@@ -1,14 +1,11 @@
-# sportshold
-This is a typical layout for website sports boots.
+# liceum28
+## Версия сайта для редактирования и потом релиза на хостинг
 
 Technology used:
-Less/Gulp
+Gulp/css
 
 To install:
-
-npm up
+npm i
+To start:
 npm start
 
-
-Layout made by abc1057001117
-January 2018
