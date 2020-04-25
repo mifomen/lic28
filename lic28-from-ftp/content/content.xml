@@ -1,0 +1,514 @@
+<site>
+ <posts />
+ <pages customHeadHtml="">
+  <page author="" caption="Главная" customHeadHtml="" dateModified="09/21/2015 19:59:01" description="Description" keywords="Keywords" metaTags="" name="главная" path="/главная" showInHmenu="True" showInVmenu="True" showTitle="False" title="" titleInBrowser="">
+   <pageHead>&lt;style&gt;.art-content .art-postcontent-0 .layout-item-old-0 { color: #262C2C; background: ; padding-right: 0px;padding-left: 0px; vertical-align: top;  }
+.art-content .art-postcontent-0 .layout-item-old-1 {  border-collapse: separate;  }
+.art-content .art-postcontent-0 .layout-item-old-2 { border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-color:#B5BFBF;border-right-color:#B5BFBF;border-bottom-color:#B5BFBF;border-left-color:#B5BFBF; color: #262C2C; padding-top: 3px;padding-right: 3px;padding-bottom: 3px;padding-left: 5px; vertical-align: top; border-radius: 10px;  }
+.art-content .art-postcontent-0 .layout-item-old-3 { border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-color:#B5BFBF;border-right-color:#B5BFBF;border-bottom-color:#B5BFBF;border-left-color:#B5BFBF; color: #262C2C; padding: 3px; vertical-align: top; border-radius: 10px;  }
+.art-content .art-postcontent-0 .layout-item-old-4 { color: #262C2C;  }
+.art-content .art-postcontent-0 .layout-item-old-5 { color: #262C2C; padding: 0px;  }
+.art-content .art-postcontent-0 .layout-item-old-6 { border-top-width:3px;border-top-style:dotted;border-top-color:#B5BFBF;  }
+.art-content .art-postcontent-0 .layout-item-old-7 { border-right-style:Dashed;border-bottom-style:Dashed;border-left-style:Dashed;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-right-color:#3B7245;border-bottom-color:#3B7245;border-left-color:#3B7245; color: #262C2C; padding: 0px;  }
+.art-content .art-postcontent-0 .layout-item-old-8 { color: #262C2C;  border-collapse: separate;  }
+.art-content .art-postcontent-0 .layout-item-old-9 { border-top-style:dotted;border-right-style:dotted;border-bottom-style:dotted;border-left-style:dotted;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-color:#B5BFBF;border-right-color:#B5BFBF;border-bottom-color:#B5BFBF;border-left-color:#B5BFBF; color: #262C2C; padding: 5px; border-radius: 15px;  }
+.art-content .art-postcontent-0 .layout-item-0 { border-style:Solid;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-color:#FFFFFF; color: #262C2C; background: ;  }
+.art-content .art-postcontent-0 .layout-item-1 { color: #1A1E1E; background: #FFFFFF; padding-right: 0px;padding-left: 0px;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+&lt;/style&gt;</pageHead>
+   <content>&lt;div class="art-content-layout layout-item-0"&gt;
+    &lt;div class="art-content-layout-row"&gt;
+    &lt;div class="art-layout-cell layout-item-1" style="width: 33%" &gt;
+        &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+    &lt;/div&gt;&lt;div class="art-layout-cell layout-item-1" style="width: 34%" &gt;
+        &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+    &lt;/div&gt;&lt;div class="art-layout-cell layout-item-1" style="width: 33%" &gt;
+        &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+   <layout>
+    <struct>&lt;div class="art-content-layout layout-item-0"&gt;
+    &lt;div class="art-content-layout-row"&gt;
+    &lt;div class="art-layout-cell layout-item-1" style="width: 33%" &gt;
+        {content}
+    &lt;/div&gt;&lt;div class="art-layout-cell layout-item-1" style="width: 34%" &gt;
+        {content}
+    &lt;/div&gt;&lt;div class="art-layout-cell layout-item-1" style="width: 33%" &gt;
+        {content}
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</struct>
+    <contents>
+     <content>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</content>
+     <content>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</content>
+     <content>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</content>
+    </contents>
+   </layout>
+  </page>
+  <page author="" caption="Сведения о лицее" customHeadHtml="" dateModified="09/20/2015 15:41:18" description="" keywords="" metaTags="" name="сведения-о-лицее" path="/сведения-о-лицее" showInHmenu="True" showInVmenu="True" showTitle="True" title="Сведения об образовательной организации" titleInBrowser="Сведения об образовательной организации">
+   <pageHead>&lt;style&gt;.art-content .art-postcontent-0 .layout-item-0 { padding-right: 0px;padding-left: 0px;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+&lt;/style&gt;</pageHead>
+   <content>&lt;div class="art-content-layout"&gt;
+    &lt;div class="art-content-layout-row"&gt;
+    &lt;div class="art-layout-cell layout-item-0" style="width: 100%" &gt;
+        &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+   <layout>
+    <struct>&lt;div class="art-content-layout"&gt;
+    &lt;div class="art-content-layout-row"&gt;
+    &lt;div class="art-layout-cell layout-item-0" style="width: 100%" &gt;
+        {content}
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</struct>
+    <contents>
+     <content>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</content>
+    </contents>
+   </layout>
+   <pages>
+    <page author="" caption="Основные сведения" customHeadHtml="" dateModified="09/21/2015 19:30:01" description="" keywords="" metaTags="" name="основные-сведения" path="/сведения-о-лицее/основные-сведения" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+     <pageHead>&lt;style&gt;.art-content .art-postcontent-0 .layout-item-0 { border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-color:#B5BFBF;border-right-color:#B5BFBF;border-bottom-color:#B5BFBF;border-left-color:#B5BFBF;  }
+.art-content .art-postcontent-0 .layout-item-1 { padding-right: 0px;padding-left: 0px;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+&lt;/style&gt;</pageHead>
+     <content>&lt;div class="art-content-layout layout-item-0"&gt;
+    &lt;div class="art-content-layout-row"&gt;
+    &lt;div class="art-layout-cell layout-item-1" style="width: 100%" &gt;
+        &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+     <layout>
+      <struct>&lt;div class="art-content-layout layout-item-0"&gt;
+    &lt;div class="art-content-layout-row"&gt;
+    &lt;div class="art-layout-cell layout-item-1" style="width: 100%" &gt;
+        {content}
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</struct>
+      <contents>
+       <content>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</content>
+      </contents>
+     </layout>
+    </page>
+    <page author="" caption="Структура и органы управления образовательной организацией" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="структура-и-органы-управления-образовательнои" path="/сведения-о-лицее/структура-и-органы-управления-образовательнои" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+     <pageHead></pageHead>
+     <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+     <layout>
+      <struct>{content}</struct>
+      <contents>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+      </contents>
+     </layout>
+     <pages>
+      <page author="" caption="Схема структуры обр.орг." customHeadHtml="" dateModified="09/15/2015 11:41:09" description="" keywords="" metaTags="" name="схема-структуры-обр-орг" path="/сведения-о-лицее/структура-и-органы-управления-образовательнои/схема-структуры-обр-орг" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+       <pageHead></pageHead>
+       <content>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</content>
+       <layout>
+        <struct>{content}</struct>
+        <contents>
+         <content>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</content>
+        </contents>
+       </layout>
+      </page>
+      <page author="" caption="Структурные подразделения" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="структурные-подразделения" path="/сведения-о-лицее/структура-и-органы-управления-образовательнои/структурные-подразделения" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+       <pageHead></pageHead>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+       <layout>
+        <struct>{content}</struct>
+        <contents>
+         <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+        </contents>
+       </layout>
+      </page>
+      <page author="" caption="Закрепление территорий" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="закрепление-территории" path="/сведения-о-лицее/структура-и-органы-управления-образовательнои/закрепление-территории" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+       <pageHead></pageHead>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+       <layout>
+        <struct>{content}</struct>
+        <contents>
+         <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+        </contents>
+       </layout>
+      </page>
+     </pages>
+    </page>
+    <page author="" caption="Документы" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="документы" path="/сведения-о-лицее/документы" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+     <pageHead></pageHead>
+     <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+     <layout>
+      <struct>{content}</struct>
+      <contents>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+      </contents>
+     </layout>
+    </page>
+    <page author="" caption="Образование" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="образование" path="/сведения-о-лицее/образование" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+     <pageHead></pageHead>
+     <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+     <layout>
+      <struct>{content}</struct>
+      <contents>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+      </contents>
+     </layout>
+     <pages>
+      <page author="" caption="Образовательные программы" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="образовательные-программы" path="/сведения-о-лицее/образование/образовательные-программы" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+       <pageHead></pageHead>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+       <layout>
+        <struct>{content}</struct>
+        <contents>
+         <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+        </contents>
+       </layout>
+      </page>
+      <page author="" caption="Программа развития" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="программа-развития" path="/сведения-о-лицее/образование/программа-развития" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+       <pageHead></pageHead>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+       <layout>
+        <struct>{content}</struct>
+        <contents>
+         <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+        </contents>
+       </layout>
+      </page>
+      <page author="" caption="Рабочие программы" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="рабочие-программы" path="/сведения-о-лицее/образование/рабочие-программы" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+       <pageHead></pageHead>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+       <layout>
+        <struct>{content}</struct>
+        <contents>
+         <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+        </contents>
+       </layout>
+      </page>
+      <page author="" caption="Уровни образования" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="уровни-образования" path="/сведения-о-лицее/образование/уровни-образования" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+       <pageHead></pageHead>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+       <layout>
+        <struct>{content}</struct>
+        <contents>
+         <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+        </contents>
+       </layout>
+      </page>
+      <page author="" caption="Годовой календарный план-график" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="годовои-календарныи-план-график" path="/сведения-о-лицее/образование/годовои-календарныи-план-график" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+       <pageHead></pageHead>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+       <layout>
+        <struct>{content}</struct>
+        <contents>
+         <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+        </contents>
+       </layout>
+      </page>
+      <page author="" caption="Методические документы" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="методические-документы" path="/сведения-о-лицее/образование/методические-документы" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+       <pageHead></pageHead>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+       <layout>
+        <struct>{content}</struct>
+        <contents>
+         <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+        </contents>
+       </layout>
+      </page>
+      <page author="" caption="Опыт инновационной деятельности" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="опыт-инновационнои-деятельности" path="/сведения-о-лицее/образование/опыт-инновационнои-деятельности" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+       <pageHead></pageHead>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+       <layout>
+        <struct>{content}</struct>
+        <contents>
+         <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+        </contents>
+       </layout>
+      </page>
+     </pages>
+    </page>
+    <page author="" caption="Образовательные стандарты" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="образовательные-стандарты" path="/сведения-о-лицее/образовательные-стандарты" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+     <pageHead></pageHead>
+     <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+     <layout>
+      <struct>{content}</struct>
+      <contents>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+      </contents>
+     </layout>
+    </page>
+    <page author="" caption="Руководство. Педагогический состав" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="руководство-педагогическии-состав" path="/сведения-о-лицее/руководство-педагогическии-состав" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+     <pageHead></pageHead>
+     <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+     <layout>
+      <struct>{content}</struct>
+      <contents>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+      </contents>
+     </layout>
+    </page>
+    <page author="" caption="Материально-техническое обеспечение" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="материально-техническое-обеспечение" path="/сведения-о-лицее/материально-техническое-обеспечение" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+     <pageHead></pageHead>
+     <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+     <layout>
+      <struct>{content}</struct>
+      <contents>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+      </contents>
+     </layout>
+    </page>
+    <page author="" caption="Стипендии и иные виды материальной поддержки" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="стипендии-и-иные-виды-материальнои-поддержки" path="/сведения-о-лицее/стипендии-и-иные-виды-материальнои-поддержки" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+     <pageHead></pageHead>
+     <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+     <layout>
+      <struct>{content}</struct>
+      <contents>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+      </contents>
+     </layout>
+    </page>
+    <page author="" caption="Платные образовательные услуги" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="платные-образовательные-услуги" path="/сведения-о-лицее/платные-образовательные-услуги" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+     <pageHead></pageHead>
+     <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+     <layout>
+      <struct>{content}</struct>
+      <contents>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+      </contents>
+     </layout>
+    </page>
+    <page author="" caption="Финансово-хозяйственная деятельность" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="финансово-хозяиственная-деятельность" path="/сведения-о-лицее/финансово-хозяиственная-деятельность" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+     <pageHead></pageHead>
+     <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+     <layout>
+      <struct>{content}</struct>
+      <contents>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+      </contents>
+     </layout>
+    </page>
+    <page author="" caption="Вакантные места для приема" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="вакантные-места-для-приема" path="/сведения-о-лицее/вакантные-места-для-приема" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+     <pageHead></pageHead>
+     <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+     <layout>
+      <struct>{content}</struct>
+      <contents>
+       <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+      </contents>
+     </layout>
+    </page>
+   </pages>
+  </page>
+  <page author="" caption="Новости" customHeadHtml="" dateModified="09/20/2015 15:41:02" description="" keywords="" metaTags="" name="novocti" path="/novocti" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новости нашего лицея" titleInBrowser="Новости нашего лицея">
+   <pageHead>&lt;style&gt;.art-content .art-postcontent-0 .layout-item-old-0 { border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-color:#B5BFBF;border-right-color:#B5BFBF;border-bottom-color:#B5BFBF;border-left-color:#B5BFBF; color: #262C2C;  }
+.art-content .art-postcontent-0 .layout-item-old-1 { border-right-style:solid;border-right-width:0px;border-right-color:#B5BFBF; color: #151919; background: #FCE4BA; padding-right: 5px;padding-left: 5px;  }
+.art-content .art-postcontent-0 .layout-item-old-2 { border-right-style:solid;border-right-width:1px;border-right-color:#B5BFBF; color: #181B1B; background: #E4E7E7; padding-right: 5px;padding-left: 5px;  }
+.art-content .art-postcontent-0 .layout-item-0 { color: #262C2C;  }
+.art-content .art-postcontent-0 .layout-item-1 { color: #262C2C; padding-right: 0px;padding-left: 0px;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+&lt;/style&gt;</pageHead>
+   <content>&lt;div class="art-content-layout layout-item-0"&gt;
+    &lt;div class="art-content-layout-row"&gt;
+    &lt;div class="art-layout-cell layout-item-1" style="width: 100%" &gt;
+        &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+   <layout>
+    <struct>&lt;div class="art-content-layout layout-item-0"&gt;
+    &lt;div class="art-content-layout-row"&gt;
+    &lt;div class="art-layout-cell layout-item-1" style="width: 100%" &gt;
+        {content}
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</struct>
+    <contents>
+     <content>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</content>
+    </contents>
+   </layout>
+  </page>
+  <page author="" caption="Электронная приемная" customHeadHtml="" dateModified="09/10/2015 22:59:08" description="" keywords="" metaTags="" name="электронная-приемная" path="/электронная-приемная" showInHmenu="True" showInVmenu="True" showTitle="True" title="Электронная приёмная" titleInBrowser="Электронная приёмная">
+   <pageHead>&lt;style&gt;.art-content .art-postcontent-0 .layout-item-0 { padding-right: 0px;padding-left: 0px;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+&lt;/style&gt;</pageHead>
+   <content>&lt;div class="art-content-layout"&gt;
+    &lt;div class="art-content-layout-row"&gt;
+    &lt;div class="art-layout-cell layout-item-0" style="width: 100%" &gt;
+        &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+   <layout>
+    <struct>&lt;div class="art-content-layout"&gt;
+    &lt;div class="art-content-layout-row"&gt;
+    &lt;div class="art-layout-cell layout-item-0" style="width: 100%" &gt;
+        {content}
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</struct>
+    <contents>
+     <content>&lt;p&gt;&lt;br&gt;&lt;/p&gt;</content>
+    </contents>
+   </layout>
+  </page>
+  <page author="" caption="Музей лицея" customHeadHtml="" dateModified="01/01/0001 00:00:00" description="" keywords="" metaTags="" name="музеи-лицея" path="/музеи-лицея" showInHmenu="True" showInVmenu="True" showTitle="True" title="Новая страница" titleInBrowser="Новая страница">
+   <pageHead></pageHead>
+   <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+   <layout>
+    <struct>{content}</struct>
+    <contents>
+     <content>&lt;p&gt;&lt;br/&gt;&lt;/p&gt;</content>
+    </contents>
+   </layout>
+  </page>
+  <page author="" caption="Контакты" customHeadHtml="" dateModified="04/13/2016 18:48:06" description="Description" keywords="Keywords" metaTags="" name="контакты" path="/контакты" showInHmenu="True" showInVmenu="True" showTitle="True" title="Контакты" titleInBrowser="Контакты">
+   <pageHead>&lt;style&gt;.art-content .art-postcontent-0 .layout-item-0 { border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-color:#B5BFBF;border-right-color:#B5BFBF;border-bottom-color:#B5BFBF;border-left-color:#B5BFBF; color: #262C2C;  }
+.art-content .art-postcontent-0 .layout-item-1 { color: #262C2C; padding-right: 0px;padding-left: 0px;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+&lt;/style&gt;</pageHead>
+   <content>&lt;div class="art-content-layout layout-item-0"&gt;
+    &lt;div class="art-content-layout-row"&gt;
+    &lt;div class="art-layout-cell layout-item-1" style="width: 100%" &gt;
+        &lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="color: rgb(57, 65, 65);"&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</content>
+   <layout>
+    <struct>&lt;div class="art-content-layout layout-item-0"&gt;
+    &lt;div class="art-content-layout-row"&gt;
+    &lt;div class="art-layout-cell layout-item-1" style="width: 100%" &gt;
+        {content}
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</struct>
+    <contents>
+     <content>&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="color: rgb(57, 65, 65);"&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</content>
+    </contents>
+   </layout>
+  </page>
+ </pages>
+ <sidebars>
+  <sidebar caption="" name="sidebar1">
+   <block name="text-1" position="0" title="Новый блок">
+    <content>&lt;p&gt;Donec senectus mus nunc.&lt;/p&gt;&lt;p&gt;Libero adipiscing posuere &lt;span style="color: #000000;"&gt;mollis&lt;/span&gt; ut justo elit quisque. Vivamus vitae leo auctor in praesent quis nulla mauris nunc et phasellus metus aenean ultricies erat nec augue.&lt;/p&gt;</content>
+    <pageHead></pageHead>
+   </block>
+  </sidebar>
+  <sidebar caption="" name="sidebar2">
+   <widget name="поиск" position="0" title="Search">
+    <content>&lt;div&gt;
+  &lt;form action="#" class="art-search" method="get" name="searchform"&gt;
+    &lt;input type="text" value="" name="s" /&gt;
+    &lt;input type="submit" value="Search" name="search" class="art-search-button" /&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</content>
+    <pageHead></pageHead>
+   </widget>
+   <widget name="категории" position="1" title="Categories">
+    <content>&lt;div&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet. Nam sit amet sem. Mauris a ante.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="#" title="All News"&gt;All News&lt;/a&gt; (50)
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#" title="Best of the Year"&gt;Best of the Year&lt;/a&gt; (4)
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#" title="Hyperlink"&gt;Hyperlink&lt;/a&gt; (24)
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#" title="Visited link" class="visited"&gt;Visited link&lt;/a&gt; (17)
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#" title="Hovered link" class="hover"&gt;Hovered link&lt;/a&gt; (6)
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</content>
+    <pageHead></pageHead>
+   </widget>
+   <widget name="архив" position="2" title="Archives">
+    <content>&lt;div&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="#" title="November 2008"&gt;November 2008&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#" title="October 2008"&gt;October 2008&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#" title="September 2008"&gt;September 2008&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#" title="June 2008"&gt;June 2008&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</content>
+    <pageHead></pageHead>
+   </widget>
+   <widget name="links-2" position="3" title="Blogroll">
+    <content>&lt;div&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href="#"&gt;My first blog&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#"&gt;Who will prevail?&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#"&gt;Stay positive!&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#"&gt;Oil still going up&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#"&gt;Gripes and Grins&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#"&gt;2012 Olympics&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#"&gt;How to SEO&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#"&gt;On Global Warming&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="#"&gt;Can you guess?&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</content>
+    <pageHead></pageHead>
+   </widget>
+  </sidebar>
+  <sidebar caption="" name="content-before" />
+  <sidebar caption="" name="content-after" />
+ </sidebars>
+ <collages />
+</site>
