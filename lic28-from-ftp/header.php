@@ -45,7 +45,7 @@ if (is_singular() && get_option('thread_comments')) {
 }
 wp_head();
 ?>
-<link rel="stylesheet" type="text/css" href="flex-style.css"/>
+<link rel="stylesheet" type="text/css" href="http://liceum28.nnov.ru/wp-content/themes/UNN-liceum28/flex-style.css"/>
 </head>
 <body <?php body_class(); ?>>
 
