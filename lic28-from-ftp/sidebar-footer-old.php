@@ -68,7 +68,7 @@ echo do_shortcode(theme_get_option('theme_override_default_footer_content') ? th
 <div class="art-content-layout layout-item-0">
     <div class="art-content-layout-row">
     <div class="art-layout-cell layout-item-1" style="width: 33%"><?php if (false === theme_print_sidebar('footer-1-widget-area')) { ?>
-        <p><a href="http://www.unn.ru/" style="font-family: Verdana;"><span style="color: #FFFFFF;">Хостинг для сайта предоставлен</span></a></p><p><span style="font-family: Verdana; color: #FFFFFF;"><a href="http://www.unn.ru/" style="font-family: Verdana;"><span style="color: #FFFFFF;">&nbsp;ННГУ им. Н.И. Лобачевского</span></a></span><span style="color: #FFFFFF;"></span></p><p><br></p><p class="MsoNormal"><span style="color: rgb(255, 255, 255); font-family: Verdana;">© МАОУ "Лицей №28 им. акад. Б.А.Королёва"</span></p><p class="MsoNormal CurrentYearDate"  style="color: rgb(255, 255, 255); font-family: Verdana;" >1990<span style="color: rgb(255, 255, 255); font-family: Verdana;"></span></p><p><br></p><p><span style="color: #FFFFFF;"></span></p>
+        <p><a href="http://www.unn.ru/" style="font-family: Verdana;"><span style="color: #FFFFFF;">Хостинг для сайта предоставлен</span></a></p><p><span style="font-family: Verdana; color: #FFFFFF;"><a href="http://www.unn.ru/" style="font-family: Verdana;"><span style="color: #FFFFFF;">&nbsp;ННГУ им. Н.И. Лобачевского</span></a></span><span style="color: #FFFFFF;"></span></p><p><br></p><p class="MsoNormal"><span style="color: rgb(255, 255, 255); font-family: Verdana;">© МАОУ "Лицей №28 им. акад. Б.А.Королёва"</span></p><p class="MsoNormal"  style="color: rgb(255, 255, 255); font-family: Verdana;" >2020<span style="color: rgb(255, 255, 255); font-family: Verdana;"></span></p><p><br></p><p><span style="color: #FFFFFF;"></span></p>
     <?php } ?></div>
 <div class="art-layout-cell layout-item-2" style="width: 34%"><?php if (false === theme_print_sidebar('footer-2-widget-area')) { ?>
         <p><img width="150" height="" alt="" class="art-lightbox" src="<?php echo get_template_directory_uri() ?>/images/%d0%b2%20%d1%88%d0%ba%d0%be%d0%bb%d1%83-large.png"><br></p>
@@ -77,7 +77,7 @@ echo do_shortcode(theme_get_option('theme_override_default_footer_content') ? th
         <p>
         </p><p><br></p><p><br></p><p><img width="300" height="16" alt="" class="art-lightbox" src="<?php echo get_template_directory_uri() ?>/images/coollogo_com-196812535.png"><br></p>
     <?php } ?></div>
-    
+
     </div>
 </div>
 
@@ -86,8 +86,5 @@ echo do_shortcode(theme_get_option('theme_override_default_footer_content') ? th
 
 </div>
 
-<script>
-    var CurrentYearDate = new Date();
-document.querySelector('.CurrentYearDate').textContent=CurrentYearDate.getUTCFullYear();
-</script>
+
 

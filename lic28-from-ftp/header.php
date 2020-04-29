@@ -47,7 +47,7 @@ wp_head();
 ?>
 <link rel="stylesheet" type="text/css" href="http://liceum28.nnov.ru/wp-content/themes/UNN-liceum28/flex-style.css"/>
 </head>
-<body <?php body_class(); ?>>
+<body  <?php body_class(); ?>>
 
 <div id="art-main">
 
@@ -68,7 +68,7 @@ wp_head();
 	get_sidebar('nav'); 
 ?> 
     </nav>
-<div class="art-layout-wrapper">
+<div   style="background-color: #fff; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==');" class="art-layout-wrapper">
                 <div class="art-content-layout">
                     <div class="art-content-layout-row">
                         <?php get_sidebar(); ?>
