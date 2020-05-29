@@ -237,7 +237,11 @@
     }
 }
 
-.vh {
+.responsive .art-responsive-embed iframe,
+.responsive .art-responsive-embed object,
+.responsive .art-responsive-embed embed,
+.vh,
+embed {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
     /* IE6, IE7 */
