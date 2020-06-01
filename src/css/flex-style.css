@@ -322,16 +322,35 @@ embed {
   0% { border: 5px solid transparent;}
   50% { border: 5px solid green;}
   100% { border: 5px solid transparent;}
-
 }
+.AniBorderTransparent {
+ animation: AnimationBorder 7s infinite ease;
+ }
+@keyframes AnimationBorderBlue {
+  0% { border: 5px solid #2018ca;}
+  50% { border: 5px solid #6a89e2;}
+  100% { border: 5px solid #2018ca;}
+}
+ .AniBorderBlue {
+ animation: AnimationBorderBlue 7s infinite ease;
+ }
+@keyframes AnimationBorderGreen {
+  0% { border: 5px solid #75af62;}
+  50% { border: 5px solid green;}
+  100% { border: 5px solid #75af62;}
+}
+.AniBorderGreen {
+ animation: AnimationBorderGreen 7s infinite ease;
+ }
+
 .transparent-border-5px {
   border: 5px solid transparent;
   padding:15px;
   border-radius: 25px;
   margin:0;
-  animation: AnimationBorder 7s infinite ease;
-  margin:5px;
+   margin:5px;
 }
+
 .blue-ts{
     text-shadow: 1px 1px 1px blue; 
     color: #34a5ef; 
