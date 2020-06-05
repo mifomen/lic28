@@ -45,8 +45,8 @@ if (is_singular() && get_option('thread_comments')) {
 }
 wp_head();
 ?>
- <link rel="preload" href="http://liceum28.nnov.ru/wp-content/themes/UNN-liceum28/flex-style.css?v=202005291" as="style">
- <link rel="stylesheet" href="http://liceum28.nnov.ru/wp-content/themes/UNN-liceum28/flex-style.css?v=202005291"/>
+ <link rel="preload" href="http://liceum28.nnov.ru/wp-content/themes/UNN-liceum28/flex-style.css?v=202006205" as="style">
+ <link rel="stylesheet" href="http://liceum28.nnov.ru/wp-content/themes/UNN-liceum28/flex-style.css?v=202006205"/>
 </head>
 <body  <?php body_class(); ?>>
 
