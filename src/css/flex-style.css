@@ -636,18 +636,18 @@ ol.ff-times a.visited {
 
 }
 
-  .parents__img {
+.parents__img {
   width: 100%;
   height: auto;
   border-radius: 5px;
   border: 1px solid black;
 }
 
- .parents__card {
+.parents__card {
   color: black;
   text-decoration: none;
   line-height: 1.5;
-   display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
@@ -656,4 +656,17 @@ ol.ff-times a.visited {
 .parents__card:hover {
   color: black;
   text-decoration: underline;
+}
+
+.title-green-ts {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 24px;
+  text-transform: uppercase;
+
+  color: green;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #0a1,
+  1px -1px 1px #0a1;
 }
