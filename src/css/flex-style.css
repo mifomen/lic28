@@ -12,8 +12,9 @@
   min-height: 10vh;
   line-height: 10vh;
   font-family: arial,serif;
+   z-index:1000;
   text-align: center;
-  z-index:1000;
+
 }
 .cookie__text {
   font-size: 24px;
