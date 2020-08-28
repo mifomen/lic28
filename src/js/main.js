@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded',function () {
 
 
 ClearCokieMemory = function () {
-  return delete localStorage.CookieMemory; 
+  return delete localStorage.CookieMemory;
 }
 
 
