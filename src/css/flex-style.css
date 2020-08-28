@@ -676,11 +676,7 @@ ol.ff-times a,ol.ff-times a.visited,ol.ff-times>li>ul>li {
 }
 
 .parents__img {
-<<<<<<< HEAD
   width: 93%;
-=======
-  width: 100%;
->>>>>>> d9f11a55e1ef31f0f2d26c147b790d008dfc2cb3
   height: auto;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -699,7 +695,6 @@ ol.ff-times a,ol.ff-times a.visited,ol.ff-times>li>ul>li {
 }
 
 .parents__card {
-<<<<<<< HEAD
   color: #000;
   text-decoration: none;
   line-height: 1.5;
@@ -707,12 +702,6 @@ ol.ff-times a,ol.ff-times a.visited,ol.ff-times>li>ul>li {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-=======
-  color: black;
-  text-decoration: none;
-  line-height: 1.5;
-  display: flex;
->>>>>>> d9f11a55e1ef31f0f2d26c147b790d008dfc2cb3
   flex-direction: column;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -720,31 +709,15 @@ ol.ff-times a,ol.ff-times a.visited,ol.ff-times>li>ul>li {
 }
 
 .parents__card:hover {
-<<<<<<< HEAD
   color: #000;
-=======
-  color: black;
-  text-decoration: underline;
->>>>>>> d9f11a55e1ef31f0f2d26c147b790d008dfc2cb3
 }
 
 .title-green-ts {
   text-align: center;
   line-height: 1.5;
-<<<<<<< HEAD
   text-transform: uppercase;
   color: green;
   font-size: 32px;
   font-weight: 700;
   text-shadow: 1px 1px 1px #0a1,1px -1px 1px #0a1;
-=======
-  font-size: 24px;
-  text-transform: uppercase;
-
-  color: green;
-  font-size: 32px;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px #0a1,
-  1px -1px 1px #0a1;
->>>>>>> d9f11a55e1ef31f0f2d26c147b790d008dfc2cb3
 }
