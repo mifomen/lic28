@@ -5,6 +5,8 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/style.responsive.css" type="text/css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/flex-style.css" >
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width" original-font-size="16px" original-border-color="rgb(0, 0, 0)" original-background-color="rgba(0, 0, 0, 0)" original-background-image="none" original-color="rgb(0, 0, 0)" original-box-shadow="none" original-text-shadow="none" original-font-family="&quot;Times New Roman&quot;" original-letter-spacing="0" original-line-height="normal">
@@ -167,10 +169,52 @@ input.button4:active {
   50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
 }
 
+.new {
+  display: inline-block;
+ 
+  padding: 5px 25px;
+ 
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  border-radius:15px;
+  /*font-weight: bold;*/
+   transition: 300ms;
+   font-family: 'Times New Roman', serif, arial;
+   font-family: 'Roboto Slab', serif;
+}
+.green-btn{
+   border: 3px solid #38e161;
+ background: #30b350;
+}
+.orange-btn {
+    border: 3px solid #bf8b3a;
+ background: #d7ac69;
+}
+
+@keyframes ani-btn {
+  0% {background: transparent;}
+  100% {background: linear-gradient(to left, rgba(255,255,255,.0), rgba(255,255,255,.8), rgba(255,255,255,.0)) no-repeat -2em 0%;  }
+  
+}
+
+
+.new:hover {
+  transition: 300ms;
+  border-radius:30px; 
+  text-decoration: underline;
+ 
+  background-size: 2em 100%;
+
+  
+}
 </style>
 </head>
 
-<body style="width: 90%;">
+<body style="width: 90%; background-color: #fff; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==');: green;">
+
+  <br><br>
+  <a class="new green-btn orane-btn" href="#">Расписание <br> 1-4 классы</a>
 <a href="#" class="button12" tabindex="0">Расписание уроков 5-11 класс</a>
 <a href="#" class="button17" tabindex="0">кнопка</a>
 <a href="#" class="button28">Установить</a>
