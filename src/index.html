@@ -6,499 +6,107 @@
   <link rel="stylesheet" href="css/style.responsive.css" type="text/css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/flex-style.css" >
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width" original-font-size="16px" original-border-color="rgb(0, 0, 0)" original-background-color="rgba(0, 0, 0, 0)" original-background-image="none" original-color="rgb(0, 0, 0)" original-box-shadow="none" original-text-shadow="none" original-font-family="&quot;Times New Roman&quot;" original-letter-spacing="0" original-line-height="normal">
-<style>
-  
-a.button12 {
-  position: relative;
-  display: inline-block;
-  font-size: 100%;
-  font-weight: 700;
-  color: #fff;
-  text-shadow: #053852 -1px 1px, #053852 1px 1px, #053852 1px -1px, #053852 -1px -1px;
-  text-decoration: none;
-  user-select: none;
-  padding: .3em .7em;
-  outline: none;
-  border-radius: 7px;
-  background: #053852 repeating-linear-gradient(135deg, #053852, #053852 10px, #1679ad 10px, #1679ad 20px, #053852 20px);
-  box-shadow:
-   inset -2px -2px rgba(0,0,0,.3),
-   inset 2px 2px rgba(255,255,255,.3);
-  transition: background-position 999999s, color 999999s, text-shadow 999999s;
-}
-a.button12:hover, a.button12:focus {
-  text-shadow: #0175b1 -1px 1px, #0175b1 1px 1px, #0175b1 1px -1px, #0175b1 -1px -1px;
-  background: #0175b1 repeating-linear-gradient(135deg, #0175b1, #0175b1 10px, #8fd2f5 10px, #8fd2f5 20px, #0175b1 20px) no-repeat;
-  background-size: 1000% 100%;
-}
-a.button12:hover {
-  background-position: 0 0;
-}
-a.button12:focus {
-  color: rgba(255,255,255,0);
-  text-shadow: rgba(1,117,177,0) -1px 1px, rgba(1,117,177,0) 1px 1px, rgba(1,117,177,0) 1px -1px, rgba(1,117,177,0) -1px -1px;
-  background-position: 900% 0;
-  transition: background-position linear 600s, color .5s, text-shadow .5s;
-}
-a.button12:after {
-  content: "загрузка\2026";
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: .3em .7em;
-  color: rgba(0,0,0,0);
-  text-shadow: none;
-  transition: 999999s;
-}
-a.button12:focus:after {
-  color: #fff;
-  text-shadow: #0175b1 -1px 1px, #0175b1 1px 1px, #0175b1 1px -1px, #0175b1 -1px -1px;
-  transition: .5s;
-}
+  <style>
 
 
- /* стили подбирала "на глаз" */
+    .new {
+      display: inline-block;
+      /*height: 350px;*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-a.button17 {
-  display: inline-block;
-  font-family: arial,sans-serif;
-  font-size: 11px;
-  color: rgb(205,216,228);
-  text-shadow: 0 -1px rgb(46,53,58);
-  text-decoration: none;
-  user-select: none;
-  line-height: 2em;
-  padding: 1px 1.2em;
-  outline: none;
-  border: 1px solid rgba(33,43,52,1);
-  border-radius: 3px;
-  background: rgb(81,92,102) linear-gradient(rgb(81,92,102), rgb(69,78,87));
-  box-shadow:
-   inset 0 1px rgba(101,114,126,1),
-   inset 0 0 1px rgba(140,150,170,.8),
-   0 1px rgb(83,94,104),
-   0 0 1px rgb(86,96,106);
-}
-a.button17:active {
-  box-shadow:
-   inset 0 1px 3px rgba(0,10,20,.5),
-   0 1px rgb(83,94,104),
-   0 0 1px rgb(86,96,106);
-}
-a.button17:focus:not(:active) {
-  border: 1px solid rgb(22,32,43);
-  border-bottom: 1px solid rgb(25,34,45);
-  background: rgb(53,61,71);
-  box-shadow:
-   inset 0 1px 3px rgba(0,10,20,.5),
-   0 1px rgb(83,94,104),
-   0 0 1px rgb(86,96,106);
-  pointer-events: none;
-}
-
-
-a.button28 {
-  position: relative;
-  display: inline-block;
-  font-size: 90%;
-  font-weight: 700;
-  color: rgb(209,209,217);
-  text-decoration: none;
-  text-shadow: 0 -1px 2px rgba(0,0,0,.2);
-  padding: .5em 1em;
-  outline: none;
-  border-radius: 3px;
-  background: linear-gradient(rgb(110,112,120), rgb(81,81,86)) rgb(110,112,120);
-  box-shadow:
-   0 1px rgba(255,255,255,.2) inset,
-   0 3px 5px rgba(0,1,6,.5),
-   0 0 1px 1px rgba(0,1,6,.2);
-  transition: .2s ease-in-out;
-}
-a.button28:hover:not(:active) {
-  background: linear-gradient(rgb(126,126,134), rgb(70,71,76)) rgb(126,126,134);
-}
-a.button28:active {
-  top: 1px;
-  background: linear-gradient(rgb(76,77,82), rgb(56,57,62)) rgb(76,77,82);
-  box-shadow:
-   0 0 1px rgba(0,0,0,.5) inset,
-   0 2px 3px rgba(0,0,0,.5) inset,
-   0 1px 1px rgba(255,255,255,.1);
-}
-
-
-input.button4 {
-  position: relative;
-  display: inline-block;
-  font-family: Arial,Helvetica,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif;
-  font-size: 1.5em;
-  font-weight: 700;
-  color: rgb(245,245,245);
-  text-shadow: 0 -1px rgba(0,0,0,.1);
-  text-decoration: none;
-  user-select: none;
-  padding: .3em 1em;
-  outline: none;
-  border: none;
-  border-radius: 3px;
-  background: #0c9c0d linear-gradient(#82d18d, #0c9c0d);
-  box-shadow: inset #72de26 0 -1px 1px, inset 0 1px 1px #98ff98, #3caa3c 0 0 0 1px, rgba(0,0,0,.3) 0 2px 5px;
-  -webkit-animation: pulsate 1.2s linear infinite;
-  animation: pulsate 1.2s linear infinite;
-}
-input.button4:hover {
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;
-  cursor: pointer;
-}
-input.button4:active {
-  top: 1px;
-  color: #fff;
-  text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;
-  box-shadow: 0 -1px 3px rgba(0,0,0,.3), 0 1px 1px #fff, inset 0 1px 2px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);
-}
-@-webkit-keyframes pulsate {
-  50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
-}
-@keyframes pulsate {
-  50% {color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff;}
-}
-
-.new {
-  display: inline-block;
- 
-  padding: 5px 45px;
-  text-align: center;
- 
-  text-decoration: none;
-  color: white;
-  font-size: 24px;
-  margin:15px 15px;
-outline: 2px solid black;
-outline-offset: 17px;
-  border-radius:15px;
-  /*font-weight: bold;*/
-   transition: 300ms;
-   font-family: 'Times New Roman', serif, arial;
-   font-family: 'Roboto Slab', serif;
-}
-.green-btn{
-   border: 5px solid #38e161;
- background-color: #30b350;
-}
-.orange-btn {
+      padding: 5px 65px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      font-size: 24px;
+      margin:15px 15px;
+      outline: 2px solid black;
+      outline-offset: 17px;
+      border-radius:15px;
+      /*font-weight: bold;*/
+      transition: 300ms;
+      font-family: 'Times New Roman', serif, arial;
+      /*font-family: 'Roboto Slab', serif;*/
+      text-shadow: 1px 1px 3px black;
+      width: 275px;
+    }
+    .green-btn{
+     border: 5px solid #38e161;
+     background-color: #30b350;
+   }
+   .orange-btn {
     border: 5px solid #bf8b3a;
- background-color: #d7ac69;
-}
+    background-color: #d7ac69;
+  }
+     .orange-btn {
+    border: 5px solid #ff7112;
+    background-color: #ff9547;
+  }
+  .blue-btn {
+    border: 5px solid #3f82bb;
+    background-color: #00487a;
+  }
+  .red-btn {
+    border: 5px solid #bc0028;
+    background-color: #ca3c4c;
+  }
 
-@keyframes ani-btn {
-  0% {background: transparent;}
-  100% {background: linear-gradient(to left, rgba(255,255,255,.0), rgba(255,255,255,.8), rgba(255,255,255,.0)) no-repeat -2em 0%;  }
-  
-}
+  .pink-btn {
+       border: 5px solid #f674ba;
+    background-color: #ee2899; 
+  }
+
+  @keyframes ani-btn {
+    0% {background: transparent;}
+    100% {background: linear-gradient(to left, rgba(255,255,255,.0), rgba(255,255,255,.8), rgba(255,255,255,.0)) no-repeat -2em 0%;  }
+
+  }
 
 
-.new:hover {
-  transition: 300ms;
-  border-radius:30px; 
-  text-decoration: underline;
+  .new:hover {
+    transition: 300ms;
+    border-radius:30px; 
+    text-decoration: underline;
 
-  background-size: 2em 100%;
+    background-size: 2em 100%;
 
-  
-}
+
+  }
+  .ttu {
+    text-transform: uppercase;
+  }
+  .new-wrapper  {
+    width: 90vw;
+    outline: 2px solid darkblue;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .new-w200 {
+    width: 250px;
+  }
 </style>
 </head>
 
 <body style="width: 90%; background-color: #fff; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==');: green;">
 
-  <br><br>
-  <a class="new orange-btn " href="#">Расписание <br> 1-4 классы</a>
-  <a class="new green-btn " href="#">Расписание <br> 5-11 классы</a>
-<a href="#" class="button12" tabindex="0">Расписание уроков 5-11 класс</a>
-<a href="#" class="button17" tabindex="0">кнопка</a>
-<a href="#" class="button28">Установить</a>
-<input type="button" class="button4" value="Купить">
- <p class="df ffdc fjcc" style="font-size: 14pt;font-family: verdana, geneva, sans-serif">
-    <span style="text-align: center;font-weight: bold; color: #ff0000;">2020 - 2021 учебный год</span>
-    <span>Уровень начального общего образования:  <strong>459</strong>  учащихся</span>
-    <span>Уровень основного общего образования: <strong>392</strong> учащихся</span>
-    <span>Уровень среднего общего образования: <strong>196</strong> учащихся </span>
-    <span>Обучающихся, являющихся иностранными гражданами <strong>0</strong> человек</span>
-    <span>Общая численность:  <strong>1048</strong> учащихся - за счет бюджетных ассигнований</span>
-    <span style="line-height:1.5;font-size: 14pt;font-family: verdana, geneva, sans-serif">Заключенные и планируемые к заключению договора с иностранными и (или) международными организациями по вопросам образования и науки <strong>отсутствует</strong></span>
-  </p>
-
-  
- <div class="df fww fjcsa facc " style="border:2px solid green;padding:5px; line-height: 1.2;">
-<p style="font-size: 20px;text-indent: 15px">1 сентября 2020 года открывается регистрация участников IV Всероссийской онлайн-олимпиады по финансовой грамотности. Открытая некоммерческая междисциплинарная олимпиада по финансовой грамотности проводится с
-использованием средств интернета для различных возрастных категорий обучающихся, проживающих в любом из регионов Российской Федерации.
-Участие в олимпиаде бесплатное. Официальный сайт Всероссийской онлайнолимпиады по финансовой грамотности — <a href="https://olimpiada.oc3.ru" target="_blank" rel="noopener noreferrer">https://olimpiada.oc3.ru</a> Сайт
-предоставляет возможность для регистрации учащихся и учителей, которые могут регистрировать своих учеников, отслеживать их результаты, получать благодарности.</p>
-<p style="font-size: 20px;text-indent: 15px">Олимпиада проводится в заочной форме в 2 тура: отборочный тур — с 16 сентября
-(с 12:00 по МСК) по 30 сентября (до 12:00 МСК) 2020 года; заключительный тур — с 14 октября по 28 октября 2020 года, среди участников следующих возрастных групп:</p>
-<ul style="text-align: left">
-  <li>возрастная группа учащихся 5-6-х классов (10-12 лет);</li>
-  <li>возрастная группа учащихся 7-8-х классов (12-14 лет);</li>
-  <li>возрастная группа учащихся 9-х классов (14-16 лет);</li>
-  <li>возрастная группа учащихся 10-11-х классов (15-18 лет);</li>
-  <li>возрастная группа обучающихся по программе среднего профессионального образования (15-18 лет).</li>
-</ul>
-<p style="font-size: 20px;text-indent: 15px">Регистрация участников начинается 1 сентября (с 12:00 по МСК) и заканчивается
-за 1 день до окончания отборочного тура — 29 сентября (до 12:00 МСК).</p>
-<p>Задания для олимпиады подготовлены в соответствии со стандартами программы по оценке образовательных достижений учащихся PISA. PISA (Programme for International Student Assessment) — это международное исследование, которое оценивает способность учащихся применять свои умения и знания в жизненных обстоятельствах. Задания IV Всероссийской онлайн-олимпиады по финансовой грамотности призваны оценить компетенции учащихся России в области финансовой грамотности.</p>
-<p style="font-size: 20px;text-indent: 15px">Подготовка к олимпиаде и участие в ней помогут учащимся повысить уровень
-знаний в области социально-экономических отношений и научат более рационально и осознанно вести себя в сфере финансовых отношений. Также
-проведение Олимпиады положительным образом влияет на распространение и популяризацию знаний в области финансовой грамотности для успешной реализации приоритетных направлений социально-экономического развития РФ.</p>
-<p style="font-size: 20px;text-indent: 15px">О Всероссийской онлайн-олимпиаде по финансовой грамотности</p>
-<p style="font-size: 20px;text-indent: 15px">Ежегодную Всероссийскую онлайн-олимпиаду по финансовой грамотности
-организует ООО "АйТи Агентство ОСӠ" с 2017 года по 2021 год включительно в рамках реализации совместного Проекта Российской Федерации и
-Международного банка реконструкции и развития "Содействие повышению уровня финансовой грамотности населения и развитию финансового образования в Российской Федерации" по заказу Министерства финансов Российской Федерации.</p>
-
-
- </div>
-<!-- 
-  <div class="df fww fjcsa facc fasfs" style="border:2px solid green;padding:5px">
-
-
-
-
-<a href="http://www.liceum28.nnov.ru/files/rasp_zv_1.pdf" target="_blank"><img src="http://www.liceum28.nnov.ru/files/zvonki_1_knopka-300x84.jpg" alt="none" width="250px" height="auto"></a>
-
-<a href="http://www.liceum28.nnov.ru/files/zvonki-2-4.jpg" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-9468" src="http://www.liceum28.nnov.ru/files/zvonki_2-4_knopka-300x84.jpg" alt="" width="250px" height="auto" /></a>
-
-
-<a href="http://www.liceum28.nnov.ru/files/rasp_zv_5-11.pdf" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-9469" src="http://www.liceum28.nnov.ru/files/zvonki_5-11_knopka-300x84.jpg" alt="" width="250px" height="70" /></a>
-
-
-<a href="http://www.liceum28.nnov.ru/files/Raspisanie-NACHALKA.pdf" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-9479" src="http://www.liceum28.nnov.ru/files/uroki_1-4_knopka-300x84.jpg" alt="" width="250px" height="70" /></a>
-
-
-<a href="http://www.liceum28.nnov.ru/files/raspisanie-2-chetvert.pdf"><img class="alignnone wp-image-9480" src="http://www.liceum28.nnov.ru/files/uroki_5-11_knopka-300x84.jpg" alt="" width="250px" height="70" /></a>
-
-
-<a class="fasfs" href="http://www.liceum28.nnov.ru/files/rasp-spetskursy-14.10.pdf" target="_blank" rel="noopener noreferrer"><img src="http://www.liceum28.nnov.ru/files/uroki_s-k_knopka-300x84.jpg" alt="" width="250px" height="70" /></a>
-
-
-<a class="fasfs" href="http://www.liceum28.nnov.ru/files/kanikuly-2019-2020.jpg" target="_blank" rel="noopener noreferrer"><img src="http://www.liceum28.nnov.ru/files/kanikuly_knopka1-300x84.jpg" alt="" width="250px" height="70" /></a>
-
-<a class="fasfs" href="http://www.liceum28.nnov.ru/files/kanikuly-2019-2020.jpg" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-10333" src="http://www.liceum28.nnov.ru/files/gia-1-300x85.png" alt="" width="250px" height="71" /></a>
-
-
-
-
-
-<a class="fasfs" href="http://www.liceum28.nnov.ru/files/raspisanie-vneurochka-2019-2020.pdf" target="_blank" rel="noopener noreferrer"><img class="alignnone wp-image-11113" src="http://www.liceum28.nnov.ru/files/rasp_vneurochka-300x81.jpg" alt="" width="250px" height="68" /></a>
-
-
-</div>
- <div class="parents df fww fjcfs facc fasfs">
-<div>
-  <a class="parents__card" target="_blank" href="http://liceum28.multisite.unn.ru/files/pravila-priema-v-litsej-2019-2020.pdf">
-  <img class="parents__img" src="http://www.liceum28.nnov.ru/files/postuplenie.jpg" alt="picture1">
- <span class="parents__span">ПРИЁМ В ЛИЦЕЙ</span>
-</a>
-</div>
-
-
-<div>
-  <a class="parents__card" target="_blank" href="http://www.liceum28.nnov.ru/svedeniya-ob-ou/vakantnye-mesta-dlya-priema/">
-  <img class="parents__img" src="http://www.liceum28.nnov.ru/files/1_klass.jpg" alt="picture1">
- <span class="parents__span">Родителям будущих первоклассников</span>
-</a>
-</div>
-
-<div>
-  <a class="parents__card" target="_blank" href="http://www.liceum28.nnov.ru/svedeniya-ob-ou/struktura-i-organy-upravleniya-obrazo/zakreplenie-territorii/">
-  <img class="parents__img" src="http://www.liceum28.nnov.ru/files/territoriya-litsej-300x202.jpg" alt="picture1">
- <span class="parents__span">Закрепление территорий</span>
-</a>
-</div>
-
-<div>
-  <a class="parents__card" target="_blank" href="http://www.liceum28.nnov.ru/parents-and-covid/">
-  <img class="parents__img" src="http://www.liceum28.nnov.ru/files/covid-info-for-parents.gif" alt="picture1">
- <span class="parents__span">Памятка: Соблюдайте режим обязательной самоизоляции граждан!</span>
-</a>
-</div>
-
-<div>
-  <a class="parents__card" target="_blank" href="http://www.liceum28.nnov.ru/meditsinskij-kabinet/">
-  <img class="parents__img" src="http://www.liceum28.nnov.ru/files/medcab-300x168.jpg" alt="picture1">
- <span class="parents__span">Медицинский кабинет</span>
-</a>
-</div>
-
-<div>
-  <a class="parents__card" target="_blank" href="http://www.liceum28.nnov.ru/summer-literature-list/">
-  <img class="parents__img" src="http://www.liceum28.nnov.ru/files/literature-list.png" alt="picture1">
- <span class="parents__span">Список литературы на лето</span>
-</a>
-</div>
-
-<div>
-  <a class="parents__card" target="_blank" href="http://www.liceum28.nnov.ru/snus/">
-  <img class="parents__img" src="http://liceum28.multisite.unn.ru/files/snus.png" alt="picture1">
- <span class="parents__span">Снюс информация для родителей</span>
-</a>
-</div>
-
-<div>
-  <a class="parents__card" target="_blank" href="http://liceum28.multisite.unn.ru/files/karantin-12.02.2020.jpg">
-  <img class="parents__img" src="https://www.volyn24.com/img/modules/news/8/1e/eec9a4a6575af4716e553c36e39611e8/gallery-photo.jpg" alt="picture1">
- <span class="parents__span">Внимание! Карантин продлен</span>
-</a>
-</div>
-
-<div>
-  <a class="parents__card" target="_blank" href="http://www.liceum28.nnov.ru/korono-virus/">
-  <img class="parents__img" src="http://liceum28.multisite.unn.ru/files/gripp-1.jpg?gid=88" alt="picture1">
- <span class="parents__span">Профилактика коронавирусной инфекции и ОРВИ</span>
-</a>
-</div>
-
-<div>
-  <a class="parents__card" target="_blank" href="http://www.liceum28.nnov.ru/files/otvetstvennost-nesovershennoletnih.pdf">
-  <img class="parents__img" src="http://www.liceum28.nnov.ru/files/medium_Bezyimyannyiy-300x225.jpg" alt="picture1">
- <span class="parents__span">Административная ответственность несовершеннолетних</span>
-</a>
-</div>
-
-<div>
-  <a class="parents__card" target="_blank" href="http://www.liceum28.nnov.ru/protivodejstvie-korruptsii/">
-  <img class="parents__img" src="http://www.liceum28.nnov.ru/files/kor-300x237.jpg" alt="picture1">
- <span class="parents__span">Противодействие коррупции</span>
-</a>
-</div>
-
-<div>
-  <a class="parents__card" target="_blank" href="http://liceum28.multisite.unn.ru/files/ras.pdf">
-  <img class="parents__img" src="http://liceum28.multisite.unn.ru/files/ras.jpg" alt="picture1">
- <span class="parents__span"> Общая информация о РАС</span>
-</a>
-</div>
-
-<div>
-  <a class="parents__card" target="_blank" href="http://www.liceum28.nnov.ru/dorozhnyj-pasport/">
-  <img class="parents__img" src="http://www.liceum28.nnov.ru/files/pasport-db.jpg" alt="picture1">
- <span class="parents__span">Паспорт дорожной безопасности</span>
-</a>
-</div>
-
-<div>
-  <a class="parents__card" target="_blank" href="http://www.liceum28.nnov.ru/?p=3246">
-  <img class="parents__img" src="http://www.liceum28.nnov.ru/files/pitanie-300x146.jpg" alt="picture1">
- <span class="parents__span">О питании в лицее</span>
-</a>
-</div>
-
-<div>
-  <a class="parents__card" target="_blank" href="http://www.liceum28.nnov.ru/protivodejstvie-ekstremistskoj-deyatelnosti/">
-  <img class="parents__img" src="http://www.liceum28.nnov.ru/files/prokuratura_7-300x233.jpg" alt="picture1">
- <span class="parents__span">Противодействие экстремистской деятельности</span>
-</a>
-</div>
-
-
-
-<div>
-  <a class="parents__card" target="_blank" href="http://www.liceum28.nnov.ru/psychologists-advice-for-parents-of-adolescents-who-are-at-home-during-quarantine-due-to-coronavirus/">
-  <img  class="parents__img" src="http://ruo.ch-adm.ru/Storage/Image/PublicationItem/Image/big/867/11111111111.jpg" alt="picture1">
- <span class="parents__span">Советы психолога для родителей подростков, оказавшихся дома во время карантина из-за коронавируса</span>
-</a>
-</div>
--->
-<!--
-<div style="text-align: center;padding:5px;width:100%;font-size: 18px;line-height: 1.2;color: blue" class="fasfs AniBorderBlue "><a href=""><span class="orange-ts1" style="font-size: 16px;font-weight: bold"></span></a> </div> 
-</div>
-
-
- <div class=" vh transparent-border-5px AniBorderBlue df ffdc fjcc">
-   <h2 style="font-size: 30px;margin:0; padding-bottom:0px" class="orange-ts">Для родителей будущих первоклассников!</h2>
-   <p class="blue-ts">Уважаемые родители! Приглашаем вас на онлайн - собрание, которое состоится  <u class="green-ts">03.06.2020 г. в 16.00</u> по следующей ссылки <a href="https://youtu.be/H8ao02-x_VA">youtube.com</a></p>
- </div>
-
-  <div class="vh transparent-border-5px AniBorderGreen df ffdc fjcc">
-    <span style="font-size: 30px;padding-bottom:5px" class="orange-ts"> Информация для поступающих!</span>
-    <p class="blue-ts">На основании постановления Правительства Нижегородской области от 12.05.2014 г. №321 <br />с изменениями от 25.05.2020 №421 МАОУ «Лицей №28 имени академика Б.А.Королёва» будет проводить <br />индивидуальный отбор <u class="green2-ts fz24">в 10 класс естественнонаучного профиля</u> (углубленное изучение <u class="green-ts">химии, биологии</u>) <br />
-      <u class="green-ts">Количество мест - 20.</u></p>
-      <p class="blue-ts fz20 ">Предварительная дата начала индивидуального отбора 01.07.2020. в 10.00 (Гагарина 8, основное здание)<br />
-      01.07.2020 состоится тестирование по химии, биологии и экспертиза документов. </p>
-      <ol class="ta-c">  
-        <span class="black-ts fz20 ta-c">Документы, необходимыe для поступления </span>
-
-        <li class="ta-l fw-bold fz20">Документ об образовании (копию аттестата об основном общем образовании) или документы, содержащие информацию об итоговых отметках обучающегося за предыдущий период обучения (за 9 класс).</li>
-        <li class="ta-l fw-bold fz20">Индивидуальные учебные достижения обучающегося (портфолио): грамоты олимпиад различных уровней, дипломы НОУ различных уровней и.т.п.</li>
-
-        <span class="black-ts fz20">В остальные параллели – вакантных мест нет.</span>
-      </ol>
-    </div>
-
-    <hr /> -->
-<!--
-<div class="df fww fjcsa facsa fm-a">
-<a href="http://www.liceum28.nnov.ru/100-points-for-win/">100 баллов для Победы!</a>
-<a href="http://www.liceum28.nnov.ru/nou/">Городская конференция НОУ "Эврика"-2020</a>
-</div>
-
-<hr>
-
-<ul class="df fww main-links fjcc facc "> <li class=" df facc facc fjcc bg1"><a href="http://www.liceum28.nnov.ru/raspisanie-2/" target="_blank" rel="noopener noreferrer"> Расписание</a></li>
-
-<li class="   df  facc fjcc bg2"><a  style="" href="https://bus.gov.ru/pub/top-organizations" target="_blank" rel="noopener noreferrer"> Независимая оценка качества образования</a></li>
-<li class="   df  facc fjcc bg3 "><a   href="http://www.liceum28.nnov.ru/informatsionnaya-bezopasnost/" target="_blank" rel="noopener noreferrer"> Информационная безопасность</a></li>
-
-<li class="   df  facc fjcc bg4 "><a  href="http://www.liceum28.nnov.ru/distant-learning/" rel="noopener noreferrer"> Дистанционное обучение
-Единое окно </a></li>
-</ul>
-
-
-  <hr />
-<p style="text-align: center"><a style="font-size: 18px;font-weight: bold" href="http://www.liceum28.nnov.ru/100-points-for-win/">100 баллов для Победы!</a></p>
-<hr />
-<span> date</span>
-<p class="CurrentYear"> </p>
-
-
-<p><img class="aligncenter" src="https://avatars.mds.yandex.net/get-pdb/1766896/2a5d5c60-73e5-401d-8f4c-febc543b3c7b/s1200?webp=false" width="200px/" /></p>
-<p style="text-shadow: 1px 1px 1px black; color: #6959f4; line-height: 1.5; font-size: 22px; font-weight: bold; text-align: center;">Новости за апрель</p>
-
-
-http://www.liceum28.nnov.ru/news-of-april-2020/
-
-<p style="text-align: center;"><a href="http://www.liceum28.nnov.ru/snus/"><img class="wp-image-2961 aligncenter" src="http://liceum28.multisite.unn.ru/files/snus3.gif" alt="" width="150" /></a><span style="font-size: 24px; background-color: rgba(153,0,0,0.8); color: white;">СНЮС<br />Информаиция для родителей и учеников!</span></p>
-<p style="text-shadow: 1px 1px 1px rgba(153,0,0,0.8),1px -1px 1px rgba(153,0,0,0.8),-1px 1px 1px rgba(153,0,0,0.8),-1px -1px 1px rgba(153,0,0,0.8); color: white; line-height: 1.5; font-size: 22px; font-weight: bold; text-align: center;">СНЮС<br />Информаиция для родителей и учеников!</p>
-
-
-<p style="text-shadow: 1px 1px 1px rgba(223,0,0,0.8),1px -1px 1px rgba(223,0,0,0.8),-1px 1px 1px rgba(223,0,0,0.8),-1px -1px 1px rgba(223,0,0,0.8); color: green; line-height: 1.5; font-size: 22px; font-weight: bold; text-align: center;">СНЮС<br />Информация для родителей и учеников!</p>
-<p style="text-shadow: 1px 1px 1px black,1px -1px 1px white,-1px 1px 1px white,-1px -1px 1px white; color: rgba(173,0,0,1); line-height: 1.5; font-size: 22px; font-weight: bold; text-align: center;">СНЮС<br />Информация для родителей и учеников!</p>
-
-14 slide
-<p style="text-align: center;"> </p>
-<p style="text-align: center; line-height: 1.5;"><img class="aligncenter" src="http://liceum28.multisite.unn.ru/files/ran1.png" width="200px" /><span style="background-color: rgba(0, 123, 0, 0.75); font-size: 18pt; color: #ffffff;">21 февраля в здании <br />Президиума РАН <br />состоялся круглый стол</span></p>
-
-
-
-<p style="text-align:center;font-size: 20px;line-height: 1.2">С 1 мая по 5 мая 2020 включительно праздничные дни, <strong>6-8 мая обучение с  1 по 11 классы в дистанционной форме</strong> с применением дистанционных технологий и электронного обучения по расписанию.<br />С  9 мая по 11 мая включительно  праздничные дни.<br />С 12 мая обучения 1-11 классов в дистанционной форме с применением дистанционных технологий и электронного обучения по расписанию</p>
-<hr />
-
-
-<p style="text-shadow: 1px 1px 1px black; color: darkorange; line-height: 1.5; font-size: 22px; font-weight: bold; text-align: center;">Расписание первого дня трансляции нового телевизионного образовательного проекта</p>
-<p style="text-shadow: 1px 1px 1px blue; color: #34a5ef; line-height: 1.5; font-size: 22px; font-weight: bold; text-align: center;">Минпросвещения России «МОЯ ШКОЛА в online»</p>
-
-
--->
-
-
-<div class="cookie vh" id='cookie' style='display: none;'>
-  <span class="cookie__text">Сайт использует cookie, чтобы сделать пользование сайтом проще.</span> 
-  <button  type="button" id="cookie__button" class="cookie__button">Ok</button>
-</div>
-<script src="js/main.js"></script>
+  <div class="new-wrapper " style="">
+    <a class="new blue-btn ttu" href="#">Звонки  <br> 1 класс</a>
+    <a class="new green-btn ttu" href="#">Звонки <br> 2-4 классы</a>
+    <a class="new pink-btn ttu" href="#">Звонки <br> 5-11 классы</a>
+    <a class="new green-btn" href="#">Расписание уроков <br> 1-4 классы</a>
+    <a class="new orange-btn" href="#">Расписание уроков <br> 5-11 классы</a>
+    <a class="new blue-btn" href="#">Расписание <br> спецкурсов</a>
+    <a class="new red-btn ttu fw-bold" style="font-size:36px" href="#">каникулы</a>
+    <a class="new blue-btn fw-bold" style="font-size:36px" href="#">ГИА 9 , 11</a>
+    <a class="new orange-btn new-w200"  href="#">Расписание внеурочной деятельности</a>
+  </div>
+  <script src="js/main.js"></script>
 </body>
 </html>
