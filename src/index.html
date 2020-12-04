@@ -13,28 +13,24 @@
   <style>
 
 
-    .new {
+    .menu__button {
       display: inline-block;
-      /*height: 350px;*/
       display: flex;
       align-items: center;
       justify-content: center;
-
-      padding: 5px 65px;
+      padding: 7px 45px;
       text-align: center;
       text-decoration: none;
       color: white;
-      font-size: 24px;
-      margin:15px 15px;
-      outline: 2px solid black;
+      font-size: 20px;
+      margin:0.5% 0.5%;
       outline-offset: 17px;
       border-radius:15px;
-      /*font-weight: bold;*/
       transition: 300ms;
       font-family: 'Times New Roman', serif, arial;
       /*font-family: 'Roboto Slab', serif;*/
       text-shadow: 1px 1px 3px black;
-      width: 275px;
+      width: 170px;
     }
     .green-btn{
      border: 5px solid #38e161;
@@ -44,7 +40,7 @@
     border: 5px solid #bf8b3a;
     background-color: #d7ac69;
   }
-     .orange-btn {
+  .orange-btn {
     border: 5px solid #ff7112;
     background-color: #ff9547;
   }
@@ -56,56 +52,43 @@
     border: 5px solid #bc0028;
     background-color: #ca3c4c;
   }
-
   .pink-btn {
-       border: 5px solid #f674ba;
-    background-color: #ee2899; 
-  }
+   border: 5px solid #f674ba;
+   background-color: #ee2899; 
+ }
+ .menu__button:hover {
+  transition: 300ms;
+  border-radius:30px; 
+  text-decoration: underline;
+}
+.ttu {
+  text-transform: uppercase;
+}
+.menu__button-wrapper  {
 
-  @keyframes ani-btn {
-    0% {background: transparent;}
-    100% {background: linear-gradient(to left, rgba(255,255,255,.0), rgba(255,255,255,.8), rgba(255,255,255,.0)) no-repeat -2em 0%;  }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-  }
-
-
-  .new:hover {
-    transition: 300ms;
-    border-radius:30px; 
-    text-decoration: underline;
-
-    background-size: 2em 100%;
-
-
-  }
-  .ttu {
-    text-transform: uppercase;
-  }
-  .new-wrapper  {
-    width: 90vw;
-    outline: 2px solid darkblue;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .new-w200 {
-    width: 250px;
-  }
+.fz36 {
+  font-size: 36px;
+}
 </style>
 </head>
 
 <body style="width: 90%; background-color: #fff; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==');: green;">
 
-  <div class="new-wrapper " style="">
-    <a class="new blue-btn ttu" href="#">Звонки  <br> 1 класс</a>
-    <a class="new green-btn ttu" href="#">Звонки <br> 2-4 классы</a>
-    <a class="new pink-btn ttu" href="#">Звонки <br> 5-11 классы</a>
-    <a class="new green-btn" href="#">Расписание уроков <br> 1-4 классы</a>
-    <a class="new orange-btn" href="#">Расписание уроков <br> 5-11 классы</a>
-    <a class="new blue-btn" href="#">Расписание <br> спецкурсов</a>
-    <a class="new red-btn ttu fw-bold" style="font-size:36px" href="#">каникулы</a>
-    <a class="new blue-btn fw-bold" style="font-size:36px" href="#">ГИА 9 , 11</a>
-    <a class="new orange-btn new-w200"  href="#">Расписание внеурочной деятельности</a>
+  <div class="menu__button-wrapper">
+    <a class="menu__button blue-btn ttu" href="#">Звонки<br> 1 класс</a>
+    <a class="menu__button green-btn ttu" href="#">Звонки<br> 2-4 классы</a>
+    <a class="menu__button pink-btn ttu" href="#">Звонки<br> 5-11 классы</a>
+    <a class="menu__button green-btn" href="#">Расписание уроков<br> 1-4 классы</a>
+    <a class="menu__button orange-btn" href="#">Расписание уроков<br> 5-11 классы</a>
+    <a class="menu__button blue-btn" href="#">Расписание<br> спецкурсов</a>
+    <a class="menu__button red-btn ttu fw-bold fz36" href="#">каникулы</a>
+    <a class="menu__button blue-btn fw-bold fz36" href="#">ГИА 9 , 11</a>
+    <a class="menu__button orange-btn"  href="#">Расписание внеурочной деятельности</a>
   </div>
   <script src="js/main.js"></script>
 </body>
