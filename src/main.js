@@ -1,3 +1,22 @@
+let allLink = document.querySelectorAll('.js-row');
+let i = 1;
+let css = "'background: #222; color: #bada55 ";
+for (let link of allLink) {
+    let href1 = link.querySelector('td:last-child a');
+    if (href1.href[href1.href.length-1] == '#')  {
+        console.log(`${i}. ${link.querySelector('td').textContent} РП`)
+        i++;
+    };
+
+    let href2 = link.querySelector('td a');
+    if (href2.href[href2.href.length-1] == '#')  {
+        console.log(`${i}. ${link.querySelector('td').textContent} "Аннотация отсутствует"`)
+        i++;
+    };
+
+}
+
+
 
 const DATA_OF_TEACHERS = [
   {
