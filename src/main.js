@@ -651,7 +651,7 @@ if (document.querySelector('.parent')) {
 
 
 
-const sortByFIO = (a, b) => {
+const sortByFamilya = (a, b) => {
   if(a.fio < b.fio) return -1;
   if(a.fio > b.fio) return 1;
   return 0;
@@ -743,7 +743,7 @@ if (post.upQualification !== "") {
 
 
 const LEVEL_TEACHER = document.querySelector('.parent').getAttribute('data-teacher');
-  DATA_OF_TEACHERS.sort(sortByFIO);
+  DATA_OF_TEACHERS.sort(sortByFamilya);
 
 renderPostOfTeachers(DATA_OF_TEACHERS,parseInt(LEVEL_TEACHER,10));
 

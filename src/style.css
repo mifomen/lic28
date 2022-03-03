@@ -1299,3 +1299,64 @@ font-size: 1.2em;
 .reset-first-counter {
     counter-reset: first 0;
 }
+
+/*оформление для таблицы из рабочиъх программ */
+.table-basic {
+  width: 100%;
+  /*counter-reset: first 0;*/
+  /*border-collapse: collapse;*/
+  border-spacing: 10px 10px;
+  border: 1px solid var(--black);
+
+}
+
+
+
+
+.table-basic tr:nth-child(1) td {
+    font-size: 24px;
+    text-align: center;
+
+}
+.table-basic tr  {
+    text-align: center;
+}
+
+.table-basic td:nth-child(1) {
+    width: 10%;
+    /*text-align: left;*/
+    /*padding-left: 10%;*/
+    vertical-align: top;
+}
+
+.table-basic td:nth-child(2) {
+    width: 10%;
+    /*text-align: left;*/
+    /*padding-left: 10%;*/
+    vertical-align: top;
+}
+
+/*.table-basic td:nth-child(1)  {
+    width: 60%;
+    text-align: left;
+    padding-left: 10%;
+}*/
+/*.table-basic h3 {
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}*/
+.table-basic td {
+    padding: 5px 3px;
+    outline-offset: 2px;
+    outline: 1px solid var(--black);
+    font-size: 24px;
+}
+
+.table-basic tr:nth-child(1) td:nth-child(1)  {
+     text-align: center;
+     /*color: orange;*/
+     padding-left: 0;
+}

@@ -20,7 +20,7 @@
     "start-src": "browser-sync start --server --ss \"src\" --no-ui --files \"src/**/*.*\"",
     "start-list-teacher": "browser-sync start --server --ss \"list-teacher-with-js\" --no-ui --files \"list-teacher-with-js/**/*.*\"",
     "test": "npm run start-src",
-    "teacher": "npm run start-list-teacher"
+    "start": "npm run start-list-teacher"
   },
   "engines": {
     "node": "14.x",
