@@ -4,13 +4,13 @@ let css = "'background: #222; color: #bada55 ";
 for (let link of allLink) {
     let href1 = link.querySelector('td:last-child a');
     if (href1.href[href1.href.length-1] == '#')  {
-        console.log(`${i}. ${link.querySelector('td').textContent} РП`)
+        console.log(`${i}. ${link.querySelector('td').textContent} РП для ${link.querySelector('td:nth-child(2)').textContent} класса`)
         i++;
     };
 
     let href2 = link.querySelector('td a');
     if (href2.href[href2.href.length-1] == '#')  {
-        console.log(`${i}. ${link.querySelector('td').textContent} "Аннотация отсутствует"`)
+        console.log(`${i}. ${link.querySelector('td').textContent} "Аннотация отсутствует"  для ${link.querySelector('td:nth-child(2)').textContent} класса`)
         i++;
     };
 
@@ -25,9 +25,9 @@ const DATA_OF_TEACHERS = [
     "classSOO": 2,
     "classOOO": 0,
     "dolzhnost": "учитель",
-    "nameStudy": "2",
-    "levelOfStudy": "Ср/проф.",
-    "qualification": "хоровое дирижирование, руководитель хора и творческого коллектива, преподаватель хоровых дисциплин, 2013",
+    "nameStudy": "педагогическое образование",
+    "levelOfStudy": "ср/проф.",
+    "qualification": "бакалавр",
     "upQualification": "",
     "workExperienceInYear": "<span data-time=\"2012\" class=\"js-time\"> – 9 лет</span>",
     "workAsTeacherInYear": "<span data-time=\"2017\" class=\"js-time\"> – 4 лет</span>",
