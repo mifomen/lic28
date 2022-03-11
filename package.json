@@ -18,9 +18,11 @@
   "license": "MIT",
   "scripts": {
     "start-src": "browser-sync start --server --ss \"src\" --no-ui --files \"src/**/*.*\"",
+    "start-food-menu-fs": "browser-sync start --server --ss \"food-menu-fs\" --no-ui --files \"food-menu-fs/**/*.*\"",
     "start-list-teacher": "browser-sync start --server --ss \"list-teacher-with-js\" --no-ui --files \"list-teacher-with-js/**/*.*\"",
     "test": "npm run start-src",
-    "start": "npm run start-list-teacher"
+    "start": "npm run start-list-teacher",
+    "fs": "npm run start-food-menu-fs"
   },
   "engines": {
     "node": "14.x",
