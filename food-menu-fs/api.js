@@ -1,13 +1,16 @@
-const URL_FILE_ID = `09032022`;
+const URL_FILE_ID = `05032022`;
 const URL = `https://liceum28.nnov.ru/files/menu-${URL_FILE_ID}.pdf`;
-// const URL = "http://www.liceum28.nnov.ru/wp-includes/ms-files.php?file=menu-09032022.pdf";
-console.log(`DATA_GET_URL = ${URL}`);
 
-
+const getFileData = (URL) => {
 fetch(URL)
+  // .then(res => res.ok ? true : false)
   .then(res => res.ok ? res : Promise.reject(res))
-  .then(data => console.log('+', data))
-  .catch(() => console.log('some error'));
+  .then(data => { console.log('+', data)})
+  .catch((e) => console.log(`some error ${e.message}`));
+}
+
+console.log(getFileData(URL));
+
 
 // const getData = () => {
 //   fetch(URL)
