@@ -1,13 +1,23 @@
+
+if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-food-menu-low')) {
+
 const arrayMonths = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
 
-const spoilerForMenuFiles = document.querySelector('.js-food-menu');
-// console.log(spoilerForMenuFiles);
+const arrayDaysNoFoodLowSchool = ['04092021', '11092021', '18092021', '25092021', '02102021', '09102021', '16102021', '23102021', '30102021', '06112021', '13112021', '20112021', '27112021', '04122021', '11122021', '18122021', '25122021', '15012022', '22012022', '29012022', '05022022', '12022022', '19022022', '26022022', '05032022', '12032022', '19032022', '26032022', '02042022', '09042022', '16042022', '23042022', '30042022', '07052022', '21052022', '28052022'];
 
-// spoilerForMenuFiles.innerHTML = '<summary style="max-width: 450px">Школьное меню c 03.09.2021 по настоящее время</summary>';
+const arrayDaysNoFoodHighSchool = ['05092021', '12092021', '19092021', '26092021', '03102021', '10102021', '17102021', '24102021', '31102021', '07112021', '14112021', '21112021', '28112021', '05122021', '12122021', '19122021', '26122021', '01012022', '02012022', '03012022', '04012022', '05012022', '06012022', '07012022', '08012022', '09012022', '16012022', '2312022', '30012022', '06022022', '13022022', '20022022', '27022022', '06032022', '13032022', '20032022', '27032022', '03042022', '10042022', '17042022', '24042022', '01052022', '08052022', '15052022', '22052022', '29052022', '30052022'];
 
-spoilerForMenuFiles.innerHTML = "";
-const createNewFileMenu = (urlFile) => {
-  console.log('work')
+const spoilerForMenuFilesHigh = document.querySelector('.js-food-menu-high');
+const spoilerForMenuFilesLow = document.querySelector('.js-food-menu-low');
+
+document.querySelector('.js-food-menu-high summary').textContent = `Школьное меню 5-11 классы c 03.09.2021 по ${new Date().toLocaleDateString()}`;
+
+document.querySelector('.js-food-menu-low summary').textContent = `Школьное меню 1-4 классы  c 03.09.2021 по ${new Date().toLocaleDateString()}`;
+
+document.querySelector('.js-menu-food-one').remove();
+// spoilerForMenuFilesHigh.innerHTML = "";
+
+const createNewFileMenu = (urlFile, levelEducation) => {
   const newMenuFileItemLink = document.createElement('div')
   newMenuFileItemLink.className = 'document__list';
 
@@ -43,41 +53,20 @@ const createNewFileMenu = (urlFile) => {
   menuFileContent.appendChild(menuFileLinkDescription);
   newMenuFileItemLink.appendChild(menuFileContent)
 
-  spoilerForMenuFiles.appendChild(newMenuFileItemLink)
-}
-
-async function getUsers(names) {
-  let jobs = [];
-  const pathFull = `https://www.liceum28.nnov.ru/wp-includes/ms-files.php?file=menu-${names}.pdf`;
-
-  for (let name of names) {
-    let job = fetch(pathFull).then(
-      (successResponse) => {
-        if (successResponse.status != 200) {
-          return null;
-        } else {
-          createNewFileMenu(name);
-          return successResponse.formData();
-        }
-      },
-      (failResponse) => {
-        return null;
-      }
-    );
-    jobs.push(name);
+  if ( parseInt(levelEducation) === 1 ) {
+    spoilerForMenuFilesHigh.appendChild(newMenuFileItemLink);
+  } else {
+    if ( parseInt(levelEducation) === 2 ) {
+      spoilerForMenuFilesLow.appendChild(newMenuFileItemLink)
+    }
   }
-  let results = await Promise.all(jobs);
-  // console.log(results);
-  return results;
 }
-
-
 
 const end = new Date();
 const start = new Date('09/02/2021');//september 2 2021
-
-// console.log(start + end)
 let loop = new Date(end);  // today
+
+
 
 while (loop >= start) {
 
@@ -97,49 +86,47 @@ while (loop >= start) {
       }
     }
   }
-  // console.log(`loop.getMonth()=${loop.getMonth()}`)
-
-
 
   const pathFile = `menu-${nowDate}.pdf`;
   const pathFileLowSchool = `menu-0${nowDate}.pdf`;
-  // console.log(`${pathFile}`) перебираем все файлы по этмоу пути
-  // console.log(`nowDate=${nowDate}`)
 
-  const pathFullHighSchool = `https://www.liceum28.nnov.ru/wp-includes/ms-files.php?file=menu-${nowDate}.pdf`;
-  const pathFullLowSchool = `https://www.liceum28.nnov.ru/wp-includes/ms-files.php?file=menu-0${nowDate}.pdf`;
+  if (arrayDaysNoFoodHighSchool.indexOf(nowDate) === -1) {
+    const pathFullHighSchool = `https://www.liceum28.nnov.ru/wp-includes/ms-files.php?file=menu-${nowDate}.pdf`;
 
-  fetch(pathFullHighSchool).then(
-    (successResponse) => {
-      if (successResponse.status != 200) {
+    fetch(pathFullHighSchool).then(
+      (successResponse) => {
+        if (successResponse.status != 200) {
+          return null;
+        } else {
+          createNewFileMenu(nowDate,1);
+          return successResponse.formData();
+        }
+      },
+      (failResponse) => {
         return null;
-      } else {
-        createNewFileMenu(nowDate);
-        return successResponse.formData();
       }
-    },
-    (failResponse) => {
-      return null;
-    }
-  )
+    )
+  }
 
+  if (arrayDaysNoFoodLowSchool.indexOf(`${nowDate}`) === -1) {
+    const pathFullLowSchool = `https://www.liceum28.nnov.ru/wp-includes/ms-files.php?file=menu-0${nowDate}.pdf`;
 
-  fetch(pathFullLowSchool).then(
-    (successResponse) => {
-      if (successResponse.status != 200) {
+    fetch(pathFullLowSchool).then(
+      (successResponse) => {
+        if (successResponse.status != 200) {
+          return null;
+        } else {
+          createNewFileMenu(`0${nowDate}`,2);
+          return successResponse.formData();
+        }
+      },
+      (failResponse) => {
         return null;
-      } else {
-        createNewFileMenu(`0${nowDate}`);
-        return successResponse.formData();
       }
-    },
-    (failResponse) => {
-      return null;
-    }
-  )
-  // console.log(`nowDate=${nowDate}`);
+    )
+  }
 
   let newDate = loop.setDate(loop.getDate() - 1);
-  // console.log(`newDate=${loop.getDate()}`)
   loop = new Date(newDate);
+}
 }
