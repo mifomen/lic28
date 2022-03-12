@@ -15,7 +15,6 @@ console.log(getFileData(URL));
 
 async function getUsers(names) {
   let jobs = [];
-
   for (let name of names) {
     let job = fetch(URL).then(
       (successResponse) => {
@@ -29,16 +28,15 @@ async function getUsers(names) {
         return null;
       }
     );
-    jobs.push(URL);
+    jobs.push(names);
   }
-
   let results = await Promise.all(jobs);
-
+  // console.log(jobs);
   return results;
 }
 const arrayMonths = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря']
 
-console.log(getUsers(URL));
+// console.log(getUsers(URL));
 const start = new Date('09/02/2021');
 console.log(start)
 const end = new Date();
@@ -50,13 +48,16 @@ while(loop <= end){
 
  let nowDate
 if (loop.getDate() < 10) {
-  nowDate = `0${loop.getDate()}${loop.getMonth()}${loop.getFullYear()}`;
+  nowDate = `0${loop.getDate()}${loop.getMonth()+1}${loop.getFullYear()}`;
 } else {
-  nowDate = `${loop.getDate()}${loop.getMonth()}${loop.getFullYear()}`;
+  nowDate = `${loop.getDate()}${loop.getMonth()+1}${loop.getFullYear()}`;
 }
 
 const pathFile = `menu-${nowDate}.pdf`;
+const pathFileLowSchool = `menu-0${nowDate}.pdf`;
 console.log(`${pathFile}`)
+
+
 
    let newDate = loop.setDate(loop.getDate() + 1);
    loop = new Date(newDate);
@@ -96,4 +97,10 @@ const createNewFileMenu = () => {
 
   spoilerForMenuFiles.appendChild(newMenuFileItemLink)
 }
+
+
+// const allUrlsHigh = getUsers(pathFile);
+// const allUrlsLow = getUsers(pathFileLowSchool)
+
+console.log(allUrlsHigh);
 createNewFileMenu(); createNewFileMenu();
