@@ -3,7 +3,7 @@
   "update.showReleaseNotes": false,
 
   "workbench.tips.enabled": false,
-  "workbench.colorTheme": "GitHub Light",
+  "workbench.colorTheme": "GitHub Light Default",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.iconTheme": "vs-minimal",
   "workbench.startupEditor": "newUntitledFile",
