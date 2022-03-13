@@ -22,7 +22,7 @@ gulp.task('css', function() {
   return gulp.src('src/**/flex-style.css')
   .pipe(plumber())
     .pipe(autoprefixer({
- 
+
       cascade: true
     }))
  .pipe(postcss([
@@ -58,7 +58,7 @@ gulp.task('js', function() {
 gulp.task('clear', function() {
   return gulp.src( 'build/**/*', { read: false })
   .pipe( rm({
-   async: true 
+   async: true
   }) )
  })
 
@@ -81,7 +81,7 @@ gulp.watch("src/**/*.js",  gulp.parallel('js'));
   // gulp.watch("src/**/*.{sass,scss}", ["sass"]).on('change', browserSync.reload);
 });
 
-  gulp.task('build', 
+  gulp.task('build',
    gulp.series(
     'clear',
     'html',
