@@ -1,5 +1,37 @@
+if (document.querySelector('.js-now-time')) {
+  const allSpansWithNowTime = document.querySelectorAll('.js-now-time')
+  for (const allSpanWithNowTime of allSpansWithNowTime) {
+    allSpanWithNowTime.textContent = `${new Date().toLocaleDateString()}`
+  }
+}
+
 
 if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-food-menu-low')) {
+
+  // const daysLags = (dateOne, dateTwo) => {
+  //   // const date1 = ;
+  //   // const date2 = ;
+  //   if (Math.round(Math.ceil(new Date(`${dateTwo}`).getTime() - new Date(`${dateOne}`).getTime()) / (1000 * 3600 * 24)) >= 0) {
+  //     return true;
+  //   };
+  //   return false;
+  //   // console.log(daysLag);
+  // }
+
+  // const date12 = new Date(`05-24-2022`);
+  // const date22 = new Date('05-23-2022');
+
+  // console.log(daysLags(date12, date22));
+  // if (daysLags(date12, date22)) {
+  //   console.log('true')
+  // }
+
+
+  // const firstHead= document.querySelector('head').innerHTML;
+  // const textDisableCache = `<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+  // <meta http-equiv="pragma" content="no-cache" />
+  // <meta http-equiv="expires" content="0" />`
+  // document.querySelector('head').innerHTML=`${firstHead} ${textDisableCache}`;
 
   const arrayMonths = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
 
@@ -63,12 +95,14 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
     }
   }
 
-
-  // console.log(typeof(spoilerForMenuFilesLow.getAttribute('data-food-start')));
+  // spoilerForMenuFilesLow.getAttribute('data-food-start');
   // console.log(spoilerForMenuFilesLow.getAttribute('data-food-end'));
 
-  const end = new Date('06/01/2022');
-  const start = new Date(`'09/01/2021'`);  //september 2 2021
+  const end = new Date(); // const end = new Date('06-01-2022');
+  end.setDate(end.getDate() + 1); //add 1 day to today
+  // const start = new Date(`'09-01-2021'`);  //september 2 2021
+
+  const start = new Date(`${spoilerForMenuFilesLow.getAttribute('data-food-start')}`);  //september 2 2021
 
   // const end = new Date(`${spoilerForMenuFilesLow.getAttribute('data-food-end')}`);
   // const start = new Date(`${spoilerForMenuFilesLow.getAttribute('data-food-start')}`);  //september 2 2021
@@ -97,6 +131,7 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
     const pathFile = `menu-${nowDate}.pdf`;
     const pathFileLowSchool = `menu-0${nowDate}.pdf`;
 
+    console.log(`nowDate=${nowDate}`)
     if (arrayDaysNoFoodHighSchool.indexOf(nowDate) === -1) {
       const pathFullHighSchool = `https://www.liceum28.nnov.ru/wp-includes/ms-files.php?file=menu-${nowDate}.pdf`;
 
