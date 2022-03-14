@@ -63,8 +63,16 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
     }
   }
 
+
+  // console.log(typeof(spoilerForMenuFilesLow.getAttribute('data-food-start')));
+  // console.log(spoilerForMenuFilesLow.getAttribute('data-food-end'));
+
   const end = new Date('06/01/2022');
-  const start = new Date('09/01/2021');  //september 2 2021
+  const start = new Date(`'09/01/2021'`);  //september 2 2021
+
+  // const end = new Date(`${spoilerForMenuFilesLow.getAttribute('data-food-end')}`);
+  // const start = new Date(`${spoilerForMenuFilesLow.getAttribute('data-food-start')}`);  //september 2 2021
+
   let loop = new Date(end);     // today
 
   while (loop >= start) {
