@@ -8,18 +8,17 @@ if (document.querySelector('.js-now-time')) {
 
 if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-food-menu-low')) {
 
-  // const daysLags = (dateOne, dateTwo) => {
-  //   // const date1 = ;
-  //   // const date2 = ;
-  //   if (Math.round(Math.ceil(new Date(`${dateTwo}`).getTime() - new Date(`${dateOne}`).getTime()) / (1000 * 3600 * 24)) >= 0) {
-  //     return true;
-  //   };
-  //   return false;
-  //   // console.log(daysLag);
-  // }
+  const daysLags = (dateOne, dateTwo) => {
+    if (Math.round(Math.ceil(new Date(`${dateTwo}`).getTime() - new Date(`${dateOne}`).getTime()) / (1000 * 3600 * 24)) >= 0) {
+      console.log(Math.round(Math.ceil(new Date(`${dateTwo}`).getTime() - new Date(`${dateOne}`).getTime()) / (1000 * 3600 * 24)))
+      return true;
+    };
+    return false;
+    // console.log(daysLag);
+  }
 
   // const date12 = new Date(`05-24-2022`);
-  // const date22 = new Date('05-23-2022');
+  // const date22 = new Date('05-25-2022');
 
   // console.log(daysLags(date12, date22));
   // if (daysLags(date12, date22)) {
@@ -95,50 +94,50 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
     }
   }
 
-  // spoilerForMenuFilesLow.getAttribute('data-food-start');
-  // console.log(spoilerForMenuFilesLow.getAttribute('data-food-end'));
+  const dataSetEnd = spoilerForMenuFilesLow.getAttribute('data-food-end');
 
-  const end = new Date(); // const end = new Date('06-01-2022');
-  end.setDate(end.getDate() + 1); //add 1 day to today
-  // const start = new Date(`'09-01-2021'`);  //september 2 2021
-
+  let lastWorkDay = new Date(); // const lastWorkDay = new Date('06-01-2022');
+  lastWorkDay.setDate(lastWorkDay.getDate() + 1); //add 1 day to today
   const start = new Date(`${spoilerForMenuFilesLow.getAttribute('data-food-start')}`);  //september 2 2021
+  const finalDayOfWork = new Date(`${spoilerForMenuFilesLow.getAttribute('data-food-end')}`);
 
-  // const end = new Date(`${spoilerForMenuFilesLow.getAttribute('data-food-end')}`);
-  // const start = new Date(`${spoilerForMenuFilesLow.getAttribute('data-food-start')}`);  //september 2 2021
+  if ( finalDayOfWork - lastWorkDay < 0 ) {
+    console.log(`finalt bolshe`)
+    lastWorkDay = new Date(finalDayOfWork);
+  }
 
-  let loop = new Date(end);     // today
+  let loop = new Date(lastWorkDay);     // today
 
-  while (loop >= start) {
+  while ( loop >= start ) {
 
     let nowDate;
     if (loop.getDate() < 10 && loop.getMonth() > 9) {
       nowDate = `0${loop.getDate()}${loop.getMonth() + 1}${loop.getFullYear()}`;
-
     } else {
       if (loop.getDate() < 10 && loop.getMonth() < 10) {
         nowDate = `0${loop.getDate()}0${loop.getMonth() + 1}${loop.getFullYear()}`;
       } else {
         if (loop.getMonth() < 10 && loop.getDate() > 9) {
           nowDate = `${loop.getDate()}0${loop.getMonth() + 1}${loop.getFullYear()}`;
-
         } else {
           nowDate = `${loop.getDate()}${loop.getMonth() + 1}${loop.getFullYear()}`;
         }
       }
     }
-
+    const settingsOfFetch = {
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache'
+    }
     const pathFile = `menu-${nowDate}.pdf`;
     const pathFileLowSchool = `menu-0${nowDate}.pdf`;
 
-    console.log(`nowDate=${nowDate}`)
+    // console.log(`nowDate=${nowDate}`)
+
+
     if (arrayDaysNoFoodHighSchool.indexOf(nowDate) === -1) {
       const pathFullHighSchool = `https://www.liceum28.nnov.ru/wp-includes/ms-files.php?file=menu-${nowDate}.pdf`;
 
-      fetch(pathFullHighSchool, {
-        mode: 'cors', // no-cors, *cors, same-origin
-        cache: 'no-cache' // *default, no-cache, reload, force-cache, only-if-cached
-      }).then(
+      fetch(pathFullHighSchool, settingsOfFetch).then(
         (successResponse) => {
           if (successResponse.status != 200) {
             return null;
@@ -156,7 +155,7 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
     if ((arrayDaysNoFoodLowSchool.indexOf(`${nowDate}`) === -1 && arrayDaysNoFoodHighSchool.indexOf(nowDate) === -1)) {
       const pathFullLowSchool = `https://www.liceum28.nnov.ru/wp-includes/ms-files.php?file=menu-0${nowDate}.pdf`;
 
-      fetch(pathFullLowSchool).then(
+      fetch(pathFullLowSchool, settingsOfFetch).then(
         (successResponse) => {
           if (successResponse.status != 200) {
             return null;
