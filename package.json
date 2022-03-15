@@ -11,19 +11,25 @@
     "url": "https://github.com/mifomen/lic28/issues"
   },
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
     "browser-sync": "2.26.14",
     "eslint": "7.18.0",
-    "eslint-config-htmlacademy": "4.1.0"
+    "eslint-config-htmlacademy": "4.1.0",
+    "stylelint": "^14.5.3",
+    "stylelint-config-htmlacademy": "^0.1.12"
   },
   "license": "MIT",
   "scripts": {
-    "start-src": "browser-sync start --server --ss \"src\" --no-ui --files \"src/**/*.*\"",
-    "start-food-menu-fs": "browser-sync start --server --ss \"food-menu-fs\" --no-ui --files \"food-menu-fs/**/*.*\"",
-    "start-list-teacher": "browser-sync start --server --ss \"list-teacher-with-js\" --no-ui --files \"list-teacher-with-js/**/*.*\"",
-    "test": "npm run start-src",
-    "start": "npm run start-list-teacher",
-    "fs": "npm run start-food-menu-fs"
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"src/css/**/*.css\"",
+    "start": "browser-sync start --server --ss \"src\" --no-notify --no-ui --files \"./src/**/*.*\"",
+    "test": "eslint src/js/ && npm run editorconfig && npm run stylelint"
   },
+  "editorconfig-cli": [
+    "src/**/*.json",
+    "src/**/*.js",
+    "src/**/*.css"
+  ],
   "engines": {
     "node": "14.x",
     "npm": "6.x"

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.responsive.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <style>
+    .menu__button {
+      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7px 45px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      margin: 0.5% 0.5%;
+      outline-offset: 17px;
+      border-radius: 15px;
+      transition: 300ms;
+      font-family: 'Times New Roman', serif, arial;
+      /*font-family: 'Roboto Slab', serif;*/
+      text-shadow: 1px 1px 3px black;
+      width: 170px;
+    }
+
+    .green-btn {
+      border: 5px solid #38e161;
+      background-color: #30b350;
+    }
+
+    .orange-btn {
+      border: 5px solid #bf8b3a;
+      background-color: #d7ac69;
+    }
+
+    .orange-btn {
+      border: 5px solid #ff7112;
+      background-color: #ff9547;
+    }
+
+    .blue-btn {
+      border: 5px solid #3f82bb;
+      background-color: #00487a;
+    }
+
+    .red-btn {
+      border: 5px solid #bc0028;
+      background-color: #ca3c4c;
+    }
+
+    .pink-btn {
+      border: 5px solid #f674ba;
+      background-color: #ee2899;
+    }
+
+    .menu__button:hover {
+      transition: 300ms;
+      border-radius: 30px;
+      text-decoration: underline;
+    }
+
+    .ttu {
+      text-transform: uppercase;
+    }
+
+    .menu__button-wrapper {
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .fz36 {
+      font-size: 36px;
+    }
+
+    .table-news * {
+
+      padding: 0;
+    }
+
+    .table-news__list {
+
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+
+    }
+
+    .table-news__list-item {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      align-items: center;
+
+    }
+
+    .table-news__list-item-img {
+      width: 24px;
+    }
+
+    .table-news__list-link {
+      padding: 5px;
+      text-decoration: none;
+      text-shadow: 1px 1px 1px black, -1px -1px 1px black, -1px 1px 1px black, 1px -1px 1px black;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      font-family: arial, serif;
+    }
+
+    .table-news__list-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body
+  style="width: 90%; background-color: #fff; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==');: green;">
+
+  <span class="table-news__list-item"><img width="64px" src="https://www.liceum28.nnov.ru/files/docx-icon.gif"><a
+      style="color:#fba;" class=""
+      href="https://drive.google.com/file/d/1aMcQj4u8-cgKZv8Nwn-zgLLl0zk6HmyS/view?usp=sharing">Секция "Вклад е
+      стественных наук в здоровье человека"</a></span>
+
+  <div style="font-size: 18px;line-height: 1.5;color: #000">
+    <span style="font-size: 26px;font-weight: bold;">Наличие вакантных мест в школе на 2020–2021 учебный
+      год.</span><br />
+    <span style="font-size: 22px;font-weight: bold;">Образовательная программа начального общего
+      образования</span><br />
+    За счет ассигнований федерального бюджета: 0<br />
+    За счет бюджета субъектов РФ: 0<br />
+    За счет местных бюджетов: 0<br />
+    По договорам об образовании за счет средств физических и (или) юридических лиц: 0<br />
+    <span style="font-size: 22px;font-weight: bold;">Образовательная программа основного общего образования</span><br />
+    За счет ассигнований федерального бюджета: 0<br />
+    За счет бюджета субъектов РФ: 0<br />
+    За счет местных бюджетов: 0<br />
+    По договорам об образовании за счет средств физических и (или) юридических лиц: 0<br />
+    <span style="font-size: 22px;font-weight: bold;">Основная образовательная программа среднего общего
+      образования</span><br />
+    За счет ассигнований федерального бюджета: 0<br />
+    За счет бюджета субъектов РФ: 0<br />
+    За счет местных бюджетов: 0<br />
+    По договорам об образовании за счет средств физических и (или) юридических лиц: 0<br />
+    <span style="font-size: 22px;font-weight: bold;">Образовательная программа среднего общего образования
+      (ФКГОС)</span><br />
+    За счет ассигнований федерального бюджета: 0<br />
+    За счет бюджета субъектов РФ: 0<br />
+    За счет местных бюджетов: 0<br />
+    По договорам об образовании за счет средств физических и (или) юридических лиц: 0<br />
+    <span style="font-size: 22px;font-weight: bold;">Дополнительные общеобразовательные общеразвивающие
+      программы</span><br />
+    За счет ассигнований федерального бюджета: 0<br />
+    За счет бюджета субъектов РФ: 0<br />
+    За счет местных бюджетов: 0<br />
+    По договорам об образовании за счет средств физических и (или) юридических лиц: 0<br />
+  </div>
+
+  <div style="line-height: 1.2" class="transparent-border-5px AniBorderGreen df ffdc fjcc v">
+    <a target="_blank" href="https://www.liceum28.nnov.ru/priem-v-1cl-2021/" class="violet-ts" rel="noopener">Прием в 1
+      класс на 2021/2022 год</a>
+  </div>
+
+  <div style="line-height: 1.2" class="transparent-border-5px AniBorderGreen df ffdc fjcc v">
+    <a target="_blank" href="https://www.liceum28.nnov.ru/14116-2/#v10" class="violet-ts" rel="noopener">Прием заявлений
+      в 10 класс естественно-научного профиля на 2021/2022 год</a>
+  </div>
+
+
+
+  <div style="line-height: 1.2" class="transparent-border-5px AniBorderGreen df ffdc fjcc v">
+    <a target="_blank" href="https://www.liceum28.nnov.ru/priem-v-1cl-2021/" class="violet-ts" rel="noopener">Прием в 1
+      класс на 2021/2022 год</a>
+  </div>
+
+  <div style="line-height: 1.2" class="transparent-border-5px AniBorderGreen df ffdc fjcc v">
+    <a target="_blank" href="https://www.liceum28.nnov.ru/14116-2/#v10" class="violet-ts" rel="noopener">Прием заявлений
+      в 10 класс естественно-научного профиля на 2021/2022 год</a>
+  </div>
+
+
+
+  <p style="text-align: justify"><span style="font-size: 14pt;font-family: verdana, geneva, sans-serif"><a
+        href="http://base.garant.ru/70630558/" target="_blank" rel="noopener noreferrer">Приказ Минобрнауки №32 от
+        22.01.2014</a> Об утверждении Порядка приема граждан на обучение по образовательным программам начального
+      общего, основного общего и среднего общего образования</span></p>
+  <p style="text-align: justify"><span style="font-size: 14pt;font-family: verdana, geneva, sans-serif"><a
+        href="https://www.liceum28.nnov.ru/svedeniya-ob-ou/struktura-i-organy-upravleniya-obrazo/zakreplenie-territorii/"
+        target="_blank" rel="noopener noreferrer">Закрепление территорий</a></span></p>
+  <p style="text-align: justify"><a href="https://www.liceum28.nnov.ru/files/pravila-priema-v-litsej-2019-2020.pdf"
+      target="_blank" rel="noopener noreferrer"><span
+        style="font-size: 14pt;font-family: verdana, geneva, sans-serif">Правила приёма граждан в МАОУ "Лицей №28 имени
+        академика Б.А.Королёва"</span></a></p>
+  <p style="text-align: justify"><a href="https://www.liceum28.nnov.ru/files/Prikaz-76-OD-1klass.pdf" target="_blank"
+      rel="noopener noreferrer"><span style="font-size: 14pt;font-family: verdana, geneva, sans-serif">Приказ МАОУ
+        "Лицей №28 имени академика Б.А.Королёва" "Об организации приёма детей в МАОУ "Лицей № 28 имени академика Б.А.
+        Королёва" города Нижнего Новгорода в 2021 году"№ 76-ОД от 12.03.2021 г.</span></a></p>
+
+  <table class="vh" style="height: 299px;width: 637px" width="343">
+    <tbody>
+      <tr style="height: 21px">
+        <td style="width: 252.708px;height: 21px;text-align: center"><strong><span
+              style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Программа</span></strong></td>
+        <td style="width: 122.708px;height: 21px;text-align: center"><strong><span
+              style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Классы</span></strong></td>
+        <td style="width: 244.931px;height: 21px;text-align: center"><b>Количество вакантных мест для приема (перевода)
+            на места, финансируемые за счет бюджетных ассигнований</b></td>
+      </tr>
+      <tr style="height: 21px">
+        <td style="width: 252.708px;height: 84px" rowspan="4"><span
+            style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Общеобразовательная программа начального
+            общего образования</span></td>
+        <td style="width: 122.708px;height: 21px;text-align: center"><span
+            style="font-family: verdana, geneva, sans-serif;font-size: 14pt">1</span></td>
+        <td style="width: 244.931px;height: 21px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">0</span></td>
+      </tr>
+      <tr style="height: 21px">
+        <td style="width: 122.708px;height: 21px;text-align: center"><span
+            style="font-family: verdana, geneva, sans-serif;font-size: 14pt">2</span></td>
+        <td style="width: 244.931px;height: 21px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">0</span></td>
+      </tr>
+      <tr style="height: 21px">
+        <td style="width: 122.708px;height: 21px;text-align: center"><span
+            style="font-family: verdana, geneva, sans-serif;font-size: 14pt">3</span></td>
+        <td style="width: 244.931px;height: 21px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">0</span></td>
+      </tr>
+      <tr style="height: 21px">
+        <td style="width: 122.708px;height: 21px;text-align: center"><span
+            style="font-family: verdana, geneva, sans-serif;font-size: 14pt">4</span></td>
+        <td style="width: 244.931px;height: 21px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">0</span></td>
+      </tr>
+      <tr style="height: 22px">
+        <td style="width: 252.708px;height: 66px" rowspan="3"><span
+            style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Общеобразовательная программа основного
+            общего образования</span></td>
+        <td style="width: 122.708px;height: 22px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">5</span></td>
+        <td style="width: 244.931px;height: 22px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">0</span></td>
+      </tr>
+      <tr style="height: 22px">
+        <td style="width: 122.708px;height: 22px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">6</span></td>
+        <td style="width: 244.931px;height: 22px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">0</span></td>
+      </tr>
+      <tr style="height: 22px">
+        <td style="width: 122.708px;height: 22px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">7</span></td>
+        <td style="width: 244.931px;height: 22px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">0</span></td>
+      </tr>
+      <tr style="height: 22px">
+        <td style="width: 252.708px;height: 43px" rowspan="2"><span
+            style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Общеобразовательная программа с углубленным
+            изучением предметов естественно-научного цикла (химия, биология)</span></td>
+        <td style="width: 122.708px;height: 22px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">8</span></td>
+        <td style="width: 244.931px;height: 22px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">0</span></td>
+      </tr>
+      <tr style="height: 21px">
+        <td style="width: 122.708px;height: 21px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">9</span></td>
+        <td style="width: 244.931px;height: 21px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">0</span></td>
+      </tr>
+      <tr style="height: 21px">
+        <td style="width: 252.708px;height: 42px" rowspan="2"><span
+            style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Общеобразовательная программа с углубленным
+            изучением предметов технического цикла (физика,информатика)</span></td>
+        <td style="width: 122.708px;height: 21px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">8</span></td>
+        <td style="width: 244.931px;height: 21px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">0</span></td>
+      </tr>
+      <tr style="height: 21px">
+        <td style="width: 122.708px;height: 21px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">9</span></td>
+        <td style="width: 244.931px;height: 21px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">0</span></td>
+      </tr>
+      <tr style="height: 21px">
+        <td style="width: 252.708px;height: 21px" rowspan="2"><span
+            style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Общеобразовательная программа с углубленным
+            изучением предметов естественно-научного цикла (химия, биология)</span></td>
+        <td style="width: 122.708px;height: 21px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">10</span></td>
+        <td style="width: 244.931px;height: 21px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">0</span></td>
+      </tr>
+      <tr style="height: 22px">
+        <td style="width: 122.708px;height: 22px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">11</span></td>
+        <td style="width: 244.931px;height: 22px;text-align: center"><span
+            style="font-size: 14pt;font-family: verdana, geneva, sans-serif">0</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr />
+  <div class="vh">
+    <p id="v10" style="text-align: center">
+
+      <span style="background-color: #ccffcc"><strong><span
+            style="font-family: verdana, geneva, sans-serif;font-size: 14pt;background-color: #ccffcc">
+            Приём в 10 класс</span></strong></span>
+    </p>
+    <p style="text-align: justify"><span style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Традиционно в
+        <span style="background-color: #ffff99"><strong>июне</strong> </span>осуществляется «городской» набор в 10
+        класс.</span></p>
+    <p class="vh" style="text-align: justify"><span style="font-family: verdana, geneva, sans-serif;font-size: 14pt">8
+        класс — химико-биологическое направление</span></p>
+    <p style="text-align: justify"><a style="font-family: verdana, geneva, sans-serif;font-size: 14pt"
+        href="https://www.liceum28.nnov.ru/files/zayavlenie-10-class-2021-2022.docx" id="v10class" target="_blank"
+        rel="noopener">Заявление на прием в 10 класс естественно-научного профиля </a><br />
+      <span style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Прием заявлений осуществляется через
+        e-mail: liceum28nn@yandex.ru <br />Контактный телефон: 439-55-98
+      </span>
+    </p>
+    <p style="text-align: justify"><span style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Документы для
+        поступления:</span></p>
+
+    <ol>
+      <li style="text-align: justify"><span style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Итоговые
+          оценки текущего учебного года (заверенные печатью и подписью директора).</span></li>
+      <li style="text-align: justify"><span style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Портфолио
+          учащегося <span class="vh">(для поступающих в 8 класс — 5-8 классы, для поступающих в 10 класс — за 8-9
+            классы).</span></span></li>
+      <li style="text-align: justify"><span
+          style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Свидетельство о рождении ребенка (оригинал и
+          ксерокопия).</span></li>
+      <li style="text-align: justify"><span style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Паспорт
+          одного из родителей (законных представителей), страницы с фото и пропиской (оригинал и ксерокопия).</span>
+      </li>
+      <li style="text-align: justify"><span style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Копию
+          паспорта</span></li>
+      <li style="text-align: justify"><span
+          style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Свидетельство о регистрации ребенка по месту
+          жительства или свидетельства о регистрации ребенка по месту пребывания на закрепленной территории (оригинал и
+          ксерокопия).</span></li>
+      <li class="vh"><a href="https://www.liceum28.nnov.ru/files/zayavlenie-1-class-2021-2022.docx" target="_blank"
+          rel="noopener noreferrer"><span style="font-family: verdana, geneva, sans-serif;font-size: 14pt">Заявление
+            родителей &gt;&gt;&gt;</span></a></li>
+    </ol>
+    <p style="text-align: justify"><a
+        href="https://www.liceum28.nnov.ru/materialy-dlya-podgotovki-k-postupleniyu-v-litsej/" target="_blank"
+        rel="noopener noreferrer"><span style="font-size: 14pt"><strong><span
+              style="font-family: verdana, geneva, sans-serif">Материалы для подготовки к поступлению в
+              Лицей</span></strong></span></a></p>
+
+
+    <hr />
+  </div>
+  <hr>
+
+
+
+  <style>
+    .table__pro {
+
+      font-size: 18px;
+      line-height: 1.5;
+      color: #000;
+      border-spacing: 3px;
+      border: 1px solid #000;
+    }
+
+    .table__pro td {
+      font-size: 18px;
+      border: 1px solid #000;
+      text-align: center;
+    }
+  </style>
+  <table class="table__pro" border="5">
+    <tr style=" text-align: center;">
+      <th style="width:33%; text-align: center; ">Программа</th>
+      <th style="width:15%; text-align: center; ">Классы</th>
+      <th style="width:33%; text-align: center; ">Количество вакантных мест для приема (перевода) на места,
+        финансируемые за счет бюджетных ассигнований</th>
+    </tr>
+    <tr>
+      <td style="font-size: 18px;" rowspan="4">Общеобразовательная программа начального общего образования</td>
+      <td style="font-size: 18px;">1</td>
+      <td style="font-size: 18px;">0</td>
+    </tr>
+    <tr>
+      <td style="font-size: 18px;">2</td>
+      <td style="font-size: 18px;">0</td>
+    </tr>
+    <tr>
+      <td style="font-size: 18px;">3</td>
+      <td style="font-size: 18px;">0</td>
+    </tr>
+    <tr>
+      <td style="font-size: 18px;">4</td>
+      <td style="font-size: 18px;">0</td>
+    </tr>
+    <tr>
+      <td style="font-size: 18px;" rowspan="3">Общеобразовательная программа основного общего образования</td>
+      <td style="font-size: 18px;">5</td>
+      <td style="font-size: 18px;">0</td>
+    </tr>
+    <tr>
+      <td style="font-size: 18px;">6</td>
+      <td style="font-size: 18px;">0</td>
+    </tr>
+    <tr>
+      <td style="font-size: 18px;">7</td>
+      <td style="font-size: 18px;">0</td>
+    </tr>
+    <tr>
+      <td style="font-size: 18px;" rowspan="2">Общеобразовательная программа с углубленным изучением предметов
+        естественно-научного цикла (химия, биология)</td>
+      <td style="font-size: 18px;">8</td>
+      <td style="font-size: 18px;">0</td>
+    </tr>
+    <tr>
+      <td style="font-size: 18px;">9</td>
+      <td style="font-size: 18px;">0</td>
+    </tr>
+    <tr>
+      <td style="font-size: 18px;" rowspan="2">Общеобразовательная программа с углубленным изучением предметов
+        технического цикла (физика,информатика)</td>
+      <td style="font-size: 18px;">8</td>
+      <td style="font-size: 18px;">0</td>
+    </tr>
+    <tr>
+      <td style="font-size: 18px;">9</td>
+      <td style="font-size: 18px;">0</td>
+    </tr>
+    <td style="font-size: 18px;" rowspan="2">Общеобразовательная программа с углубленным изучением предметов
+      естественно-научного цикла (химия, биология)</td>
+    <td style="font-size: 18px;">10</td>
+    <td style="font-size: 18px;">0</td>
+    </tr>
+    <tr>
+      <td style="font-size: 18px;">11</td>
+      <td style="font-size: 18px;">0</td>
+    </tr>
+
+  </table>
+  <ul>
+
+    <li><a href="http://base.garant.ru/70630558/" target="_blank">Приказ Минобрнауки №32 от 22.01.2014</a> Об
+      утверждении Порядка приема граждан на обучение по образовательным программам начального общего, основного общего и
+      среднего общего образования</li>
+    <li><a
+        href="https://www.liceum28.nnov.ru/svedeniya-ob-ou/struktura-i-organy-upravleniya-obrazo/zakreplenie-territorii/"
+        target="_blank">Закрепление территорий</a></li>
+    <li><a href="https://www.liceum28.nnov.ru/files/pravila-priema-v-litsej-2019-2020.pdf" target="_blank">Правила
+        приёма граждан в МАОУ "Лицей №28 имени академика Б.А.Королёва"</a></li>
+    <li><a href="https://www.liceum28.nnov.ru/files/Prikaz-76-OD-1klass.pdf" target="_blank">Приказ МАОУ "Лицей №28
+        имени академика Б.А.Королёва" "Об организации приёма детей в МАОУ "Лицей № 28 имени академика Б.А. Королёва"
+        города Нижнего Новгорода в 2021 году"№ 76-ОД от 12.03.2021 г.</a></li>
+  </ul>
+
+
+  <h2 style="color:#000; text-align: center;">Приём документов в 1 класс на 2021-2022 учебный год начинается 1 апреля
+    2021 года!</h2>
+  <h3 style="color:#000; text-align: center;">Приём в 1 класс</h3>
+  <p>
+    <u>Количество мест для приёма:</u> 90<br>
+    <strong>График приема документов</strong> <br>
+    <u>вторник, среда, четверг</u>: с 13.00 до 16.00</u><br>
+    <u>суббота</u>: с 11.00 - 13.00 <br>
+    <u>По адресу:</u> пр. Гагарина, д. 8<br>
+  </p>
+  <ul>
+    <caption> Документы, необходимые для поступления:</caption>
+    <li>Заявление о зачислении в 1-ый класс. Образец заявления <a
+        href="https://www.liceum28.nnov.ru/files/zayavlenie-1-class-2021-2022.docx" target="_blank">ссылка</a></li>
+    <li>Оригинал и ксерокопия свидетельства о рождении ребенка;</li>
+    <li>Паспорт одного из родителей (законных представителей);</li>
+    <li>Оригинал и ксерокопия свидетельства о регистрации ребенка по месту жительства или свидетельства о регистрации
+      ребенка по месту пребывания на закрепленной территории.</li>
+  </ul>
+
+
+  <p style="text-align: center;">Перед заполнением ознакомьтесь с <a
+      href="https://www.liceum28.nnov.ru/zashhita-personalnyh-dannyh/" target="_blank"
+      rel="noopener noreferrer">cогласием на обработку персональных данных</a><br>
+    <a href="https://goo.gl/4rSwJb" target="_blank" rel="noopener noreferrer">Электронная форма подачи заявления</a><a
+      href="https://goo.gl/4rSwJb" target="_blank" rel="noopener noreferrer">
+  </p>
+  </div>
+
+
+
+
+
+
+  <div class="table-news">
+    <div class="table-news__list">
+      <span class="table-news__list-item"><img class="table-news__list-item-img"
+          src="https://www.liceum28.nnov.ru/files/google-doc-icon.png"><a style="color:white;"
+          class="table-news__list-link"
+          href="https://drive.google.com/file/d/1aMcQj4u8-cgKZv8Nwn-zgLLl0zk6HmyS/view?usp=sharing">Секция "Вклад е
+          стественных наук в здоровье человека"</a></span>
+      <span class="table-news__list-item"><img class="table-news__list-item-img"
+          src="https://www.liceum28.nnov.ru/files/google-doc-icon.png"><a style="color:white;"
+          class="table-news__list-link"
+          href="https://drive.google.com/file/d/18ETVPPuiVaoHJAoXKNxYy1iNdCu0iVR6/view?usp=sharing">Секция "Вопросы
+          медицины на английском языке"</a></span>
+      <span class="table-news__list-item"><img class="table-news__list-item-img"
+          src="https://www.liceum28.nnov.ru/files/google-doc-icon.png"><a style="color:white;"
+          class="table-news__list-link"
+          href="https://drive.google.com/file/d/19tuADsNsllXvxCBb-zPH2QzyFVzsHHGc/view?usp=sharing">Секция "Здровье
+          земли"</a></span>
+      <span class="table-news__list-item"><img class="table-news__list-item-img"
+          src="https://www.liceum28.nnov.ru/files/google-doc-icon.png"><a style="color:white;"
+          class="table-news__list-link"
+          href="https://drive.google.com/file/d/192b7433ZRWmW_pdqWLfRWGd25CkuE72-/view?usp=sharing">Секция "Медицина на
+          страже здоровья человека</a></span>
+      <span class="table-news__list-item"><img class="table-news__list-item-img"
+          src="https://www.liceum28.nnov.ru/files/google-doc-icon.png"><a style="color:white;"
+          class="table-news__list-link"
+          href="https://drive.google.com/file/d/1di49q8RBVfpLtQwhzVSMkS4yu6FGkYv2/view?usp=sharing">Секция "Медицинская
+          терминология на латинском языке"</a></span>
+      <span class="table-news__list-item"><img class="table-news__list-item-img"
+          src="https://www.liceum28.nnov.ru/files/google-doc-icon.png"><a style="color:white;"
+          class="table-news__list-link"
+          href="https://drive.google.com/file/d/1cDv5rkdolktP5Jenl2mxM1fozH8Lyi2U/view?usp=sharing">Секция "Социальные
+          вопросы в медицине"</a></span>
+      <span class="table-news__list-item"><img class="table-news__list-item-img"
+          src="https://www.liceum28.nnov.ru/files/google-doc-icon.png"><a style="color:white;"
+          class="table-news__list-link"
+          href="https://drive.google.com/file/d/1NciNrqCaGqX4yDuDohosZ1YDznkPVpa4/view?usp=sharing">Секция "Современные
+          технологии и з-доровье человека 1"</a></span>
+      <span class="table-news__list-item"><img class="table-news__list-item-img"
+          src="https://www.liceum28.nnov.ru/files/google-doc-icon.png"><a style="color:white;"
+          class="table-news__list-link"
+          href="https://drive.google.com/file/d/1W6D91dZQXU5cDvRhfir0BxvIsxLfjFJp/view?usp=sharing">Секция "Уникальная
+          система - Человек 1</a></span>
+      <span class="table-news__list-item"><img class="table-news__list-item-img"
+          src="https://www.liceum28.nnov.ru/files/google-doc-icon.png"><a style="color:white;"
+          class="table-news__list-link"
+          href="https://drive.google.com/file/d/1FU773DTa19KaW9dZJbh3DTUt0j5imggl/view?usp=sharing">Секция "Уникальная
+          система - Человек 2</a></span>
+      <span class="table-news__list-item"><img class="table-news__list-item-img"
+          src="https://www.liceum28.nnov.ru/files/google-doc-icon.png"><a style="color:white;"
+          class="table-news__list-link"
+          href="https://drive.google.com/file/d/1BK_7zLqgOvAeaorSQbgMm-uFNDqR9w9a/view?usp=sharing">Секция "Экология
+          здоровья и окружающей среды 1</a></span>
+      <span class="table-news__list-item"><img class="table-news__list-item-img"
+          src="https://www.liceum28.nnov.ru/files/google-doc-icon.png"><a style="color:white;"
+          class="table-news__list-link"
+          href="https://drive.google.com/file/d/1qpoxdKgyVfQ8jEGdAZWFcffqzOSGa9b4/view?usp=sharing">Секция "Экология
+          здоровья и окружающей среды 2</a></span>
+    </div>
+  </div>
+
+  <div style="min-height: 600px;">отступ</div>
+
+  <div class="menu__button-wrapper">
+    <a class="menu__button blue-btn ttu" href="#">Звонки<br> 1 класс</a>
+    <a class="menu__button green-btn ttu" href="#">Звонки<br> 2-4 классы</a>
+    <a class="menu__button pink-btn ttu" href="#">Звонки<br> 5-11 классы</a>
+    <a class="menu__button green-btn" href="#">Расписание уроков<br> 1-4 классы</a>
+    <a class="menu__button orange-btn" href="#">Расписание уроков<br> 5-11 классы</a>
+    <a class="menu__button blue-btn" href="#">Расписание<br> спецкурсов</a>
+    <a class="menu__button red-btn ttu fw-bold fz36" href="#">каникулы</a>
+    <a class="menu__button blue-btn fw-bold fz36" href="#">ГИА 9 , 11</a>
+    <a class="menu__button orange-btn" href="#">Расписание внеурочной деятельности</a>
+  </div>
+
+
+  <div class="df fww fjcsa ">
+    <a style="width:25%" href="http://www.liceum28.nnov.ru/files/Pandus1.jpg" target="_blank"
+      rel="noopener noreferrer"><img width="100%" src="http://www.liceum28.nnov.ru/files/Pandus1.jpg" /></a>
+    <a style="width:25%" href="http://www.liceum28.nnov.ru/files/Pandus2.jpg" target="_blank"
+      rel="noopener noreferrer"><img width="100%" src="http://www.liceum28.nnov.ru/files/Pandus2.jpg" /></a>
+    <a style="width:25%" href="http://www.liceum28.nnov.ru/files/Pandus3.jpg" target="_blank"
+      rel="noopener noreferrer"><img width="100%" src="http://www.liceum28.nnov.ru/files/Pandus3.jpg" /></a>
+    <a style="width:25%" href="http://www.liceum28.nnov.ru/files/Pandus4.jpg" target="_blank"
+      rel="noopener noreferrer"><img width="100%" src="http://www.liceum28.nnov.ru/files/Pandus4.jpg" /></a>
+  </div>
+
+
+  <div class="df fww fjcsa " style="width: 90%;">
+
+    <a style="width: 25%;" href="http://www.liceum28.nnov.ru/files/save_quality_autodor_001.jpg" target="_blank"
+      rel="noopener noreferrer"><img src="http://www.liceum28.nnov.ru/files/save_quality_autodor_001.jpg"
+        width="100%"></a>
+    <a style="width: 25%;" href="http://www.liceum28.nnov.ru/files/save_quality_autodor_002.jpg" target="_blank"
+      rel="noopener noreferrer"><img src="http://www.liceum28.nnov.ru/files/save_quality_autodor_002.jpg"
+        width="100%"></a>
+    <a style="width: 25%;" href="http://www.liceum28.nnov.ru/files/save_quality_autodor_003.jpg" target="_blank"
+      rel="noopener noreferrer"><img src="http://www.liceum28.nnov.ru/files/save_quality_autodor_003.jpg"
+        width="100%"></a>
+    <a style="width: 25%;" href="http://www.liceum28.nnov.ru/files/save_quality_autodor_004.jpg" target="_blank"
+      rel="noopener noreferrer"><img src="http://www.liceum28.nnov.ru/files/save_quality_autodor_004.jpg"
+        width="100%"></a>
+    <a style="width: 25%;" href="http://www.liceum28.nnov.ru/files/save_quality_autodor_005.jpg" target="_blank"
+      rel="noopener noreferrer"><img src="http://www.liceum28.nnov.ru/files/save_quality_autodor_005.jpg"
+        width="100%"></a>
+    <a style="width: 25%;" href="http://www.liceum28.nnov.ru/files/save_quality_autodor_006.jpg" target="_blank"
+      rel="noopener noreferrer"><img src="http://www.liceum28.nnov.ru/files/save_quality_autodor_006.jpg"
+        width="100%"></a>
+    <a style="width: 25%;" href="http://www.liceum28.nnov.ru/files/save_quality_autodor_007.jpg" target="_blank"
+      rel="noopener noreferrer"><img src="http://www.liceum28.nnov.ru/files/save_quality_autodor_007.jpg"
+        width="100%"></a>
+    <a style="width: 25%;" href="http://www.liceum28.nnov.ru/files/save_quality_autodor_008.jpg" target="_blank"
+      rel="noopener noreferrer"><img src="http://www.liceum28.nnov.ru/files/save_quality_autodor_008.jpg"
+        width="100%"></a>
+
+  </div>
+
+  <script src="./js/api.js" type="module"></script>
+</body>
+
+</html>
