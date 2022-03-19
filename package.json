@@ -22,7 +22,7 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"src/css/**/*.css\"",
-    "start": "browser-sync start --server --ss \"src\" --no-notify --no-ui --files \"./src/**/*.*\" --browser \"google-chrome\"",
+    "start": "browser-sync start --server --no-notify --no-ui --files \"./src/**/*.*\" --browser \"google-chrome\"",
     "test": "eslint src/js/ && npm run editorconfig && npm run stylelint"
   },
   "editorconfig-cli": [
