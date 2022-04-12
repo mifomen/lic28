@@ -9,8 +9,7 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
   const postFragment = document.createDocumentFragment();
 
   renderPosts.forEach((post) => {
-    if ( post.classNOO === levelEducation || (post.classSOO === levelEducation && post.classSOO === levelEducation) || post.classOOO === levelEducation
-    ) {
+    if ( post.classNOO === levelEducation || post.classSOO === levelEducation || post.classOOO === levelEducation) {
       const cardTeacher = document.createElement('li');
       cardTeacher.classList.add('fz18');
       const cardTeacherFIO = document.createElement('span');
