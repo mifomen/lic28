@@ -1,4 +1,4 @@
-import {DATA_OF_TEACHERS,setTimeWords} from './data.js';
+import {setTimeWords,sortByFIO} from './data.js';
 import { getData } from './utils.js';
 
 const renderPostOfTeachers = (renderPosts, levelEducation) => {
@@ -9,10 +9,7 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
   const postFragment = document.createDocumentFragment();
 
   renderPosts.forEach((post) => {
-    if (
-      post.classNOO === levelEducation ||
-      (post.classSOO === levelEducation && post.classSOO === levelEducation) ||
-      post.classOOO === levelEducation
+    if ( post.classNOO === levelEducation || (post.classSOO === levelEducation && post.classSOO === levelEducation) || post.classOOO === levelEducation
     ) {
       const cardTeacher = document.createElement('li');
       cardTeacher.classList.add('fz18');
@@ -88,15 +85,15 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
 
 getData((listArray) => {
   console.log(listArray);
-  for ( const listArrayItem of listArray) {
-    listArrayItem.workExperienceInYear = setTimeWords(new Date().getFullYear() - listArrayItem.workExperienceInYearStart);
+  // for ( const listArrayItem of listArray) {
+  //   listArrayItem.workExperienceInYear = setTimeWords(new Date().getFullYear() - listArrayItem.workExperienceInYearStart);
 
-    listArrayItem.workAsTeacherInYear = setTimeWords(new Date().getFullYear() - listArrayItem.workAsTeacherInYearStart);
-  }
-  renderPostOfTeachers(listArray, parseInt(1, 10));
+  //   listArrayItem.workAsTeacherInYear = setTimeWords(new Date().getFullYear() - listArrayItem.workAsTeacherInYearStart);
+  // }
+  renderPostOfTeachers(listArray.sort(sortByFIO), parseInt(1, 10));
 
   const chooseLevelEducation = document.querySelector('.js-level-education');
   chooseLevelEducation.addEventListener('change', () => {
-  renderPostOfTeachers(listArray,parseInt(chooseLevelEducation.value, 10));
+  renderPostOfTeachers(listArray.sort(sortByFIO),parseInt(chooseLevelEducation.value, 10));
   });
 })
