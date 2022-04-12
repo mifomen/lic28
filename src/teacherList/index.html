@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список учиетелй по ФИО By js</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+      </head>
+      <body>
+        <p class="list-of-teacher"> Персональный состав педагогических работников, реализующих основную образовательную программу
+          <select
+            class="level-education js-level-education"
+            name="chooseLevelEducation"
+            id="level-education"
+          >
+            <option data-teacher="1" value="1">
+              начальное общее образование
+            </option>
+            <option data-teacher="2" value="2">
+              основное общее образование
+            </option>
+            <option data-teacher="3" value="3">
+              среднее общее образование
+            </option>
+          </select>
+        </p>
+        <!-- data-teacher="2" - 1 -NOO 2- OOO - 3 - SOO -->
+        <ol class="parent" data-teacher="4"></ol>
+      </body>
+      <script src="./js/api.js" type="module"></script>
+    </html>
+  </body>
+</html>

@@ -1302,3 +1302,14 @@ font-size: 1.2em;
 .reset-first-counter {
   counter-reset: first 0;
 }
+
+.list-of-teacher {
+  font-size: 20px;
+}
+
+.level-education {
+  font-size: 20px;
+  padding: 5px;
+  border: 2px double black;
+  border-radius: 20px;
+}
