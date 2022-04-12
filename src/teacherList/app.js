@@ -1,5 +1,50 @@
-import {setTimeWords,sortByFIO} from './data.js';
-import { getData } from './utils.js';
+const DATA_GET_URL = './teachers.json';
+const getData = (onSuccess) => {
+  fetch(DATA_GET_URL)
+    .then((response) => response.json())
+    .then((teacherList) => {
+      onSuccess(teacherList);
+    });
+};
+
+
+const sortByFIO = (a, b) => {
+  if (a.fio < b.fio) {
+    return -1;
+  }
+  if (a.fio > b.fio) {
+    return 1;
+  }
+  return 0;
+};
+
+function setTimeWords (numberYear) {
+  const ageLastNumber = numberYear % 10;
+  if (ageLastNumber === 0 || ageLastNumber >= 5 && ageLastNumber <= 9)
+  {
+    return `${numberYear} лет`;
+  } else
+  if (ageLastNumber >= 2 && ageLastNumber <= 4)
+  {
+    return `${numberYear} года`;
+  } else {
+    if (ageLastNumber > 10 && ageLastNumber < 15)
+    {
+      return `${numberYear} лет`;
+    } else {
+      if (numberYear % 100 > 10 && numberYear % 100 < 15)
+      {
+        return `${numberYear} лет`;
+      } else {
+        if (ageLastNumber === 1)
+        {
+          return `${numberYear} год`;
+        }
+      }
+    }
+  }
+}
+
 
 const renderPostOfTeachers = (renderPosts, levelEducation) => {
   // levelEducation => 1= HOO 2 = OOO 3 = COO  4 = HOO&OOO 5 = OOO&COO
@@ -41,13 +86,13 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
         cardTeacherupQualification.innerHTML = `<strong>Повышение квалификации:</strong> ${post.upQualification}<br>`;
         cardTeacher.appendChild(cardTeacherupQualification);
       }
-      if (post.academicDegree !== '' && post.qualification !== undefined) {
+      if (post.academicDegree !== '' && post.academicDegree !== undefined) {
         const cardTeacherAcademicDegree = document.createElement('span');
         cardTeacherAcademicDegree.innerHTML = `<strong>Ученая степень:</strong> ${post.academicDegree}<br>`;
         cardTeacher.appendChild(cardTeacherAcademicDegree);
       }
 
-      if (post.academicTitle !== '' && post.qualificaacademicTitletion !== undefined) {
+      if (post.academicTitle !== '' && post.academicTitle !== undefined) {
         const cardTeacherAcademicTitle = document.createElement('span');
         cardTeacherAcademicTitle.innerHTML = `<strong>Ученое звание:</strong> ${post.academicTitle}<br>`;
         cardTeacher.appendChild(cardTeacherAcademicTitle);
@@ -83,7 +128,7 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
 // }
 
 getData((listArray) => {
-  console.log(listArray);
+  // console.log(listArray);
   // for ( const listArrayItem of listArray) {
   //   listArrayItem.workExperienceInYear = setTimeWords(new Date().getFullYear() - listArrayItem.workExperienceInYearStart);
 
@@ -93,6 +138,6 @@ getData((listArray) => {
 
   const chooseLevelEducation = document.querySelector('.js-level-education');
   chooseLevelEducation.addEventListener('change', () => {
-  renderPostOfTeachers(listArray.sort(sortByFIO),parseInt(chooseLevelEducation.value, 10));
+    renderPostOfTeachers(listArray.sort(sortByFIO),parseInt(chooseLevelEducation.value, 10));
   });
-})
+});

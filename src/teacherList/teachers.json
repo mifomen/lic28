@@ -354,6 +354,22 @@
     "academicTitle": ""
   },
   {
+    "fio": "Зефирова Софья Анатольевна",
+    "classNOO": 0,
+    "classSOO": 2,
+    "classOOO": 3,
+    "dolzhnost": "учитель",
+    "nameStudy": "",
+    "levelOfStudy": "высшее",
+    "qualification": "учитель русского языка и литературы",
+    "upQualification": "Технология преподавания дисциплин учебного плана начального и среднего общего образования в условиях ведения профессионального стандарта педагога и реализации ФГОС, НГПУ, 2018",
+    "workExperienceInYearStart": 1981,
+    "workAsTeacherInYearStart": 1982,
+    "subjectsTaught": "история, обществознание",
+    "academicDegree": "",
+    "academicTitle": ""
+  },
+  {
     "fio": "Демина  Марина Юрьевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -381,22 +397,6 @@
     "upQualification": "«1С: Образование 4.0. Школа», ООО «Активные технологии», 2018",
     "workExperienceInYearStart": 1989,
     "workAsTeacherInYearStart": 1989,
-    "subjectsTaught": "история, обществознание",
-    "academicDegree": "",
-    "academicTitle": ""
-  },
-  {
-    "fio": "Зефирова Софья Анатольевна",
-    "classNOO": 0,
-    "classSOO": 2,
-    "classOOO": 3,
-    "dolzhnost": "учитель",
-    "nameStudy": "",
-    "levelOfStudy": "высшее",
-    "qualification": "учитель русского языка и литературы",
-    "upQualification": "Технология преподавания дисциплин учебного плана начального и среднего общего образования в условиях ведения профессионального стандарта педагога и реализации ФГОС, НГПУ, 2018",
-    "workExperienceInYearStart": 1981,
-    "workAsTeacherInYearStart": 1982,
     "subjectsTaught": "история, обществознание",
     "academicDegree": "",
     "academicTitle": ""
