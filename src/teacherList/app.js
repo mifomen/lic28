@@ -1,12 +1,29 @@
-const DATA_GET_URL = './teachers.json';
+const URL = './teachers.json';
 const getData = (onSuccess) => {
-  fetch(DATA_GET_URL)
+  fetch(URL)
     .then((response) => response.json())
     .then((teacherList) => {
       onSuccess(teacherList);
     });
 };
 
+// async function getData(teacherList) {
+//   console.log('Starting getData...')
+//   try {
+//     const response = await fetch(URL);
+//     const teacherList = await response.json();
+//     console.log(`data=${data}`);
+//     return teacherList;
+//   }
+//   catch(errors) {
+//     console.log(`errors=${errors}`);
+//   }
+  // fetch(URL)
+  //   .then(() => response.json())
+  //   .then((teacherList) => {
+  //     onSuccess(teacherList);
+  //   });
+// };
 
 const sortByFIO = (a, b) => {
   if (a.fio < b.fio) {
@@ -20,28 +37,21 @@ const sortByFIO = (a, b) => {
 
 function setTimeWords (numberYear) {
   const ageLastNumber = numberYear % 10;
-  if (ageLastNumber === 0 || ageLastNumber >= 5 && ageLastNumber <= 9)
-  {
+  // console.log(`numberYear %100 = ${numberYear %100}; ageLastNumber=${ageLastNumber}; numberYear=${numberYear}`)
+  if (ageLastNumber === 0 || ageLastNumber >= 5 && ageLastNumber <= 9) {
     return `${numberYear} лет`;
-  } else
-  if (ageLastNumber >= 2 && ageLastNumber <= 4)
-  {
-    return `${numberYear} года`;
-  } else {
-    if (ageLastNumber > 10 && ageLastNumber < 15)
-    {
-      return `${numberYear} лет`;
-    } else {
-      if (numberYear % 100 > 10 && numberYear % 100 < 15)
-      {
-        return `${numberYear} лет`;
-      } else {
-        if (ageLastNumber === 1)
-        {
-          return `${numberYear} год`;
-        }
-      }
-    }
+  }
+  if (numberYear >= 10 && numberYear <= 15) {
+    return `${numberYear} лет`;
+  }
+  if (ageLastNumber >= 2 && ageLastNumber <= 4) {
+    return `${numberYear} года`; // Года || лет
+  }
+  if (numberYear % 100 > 10 && numberYear % 100 < 15) {
+    return `${numberYear} лет`;
+  }
+  if (ageLastNumber === 1) {
+    return `${numberYear} год`;
   }
 }
 
