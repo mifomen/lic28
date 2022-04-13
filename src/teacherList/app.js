@@ -26,10 +26,10 @@ const getData = (onSuccess) => {
 // };
 
 const sortByFIO = (a, b) => {
-  if (a.fio < b.fio) {
+  if ( a.fio < b.fio ) {
     return -1;
   }
-  if (a.fio > b.fio) {
+  if ( a.fio > b.fio ) {
     return 1;
   }
   return 0;
@@ -38,19 +38,22 @@ const sortByFIO = (a, b) => {
 function setTimeWords (numberYear) {
   const ageLastNumber = numberYear % 10;
   // console.log(`numberYear %100 = ${numberYear %100}; ageLastNumber=${ageLastNumber}; numberYear=${numberYear}`)
-  if (ageLastNumber === 0 || ageLastNumber >= 5 && ageLastNumber <= 9) {
+  if ( numberYear <= 0 ) {
+    return 'молодой специалист';
+  }
+  if ( ageLastNumber === 0 || ageLastNumber >= 5 && ageLastNumber <= 9 ) {
     return `${numberYear} лет`;
   }
-  if (numberYear >= 10 && numberYear <= 15) {
+  if ( numberYear >= 10 && numberYear <= 15 ) {
     return `${numberYear} лет`;
   }
-  if (ageLastNumber >= 2 && ageLastNumber <= 4) {
+  if ( ageLastNumber >= 2 && ageLastNumber <= 4 ) {
     return `${numberYear} года`; // Года || лет
   }
-  if (numberYear % 100 > 10 && numberYear % 100 < 15) {
+  if ( numberYear % 100 > 10 && numberYear % 100 < 15 ) {
     return `${numberYear} лет`;
   }
-  if (ageLastNumber === 1) {
+  if ( ageLastNumber === 1 ) {
     return `${numberYear} год`;
   }
 }
