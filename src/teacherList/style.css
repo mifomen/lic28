@@ -1,20 +1,20 @@
 @-webkit-keyframes b2pxb {
   0%,
   to {
-    border: 2px solid #0b7e0e
+    border: 2px solid #0b7e0e;
   }
   50% {
-    border: 2px solid transparent
+    border: 2px solid transparent;
   }
 }
 
 @keyframes b2pxb {
   0%,
   to {
-    border: 2px solid #0b7e0e
+    border: 2px solid #0b7e0e;
   }
   50% {
-    border: 2px solid transparent
+    border: 2px solid transparent;
   }
 }
 
