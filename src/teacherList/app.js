@@ -18,11 +18,11 @@ const getData = (onSuccess) => {
 //   catch(errors) {
 //     console.log(`errors=${errors}`);
 //   }
-  // fetch(URL)
-  //   .then(() => response.json())
-  //   .then((teacherList) => {
-  //     onSuccess(teacherList);
-  //   });
+// fetch(URL)
+//   .then(() => response.json())
+//   .then((teacherList) => {
+//     onSuccess(teacherList);
+//   });
 // };
 
 const sortByFIO = (a, b) => {
