@@ -68,6 +68,33 @@ const setTimeWordMonths = (numberMonth) => {
   return `${numberMonth} месяцев`;
 };
 
+const checkSummerTimeWithMonths = (thisTimeString) => {
+  const thisTime = new Date(`08-30-${thisTimeString}`);
+
+  if (new Date().getYear() - thisTime.getYear() <= 0 ) {
+    return 'молодой специалист';
+  }
+  const allMonths = (new Date().getYear()*12 + new Date().getMonth()+1) - (thisTime.getYear()*12 + thisTime.getMonth()+1);
+
+
+  const calcYears = Math.trunc ( allMonths / 12 );
+  const calcMonth = Math.trunc ( allMonths % 12 );
+
+  // console.log(`allMonths=${allMonths} calcYears=${calcYears} calcMonth=${calcMonth}`); //eslint-disable-line
+
+  if ( calcYears <= 0 ) {
+    return `${setTimeWordMonths(calcMonth)}`;
+  }
+  if (calcMonth === 0 ) {
+    return `${setTimeWordYear(calcYears)}`;
+  }
+  return `${setTimeWordYear(calcYears)} и ${setTimeWordMonths(calcMonth)} `;
+};
+
+// const teacherTime = '1992'; //mm/dd/yyyy
+
+// console.log(`resault = ${checkSummerTimeWithMonths(teacherTime)}`); //eslint-disable-line
+
 
 const renderPostOfTeachers = (renderPosts, levelEducation) => {
   // levelEducation => 1= HOO 2 = OOO 3 = COO  4 = HOO&OOO 5 = OOO&COO
@@ -130,6 +157,15 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
       cardTeacherworkAsTeacherInYear.innerHTML = `<strong>Стаж работы по специальности:</strong> ${setTimeWordYear(new Date().getFullYear() - post.workAsTeacherInYearStart)}<br>`;
       cardTeacher.appendChild(cardTeacherworkAsTeacherInYear);
 
+      //expirience teacher with month
+      // const cardTeacherworkExperienceInYearWithMonths = document.createElement('span');
+      // cardTeacherworkExperienceInYearWithMonths.innerHTML = `<strong>Общий стаж работы:</strong> ${checkSummerTimeWithMonths(post.workExperienceInYearStart)}<br>`;
+      // cardTeacher.appendChild(cardTeacherworkExperienceInYearWithMonths);
+
+      // const cardTeacherworkAsTeacherInYearWithMonths = document.createElement('span');
+      // cardTeacherworkAsTeacherInYearWithMonths.innerHTML = `<strong>Стаж работы по специальности:</strong> ${checkSummerTimeWithMonths(post.workAsTeacherInYearStart)}<br>`;
+      // cardTeacher.appendChild(cardTeacherworkAsTeacherInYearWithMonths);
+
       const cardTeacherSubjectsTaught = document.createElement('span');
       cardTeacherSubjectsTaught.innerHTML = `<strong>Преподоваемые учебные предметы:</strong> ${post.subjectsTaught}<br>`;
       cardTeacher.appendChild(cardTeacherSubjectsTaught);
@@ -165,46 +201,3 @@ getData((listArray) => {
     renderPostOfTeachers(listArray.sort(sortByFIO),parseInt(chooseLevelEducation.value, 10));
   });
 });
-
-const checkSummerTime = (nowYear,startYear) => {
-  const numberYear = nowYear.getYear() - startYear.getYear();
-
-  // if (nowYear.getMonth() === 7 || nowYear.getMonth() === 8 || nowYear.getMonth() === 9 ) {
-    // return 'летние каникулы'; //летние каникулы
-  // }
-  //was +1
-  const numberOfMonths = (nowYear.getMonth() - startYear.getMonth());
-  console.log(`numberOfMonths=${numberOfMonths}`); //eslint-disable-line
-  const months = (nowYear.getYear()*12 + nowYear.getMonth()+1) - (startYear.getYear()*12 + startYear.getMonth()+1)
-  const allMonth = months % 12;
-
-  const calcYears = Math.round((months) / 12 );
-
-  console.log(`months=${months} calcYears=${calcYears} allMonth=${allMonth}`)
-  if ( calcYears <= 0 ) {
-    return `${setTimeWordMonths(allMonth)}`;
-  }
-  if (numberOfMonths === 0 ) {
-    return `${setTimeWordYear(numberYear)}`;
-    // return `${setTimeWordYear(numberYear)} ${setTimeWordMonths(allMonth)}`;
-  }
-  // numberOfMonths
-  return `${setTimeWordYear(calcYears)} и ${setTimeWordMonths(allMonth)} `;
-};
-
-const nowTime = new Date('5/1/2022'); //MM/DD/YYYY
-const teacherTime = new Date('6/1/2021');
-
-console.log(`resault = \n ${checkSummerTime(nowTime,teacherTime)}`); //eslint-disable-line
-
-
-// console.log(`nowTime =${nowTime}`);
-// console.log(`teacherTime=${teacherTime}`);
-
-// const resault = Math.round(( nowTime - teacherTime ) / (60 * 60 * 60 * 24 * 31 * 12 * 100) );
-
-// console.log(`resault=${resault}`);
-
-// let month2=new Date().getMonth();
-// let month1=new Date('01/06/2021').getMonth();
-// console.log(`nowTime.getMonth()=${nowTime.getMonth()}`);
