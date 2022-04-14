@@ -74,19 +74,13 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
       cardTeacherFIO.innerHTML = `${post.fio} <br>`;
       cardTeacher.appendChild(cardTeacherFIO);
 
-      const cardTeacherDOL = document.createElement('span');
-      cardTeacherDOL.innerHTML = `<strong>Занимаемая должность:</strong> ${post.dolzhnost} <br>`;
-      cardTeacher.appendChild(cardTeacherDOL);
+      const cardTeacherDolzhnost = document.createElement('span');
+      cardTeacherDolzhnost.innerHTML = `<strong>Занимаемая должность:</strong> ${post.dolzhnost} <br>`;
+      cardTeacher.appendChild(cardTeacherDolzhnost);
 
-      const cardTeacherPost = document.createElement('span');
-      cardTeacherPost.innerHTML = `<strong>Уровень образование:</strong> ${post.levelOfStudy} <br>`;
-      cardTeacher.appendChild(cardTeacherPost);
-
-      if (post.special !== '' && post.special !== undefined) {
-        const cardTeacherspecial = document.createElement('span');
-        cardTeacherspecial.innerHTML = `<strong>Направленеие подготовки:</strong> ${post.special}<br>`;
-        cardTeacher.appendChild(cardTeacherspecial);
-      }
+      const cardTeacherLevelStudy = document.createElement('span');
+      cardTeacherLevelStudy.innerHTML = `<strong>Уровень образование:</strong> ${post.levelStudy} <br>`;
+      cardTeacher.appendChild(cardTeacherLevelStudy);
 
       if (post.qualification !== '' && post.qualification !== undefined) {
         const cardTeacherQualification = document.createElement('span');
@@ -94,11 +88,12 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
         cardTeacher.appendChild(cardTeacherQualification);
       }
 
-      if (post.upQualification !== '' && post.upQualification !== undefined) {
-        const cardTeacherupQualification = document.createElement('span');
-        cardTeacherupQualification.innerHTML = `<strong>Повышение квалификации:</strong> ${post.upQualification}<br>`;
-        cardTeacher.appendChild(cardTeacherupQualification);
+      if (post.directionStudy !== '' && post.directionStudy !== undefined) {
+        const cardTeacherDirectionStudy = document.createElement('span');
+        cardTeacherDirectionStudy.innerHTML = `<strong>Наименование направления подготовки и (или) специальности:</strong> ${post.directionStudy}<br>`;
+        cardTeacher.appendChild(cardTeacherDirectionStudy);
       }
+
       if (post.academicDegree !== '' && post.academicDegree !== undefined) {
         const cardTeacherAcademicDegree = document.createElement('span');
         cardTeacherAcademicDegree.innerHTML = `<strong>Ученая степень:</strong> ${post.academicDegree}<br>`;
@@ -111,6 +106,12 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
         cardTeacher.appendChild(cardTeacherAcademicTitle);
       }
 
+      if (post.upQualification !== '' && post.upQualification !== undefined) {
+        const cardTeacherupQualification = document.createElement('span');
+        cardTeacherupQualification.innerHTML = `<strong>Повышение квалификации:</strong> ${post.upQualification}<br>`;
+        cardTeacher.appendChild(cardTeacherupQualification);
+      }
+
       const cardTeacherworkExperienceInYear = document.createElement('span');
       cardTeacherworkExperienceInYear.innerHTML = `<strong>Общий стаж работы:</strong> ${setTimeWords(new Date().getFullYear() - post.workExperienceInYearStart)}<br>`;
       cardTeacher.appendChild(cardTeacherworkExperienceInYear);
@@ -119,9 +120,9 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
       cardTeacherworkAsTeacherInYear.innerHTML = `<strong>Стаж работы по специальности:</strong> ${setTimeWords(new Date().getFullYear() - post.workAsTeacherInYearStart)}<br>`;
       cardTeacher.appendChild(cardTeacherworkAsTeacherInYear);
 
-      const cardTeachersubjectsTaught = document.createElement('span');
-      cardTeachersubjectsTaught.innerHTML = `<strong>Преподоваемые учебные предметы:</strong> ${post.subjectsTaught}<br>`;
-      cardTeacher.appendChild(cardTeachersubjectsTaught);
+      const cardTeacherSubjectsTaught = document.createElement('span');
+      cardTeacherSubjectsTaught.innerHTML = `<strong>Преподоваемые учебные предметы:</strong> ${post.subjectsTaught}<br>`;
+      cardTeacher.appendChild(cardTeacherSubjectsTaught);
 
       postFragment.appendChild(cardTeacher);
     }
