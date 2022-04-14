@@ -155,3 +155,25 @@ getData((listArray) => {
     renderPostOfTeachers(listArray.sort(sortByFIO),parseInt(chooseLevelEducation.value, 10));
   });
 });
+
+
+const nowTime = new Date();
+
+const teacherTime = new Date('01/06/2019');
+console.log(`nowTime =${nowTime}`);
+console.log(`teacherTime=${teacherTime}`);
+
+const resault = Math.round(( nowTime - teacherTime ) / (60 * 60 * 60 * 24 * 31 * 12 * 100) );
+
+console.log(`resault=${resault}`);
+
+let month2=new Date().getMonth();
+let month1=new Date('01/06/2021').getMonth();
+
+if(month1===0){
+  month1++;
+  month2++;
+}
+
+const numberOfMonths = (month2 - month1) + 1;
+console.log(`numberOfMonths=${numberOfMonths}`);
