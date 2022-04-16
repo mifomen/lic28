@@ -92,9 +92,9 @@ const checkSummerTimeWithMonths = (thisTimeString) => {
   return `${setTimeWordYear(calcYears)} и ${setTimeWordMonths(calcMonth)} `;
 };
 
-const teacherTime = '1992'; //mm/dd/yyyy
+// const teacherTime = '1992'; //mm/dd/yyyy
 
-console.log(`resault = ${checkSummerTimeWithMonths(teacherTime)}`); //eslint-disable-line
+// console.log(`resault = ${checkSummerTimeWithMonths(teacherTime)}`); //eslint-disable-line
 
 
 const renderPostOfTeachers = (renderPosts, levelEducation) => {
