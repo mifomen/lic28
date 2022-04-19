@@ -2,29 +2,31 @@
   "name": "liceum28nn",
   "version": "1.0.0",
   "private": true,
-  "description": "Личный проект «Кекстаграм» от HTML Academy",
+  "description": "Личный проект «Тестирование»",
   "repository": {
     "type": "git",
-    "url": "git@github.com:mifomen/lic28.git"
+    "url": "git@github.com:mifomen/questions.git"
   },
   "bugs": {
-    "url": "https://github.com/mifomen/lic28/issues"
+    "url": "https://github.com/mifomen/questions/issues"
   },
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
-    "browser-sync": "2.26.14",
+    "browser-sync": "^2.26.14",
     "eslint": "7.18.0",
     "eslint-config-htmlacademy": "4.1.0",
+    "gulp": "^4.0.2",
     "stylelint": "^14.5.3",
     "stylelint-config-htmlacademy": "^0.1.12"
   },
   "license": "MIT",
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"src/css/**/*.css\"",
-    "start": "browser-sync start --config bs-config.js",
-    "test": "eslint src/ && npm run editorconfig && npm run stylelint",
-    "init": "browser-sync init"
+    "stylelint": "stylelint \"src/**/*.css\"",
+    "start": "browser-sync start --ss \"./src\" --server --no-ui --files \"src/**/*.*\"",
+    "start2": "browser-sync start --config bs-config.js",
+    "test": "eslint ./src/ && npm run editorconfig && npm run stylelint",
+    "test-gulp": "gulp serv"
   },
   "editorconfig-cli": [
     "src/**/*.json",
