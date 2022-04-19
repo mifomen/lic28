@@ -16,18 +16,16 @@ module.exports = {
   'ui': {
     'port': 3000,
   },
-  'files': '*/**/*.*',
+  'files': ['./src/**/*.html','./src/**/*.css','./src/**/*.js','./src/**/*.json'],
   'watchEvents': [
     'change',
   ],
   'watch': false,
   'ignore': [],
   'single': false,
-  'watchOptions': {
-    'ignoreInitial': true,
-  },
+  'watchOptions': {},
   'server': {
-    baseDir: 'src',
+    baseDir: './src',
   },
   'proxy': false,
   'port': 1234,
@@ -106,5 +104,5 @@ module.exports = {
     'gif': 'img',
     'js': 'script',
   },
-  'injectNotification': false,
+  'injectNotification': true,
 };
