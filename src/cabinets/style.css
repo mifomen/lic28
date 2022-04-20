@@ -1,0 +1,47 @@
+:root {
+  --black: #000000;
+  --grey: #808080;
+  --white: #ffffff;
+}
+* {
+  box-sizing: padding-box;
+}
+
+.hidden {
+  display: none;
+}
+
+.page-body {
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.list__item {
+  border: 1px solid var(--black);
+  text-transform: uppercase;
+  outline-offset: -4px;
+  outline: 1px solid var(--black);
+  font-size: 24px;
+  padding: 5px;
+  font-weight: 700;
+  padding: 12px 20px 12px 20px;
+  margin-right: 1px;
+}
+
+.list__item--active {
+  background-color: var(--grey);
+  border-color: var(--white);
+  outline-color: var(--white);
+  color: var(--white);
+  text-shadow: 1px 1px 1px var(--black),
+  1px -1px 1px var(--black),
+  -1px 1px 1px var(--black),
+  -1px -1px 1px var(--black);
+}
