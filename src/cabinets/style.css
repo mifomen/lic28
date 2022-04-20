@@ -34,7 +34,7 @@
   display: flex;
 }
 
-.list__item {
+.list__item2 {
   border: 1px solid var(--black);
   text-transform: uppercase;
   outline-offset: -4px;
@@ -46,7 +46,7 @@
   margin-right: 1px;
 }
 
-.list__item--active {
+.list__item--active1 {
   background-color: var(--grey);
   border-color: var(--white);
   outline-color: var(--white);
@@ -120,4 +120,64 @@ td.of-0 {
 td.ta-l {
   text-align: left;
 
+}
+
+
+.button-label__1,
+.button-label__2,
+.button-label__3,
+.button-label__4,
+.button-label__5,
+.button-label__6,
+.list__item {
+  border: 1px solid var(--black);
+  text-transform: uppercase;
+  outline-offset: -4px;
+  outline: 1px solid var(--black);
+  font-size: 24px;
+  padding: 5px;
+  font-weight: 700;
+  padding: 12px 20px 12px 20px;
+  margin-right: 1px;
+}
+
+.day__button-2:checked .button-label__2
+.day__button-1:checked .button-label__1 {
+  background-color: var(--grey);
+  border-color: var(--white);
+  outline-color: var(--white);
+  color: var(--white);
+  text-shadow: 1px 1px 1px var(--black),
+  1px -1px 1px var(--black),
+  -1px 1px 1px var(--black),
+  -1px -1px 1px var(--black);
+}
+
+.list,
+.day__button,
+.day {
+  display: none;
+}
+.day__button-1:checked ~ .day-1,
+.day__button-2:checked ~ .day-2,
+.day__button-3:checked ~ .day-3,
+.day__button-4:checked ~ .day-4,
+.day__button-5:checked ~ .day-5,
+.day__button-6:checked ~ .day-6 {
+  display: block;
+}
+.day__button-1:checked ~ .button-label__1,
+.day__button-2:checked ~ .button-label__2,
+.day__button-3:checked ~ .button-label__3,
+.day__button-4:checked ~ .button-label__4,
+.day__button-5:checked ~ .button-label__5,
+.day__button-6:checked ~ .button-label__6    {
+  background-color: var(--grey);
+  border-color: var(--white);
+  outline-color: var(--white);
+  color: var(--white);
+  text-shadow: 1px 1px 1px var(--black),
+  1px -1px 1px var(--black),
+  -1px 1px 1px var(--black),
+  -1px -1px 1px var(--black);
 }

@@ -8,19 +8,573 @@
   <title>Document</title>
 </head>
 <body class="page-body">
-  <div class="day hidden">
+
+
+
+  <input class="day__button day__button-1" type="radio" name="days" id="day-1" checked>
+  <input class="day__button day__button-2" type="radio" name="days" id="day-2">
+  <input class="day__button day__button-3" type="radio" name="days" id="day-3">
+  <input class="day__button day__button-4" type="radio" name="days" id="day-4">
+  <input class="day__button day__button-5" type="radio" name="days" id="day-5">
+  <input class="day__button day__button-6" type="radio" name="days" id="day-6">
+
+  <label class="day__button-label button-label__1" for="day-1">понедельник</label>
+  <label class="day__button-label button-label__2" for="day-2">вторник</label>
+  <label class="day__button-label button-label__3" for="day-3">среда</label>
+  <label class="day__button-label button-label__4" for="day-4">четверг</label>
+
+  <label class="day__button-label button-label__5" for="day-5">пятница</label>
+  <label class="day__button-label button-label__6" for="day-6">суббота</label>
+  <div class="day day-1">
     <h1 class="day__title vh">понедельник</h1>
-    <table>
+    <table class="cabinet-table">
+      <tr>
+        <td class="table-title" colspan="16">понедельник</td>
+      </tr>
+      <tr>
+        <td class="table-title-2" colspan="16">1-ая смена</td>
+      </tr>
+      <tr>
+        <td>№</td>
+        <td>5А</td>
+        <td>5Б</td>
+        <td>5В</td>
+        <td>5Г</td>
+        <td>8А</td>
+        <td>8Б</td>
+        <td>8В</td>
+        <td>9А</td>
+        <td>9Б</td>
+        <td>10А</td>
+        <td>10Б</td>
+        <td>10В</td>
+        <td>11А</td>
+        <td>11Б</td>
+        <td>11В</td>
+      </tr>
+      <tr>
+        <td class="cabinet-table__first-column">1.</td>
+        <td>зал</td>
+        <td>17</td>
+        <td>14</td>
+        <td>15</td>
+        <td>9</td>
+        <td>7</td>
+        <td>16</td>
+        <td>22</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>5</td>
+        <td>12</td>
+        <td>21</td>
+        <td class="bg-orange" colspan="3">ко второму уроку</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>17</td>
+        <td>зал</td>
+        <td>16</td>
+        <td>15</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>20</td>
+        <td>22</td>
+        <td>7</td>
+        <td>9</td>
+        <td>5</td>
+        <td>21</td>
+        <td>6</td>
+        <td>14</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>16</td>
+        <td>9</td>
+        <td>15</td>
+        <td>17</td>
+        <td>21</td>
+        <td>12</td>
+        <td>20</td>
+        <td>7</td>
+        <td>5</td>
+        <td>зал</td>
+        <td>18</td>
+        <td>10</td>
+        <td>6</td>
+        <td>14</td>
+        <td>22</td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>20</td>
+        <td>9</td>
+        <td>зал</td>
+        <td>16</td>
+        <td>7</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>22</td>
+        <td>17</td>
+        <td>14</td>
+        <td>10</td>
+        <td>5</td>
+        <td>15</td>
+        <td>6</td>
+        <td>18,21</td>
+      </tr>
+      <tr>
+        <td>5.</td>
+        <td>21</td>
+        <td>10</td>
+        <td>14</td>
+        <td>17</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>16</td>
+        <td>зал</td>
+        <td>12</td>
+        <td>20</td>
+        <td>15</td>
+        <td>7</td>
+        <td>9</td>
+        <td>22</td>
+        <td>6</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>6.</td>
+        <td>21</td>
+        <td>16</td>
+        <td>17</td>
+        <td>20</td>
+        <td>15</td>
+        <td>зал</td>
+        <td>14</td>
+        <td>22</td>
+        <td></td>
+        <td>10</td>
+        <td>9</td>
+        <td>7</td>
+        <td class="bg-grey-2">18,19</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>22</td>
+        <td></td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>с/к</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="special-lesson">12 Мозалевская Л.В.</td>
+        <td class="special-lesson">5 Доманин А.А.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="bg-grey-2">18,19</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>с/к</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="3" class="special-lesson">21 Демашова Ю.А.</td>
+        <td colspan="3" class="special-lesson">10 Бакулина Г.С.</td>
+      </tr>
+      <tr>
+        <td colspan="16"></td>
+      </tr>
       <tr>
         <td></td>
+        <td colspan="6">2-ая смена</td>
+        <td class="hide-cell"></td>
+        <td class="cell-border-2px">с/к</td>
+        <td class="cell-border-2px">спецкурс</td>
+      </tr>
+      <tr>
+        <td>№</td>
+        <td>6А</td>
+        <td>6Б</td>
+        <td>6В</td>
+        <td>7А</td>
+        <td>7Б</td>
+        <td>7В</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>14</td>
+        <td>17</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>20</td>
+        <td>7</td>
+        <td class="hide-cell"></td>
+        <td class="of-0 bg-grey-2">Англ. яз.</td>
+        <td class="of-0">8</td>
+        <td class="of-0 ta-l" colspan="4">Зыкина И.А.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>14</td>
+        <td>17</td>
+        <td>15</td>
+        <td>20</td>
+        <td>7</td>
+        <td class="bg-grey-2">8,19</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">18</td>
+        <td class="of-0 ta-l" colspan="4">Сельверова Н.А.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>5</td>
+        <td>20</td>
+        <td>15</td>
+        <td>7</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>16</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">19</td>
+        <td class="of-0 ta-l" colspan="4">Байданова С.Г.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>20</td>
+        <td>5</td>
+        <td>21</td>
+        <td>15</td>
+        <td>7</td>
+        <td>16</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">21</td>
+        <td class="of-0 ta-l" colspan="4">Кайтанба М.В.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>5</td>
+        <td>20</td>
+        <td>7</td>
+        <td>8</td>
+        <td>16</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>15</td>
+        <td>7</td>
+        <td>20</td>
+        <td>5</td>
+        <td>16</td>
+        <td>8</td>
       </tr>
     </table>
 
   </div>
-  <div class="day hidden">
+  <div class="day day-2">
     <h1 class="day__title vh">вторник</h1>
+    <table class="cabinet-table">
+      <tr>
+        <td class="table-title" colspan="16">вторник</td>
+      </tr>
+      <tr>
+        <td class="table-title-2" colspan="16">1-ая смена</td>
+      </tr>
+      <tr>
+        <td>№</td>
+        <td>5А</td>
+        <td>5Б</td>
+        <td>5В</td>
+        <td>5Г</td>
+        <td>8А</td>
+        <td>8Б</td>
+        <td>8В</td>
+        <td>9А</td>
+        <td>9Б</td>
+        <td>10А</td>
+        <td>10Б</td>
+        <td>10В</td>
+        <td>11А</td>
+        <td>11Б</td>
+        <td>11В</td>
+      </tr>
+      <tr>
+        <td class="cabinet-table__first-column">1.</td>
+        <td>зал</td>
+        <td>17</td>
+        <td>14</td>
+        <td>15</td>
+        <td>9</td>
+        <td>7</td>
+        <td>16</td>
+        <td>22</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>5</td>
+        <td>12</td>
+        <td>21</td>
+        <td class="bg-orange" colspan="3">ко второму уроку</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>17</td>
+        <td>зал</td>
+        <td>16</td>
+        <td>15</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>20</td>
+        <td>22</td>
+        <td>7</td>
+        <td>9</td>
+        <td>5</td>
+        <td>21</td>
+        <td>6</td>
+        <td>14</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>16</td>
+        <td>9</td>
+        <td>15</td>
+        <td>17</td>
+        <td>21</td>
+        <td>12</td>
+        <td>20</td>
+        <td>7</td>
+        <td>5</td>
+        <td>зал</td>
+        <td>18</td>
+        <td>10</td>
+        <td>6</td>
+        <td>14</td>
+        <td>22</td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>20</td>
+        <td>9</td>
+        <td>зал</td>
+        <td>16</td>
+        <td>7</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>22</td>
+        <td>17</td>
+        <td>14</td>
+        <td>10</td>
+        <td>5</td>
+        <td>15</td>
+        <td>6</td>
+        <td>18,21</td>
+      </tr>
+      <tr>
+        <td>5.</td>
+        <td>21</td>
+        <td>10</td>
+        <td>14</td>
+        <td>17</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>16</td>
+        <td>зал</td>
+        <td>12</td>
+        <td>20</td>
+        <td>15</td>
+        <td>7</td>
+        <td>9</td>
+        <td>22</td>
+        <td>6</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>6.</td>
+        <td>21</td>
+        <td>16</td>
+        <td>17</td>
+        <td>20</td>
+        <td>15</td>
+        <td>зал</td>
+        <td>14</td>
+        <td>22</td>
+        <td></td>
+        <td>10</td>
+        <td>9</td>
+        <td>7</td>
+        <td class="bg-grey-2">18,19</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>22</td>
+        <td></td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>с/к</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="special-lesson">12 Мозалевская Л.В.</td>
+        <td class="special-lesson">5 Доманин А.А.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="bg-grey-2">18,19</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>с/к</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="3" class="special-lesson">21 Демашова Ю.А.</td>
+        <td colspan="3" class="special-lesson">10 Бакулина Г.С.</td>
+      </tr>
+      <tr>
+        <td colspan="16"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan="6">2-ая смена</td>
+        <td class="hide-cell"></td>
+        <td class="cell-border-2px">с/к</td>
+        <td class="cell-border-2px">спецкурс</td>
+      </tr>
+      <tr>
+        <td>№</td>
+        <td>6А</td>
+        <td>6Б</td>
+        <td>6В</td>
+        <td>7А</td>
+        <td>7Б</td>
+        <td>7В</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>14</td>
+        <td>17</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>20</td>
+        <td>7</td>
+        <td class="hide-cell"></td>
+        <td class="of-0 bg-grey-2">Англ. яз.</td>
+        <td class="of-0">8</td>
+        <td class="of-0 ta-l" colspan="4">Зыкина И.А.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>14</td>
+        <td>17</td>
+        <td>15</td>
+        <td>20</td>
+        <td>7</td>
+        <td class="bg-grey-2">8,19</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">18</td>
+        <td class="of-0 ta-l" colspan="4">Сельверова Н.А.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>5</td>
+        <td>20</td>
+        <td>15</td>
+        <td>7</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>16</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">19</td>
+        <td class="of-0 ta-l" colspan="4">Байданова С.Г.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>20</td>
+        <td>5</td>
+        <td>21</td>
+        <td>15</td>
+        <td>7</td>
+        <td>16</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">21</td>
+        <td class="of-0 ta-l" colspan="4">Кайтанба М.В.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>5</td>
+        <td>20</td>
+        <td>7</td>
+        <td>8</td>
+        <td>16</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>15</td>
+        <td>7</td>
+        <td>20</td>
+        <td>5</td>
+        <td>16</td>
+        <td>8</td>
+      </tr>
+    </table>
   </div>
-  <div class="day hidden">
+  <div class="day day-3">
     <h1 class="day__title vh">среда</h1>
     <table class="cabinet-table">
       <tr>
@@ -294,25 +848,845 @@
       </tr>
     </table>
   </div>
-  <div class="day hidden">
-    <h1 class="day__title">четверг</h1>
+  <div class="day day-4">
+    <h1 class="day__title vh">четверг</h1>
+    <table class="cabinet-table">
+      <tr>
+        <td class="table-title" colspan="16">четверг</td>
+      </tr>
+      <tr>
+        <td class="table-title-2" colspan="16">1-ая смена</td>
+      </tr>
+      <tr>
+        <td>№</td>
+        <td>5А</td>
+        <td>5Б</td>
+        <td>5В</td>
+        <td>5Г</td>
+        <td>8А</td>
+        <td>8Б</td>
+        <td>8В</td>
+        <td>9А</td>
+        <td>9Б</td>
+        <td>10А</td>
+        <td>10Б</td>
+        <td>10В</td>
+        <td>11А</td>
+        <td>11Б</td>
+        <td>11В</td>
+      </tr>
+      <tr>
+        <td class="cabinet-table__first-column">1.</td>
+        <td>зал</td>
+        <td>17</td>
+        <td>14</td>
+        <td>15</td>
+        <td>9</td>
+        <td>7</td>
+        <td>16</td>
+        <td>22</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>5</td>
+        <td>12</td>
+        <td>21</td>
+        <td class="bg-orange" colspan="3">ко второму уроку</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>17</td>
+        <td>зал</td>
+        <td>16</td>
+        <td>15</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>20</td>
+        <td>22</td>
+        <td>7</td>
+        <td>9</td>
+        <td>5</td>
+        <td>21</td>
+        <td>6</td>
+        <td>14</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>16</td>
+        <td>9</td>
+        <td>15</td>
+        <td>17</td>
+        <td>21</td>
+        <td>12</td>
+        <td>20</td>
+        <td>7</td>
+        <td>5</td>
+        <td>зал</td>
+        <td>18</td>
+        <td>10</td>
+        <td>6</td>
+        <td>14</td>
+        <td>22</td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>20</td>
+        <td>9</td>
+        <td>зал</td>
+        <td>16</td>
+        <td>7</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>22</td>
+        <td>17</td>
+        <td>14</td>
+        <td>10</td>
+        <td>5</td>
+        <td>15</td>
+        <td>6</td>
+        <td>18,21</td>
+      </tr>
+      <tr>
+        <td>5.</td>
+        <td>21</td>
+        <td>10</td>
+        <td>14</td>
+        <td>17</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>16</td>
+        <td>зал</td>
+        <td>12</td>
+        <td>20</td>
+        <td>15</td>
+        <td>7</td>
+        <td>9</td>
+        <td>22</td>
+        <td>6</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>6.</td>
+        <td>21</td>
+        <td>16</td>
+        <td>17</td>
+        <td>20</td>
+        <td>15</td>
+        <td>зал</td>
+        <td>14</td>
+        <td>22</td>
+        <td></td>
+        <td>10</td>
+        <td>9</td>
+        <td>7</td>
+        <td class="bg-grey-2">18,19</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>22</td>
+        <td></td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>с/к</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="special-lesson">12 Мозалевская Л.В.</td>
+        <td class="special-lesson">5 Доманин А.А.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="bg-grey-2">18,19</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>с/к</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="3" class="special-lesson">21 Демашова Ю.А.</td>
+        <td colspan="3" class="special-lesson">10 Бакулина Г.С.</td>
+      </tr>
+      <tr>
+        <td colspan="16"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan="6">2-ая смена</td>
+        <td class="hide-cell"></td>
+        <td class="cell-border-2px">с/к</td>
+        <td class="cell-border-2px">спецкурс</td>
+      </tr>
+      <tr>
+        <td>№</td>
+        <td>6А</td>
+        <td>6Б</td>
+        <td>6В</td>
+        <td>7А</td>
+        <td>7Б</td>
+        <td>7В</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>14</td>
+        <td>17</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>20</td>
+        <td>7</td>
+        <td class="hide-cell"></td>
+        <td class="of-0 bg-grey-2">Англ. яз.</td>
+        <td class="of-0">8</td>
+        <td class="of-0 ta-l" colspan="4">Зыкина И.А.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>14</td>
+        <td>17</td>
+        <td>15</td>
+        <td>20</td>
+        <td>7</td>
+        <td class="bg-grey-2">8,19</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">18</td>
+        <td class="of-0 ta-l" colspan="4">Сельверова Н.А.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>5</td>
+        <td>20</td>
+        <td>15</td>
+        <td>7</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>16</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">19</td>
+        <td class="of-0 ta-l" colspan="4">Байданова С.Г.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>20</td>
+        <td>5</td>
+        <td>21</td>
+        <td>15</td>
+        <td>7</td>
+        <td>16</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">21</td>
+        <td class="of-0 ta-l" colspan="4">Кайтанба М.В.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>5</td>
+        <td>20</td>
+        <td>7</td>
+        <td>8</td>
+        <td>16</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>15</td>
+        <td>7</td>
+        <td>20</td>
+        <td>5</td>
+        <td>16</td>
+        <td>8</td>
+      </tr>
+    </table>
   </div>
-  <div class="day hidden">
-    <h1 class="day__title">пятница</h1>
+  <div class="day day-5">
+    <h1 class="day__title vh">пятница</h1>
+    <table class="cabinet-table">
+      <tr>
+        <td class="table-title" colspan="16">пятница</td>
+      </tr>
+      <tr>
+        <td class="table-title-2" colspan="16">1-ая смена</td>
+      </tr>
+      <tr>
+        <td>№</td>
+        <td>5А</td>
+        <td>5Б</td>
+        <td>5В</td>
+        <td>5Г</td>
+        <td>8А</td>
+        <td>8Б</td>
+        <td>8В</td>
+        <td>9А</td>
+        <td>9Б</td>
+        <td>10А</td>
+        <td>10Б</td>
+        <td>10В</td>
+        <td>11А</td>
+        <td>11Б</td>
+        <td>11В</td>
+      </tr>
+      <tr>
+        <td class="cabinet-table__first-column">1.</td>
+        <td>зал</td>
+        <td>17</td>
+        <td>14</td>
+        <td>15</td>
+        <td>9</td>
+        <td>7</td>
+        <td>16</td>
+        <td>22</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>5</td>
+        <td>12</td>
+        <td>21</td>
+        <td class="bg-orange" colspan="3">ко второму уроку</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>17</td>
+        <td>зал</td>
+        <td>16</td>
+        <td>15</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>20</td>
+        <td>22</td>
+        <td>7</td>
+        <td>9</td>
+        <td>5</td>
+        <td>21</td>
+        <td>6</td>
+        <td>14</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>16</td>
+        <td>9</td>
+        <td>15</td>
+        <td>17</td>
+        <td>21</td>
+        <td>12</td>
+        <td>20</td>
+        <td>7</td>
+        <td>5</td>
+        <td>зал</td>
+        <td>18</td>
+        <td>10</td>
+        <td>6</td>
+        <td>14</td>
+        <td>22</td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>20</td>
+        <td>9</td>
+        <td>зал</td>
+        <td>16</td>
+        <td>7</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>22</td>
+        <td>17</td>
+        <td>14</td>
+        <td>10</td>
+        <td>5</td>
+        <td>15</td>
+        <td>6</td>
+        <td>18,21</td>
+      </tr>
+      <tr>
+        <td>5.</td>
+        <td>21</td>
+        <td>10</td>
+        <td>14</td>
+        <td>17</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>16</td>
+        <td>зал</td>
+        <td>12</td>
+        <td>20</td>
+        <td>15</td>
+        <td>7</td>
+        <td>9</td>
+        <td>22</td>
+        <td>6</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>6.</td>
+        <td>21</td>
+        <td>16</td>
+        <td>17</td>
+        <td>20</td>
+        <td>15</td>
+        <td>зал</td>
+        <td>14</td>
+        <td>22</td>
+        <td></td>
+        <td>10</td>
+        <td>9</td>
+        <td>7</td>
+        <td class="bg-grey-2">18,19</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>22</td>
+        <td></td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>с/к</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="special-lesson">12 Мозалевская Л.В.</td>
+        <td class="special-lesson">5 Доманин А.А.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="bg-grey-2">18,19</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>с/к</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="3" class="special-lesson">21 Демашова Ю.А.</td>
+        <td colspan="3" class="special-lesson">10 Бакулина Г.С.</td>
+      </tr>
+      <tr>
+        <td colspan="16"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan="6">2-ая смена</td>
+        <td class="hide-cell"></td>
+        <td class="cell-border-2px">с/к</td>
+        <td class="cell-border-2px">спецкурс</td>
+      </tr>
+      <tr>
+        <td>№</td>
+        <td>6А</td>
+        <td>6Б</td>
+        <td>6В</td>
+        <td>7А</td>
+        <td>7Б</td>
+        <td>7В</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>14</td>
+        <td>17</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>20</td>
+        <td>7</td>
+        <td class="hide-cell"></td>
+        <td class="of-0 bg-grey-2">Англ. яз.</td>
+        <td class="of-0">8</td>
+        <td class="of-0 ta-l" colspan="4">Зыкина И.А.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>14</td>
+        <td>17</td>
+        <td>15</td>
+        <td>20</td>
+        <td>7</td>
+        <td class="bg-grey-2">8,19</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">18</td>
+        <td class="of-0 ta-l" colspan="4">Сельверова Н.А.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>5</td>
+        <td>20</td>
+        <td>15</td>
+        <td>7</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>16</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">19</td>
+        <td class="of-0 ta-l" colspan="4">Байданова С.Г.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>20</td>
+        <td>5</td>
+        <td>21</td>
+        <td>15</td>
+        <td>7</td>
+        <td>16</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">21</td>
+        <td class="of-0 ta-l" colspan="4">Кайтанба М.В.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>5</td>
+        <td>20</td>
+        <td>7</td>
+        <td>8</td>
+        <td>16</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>15</td>
+        <td>7</td>
+        <td>20</td>
+        <td>5</td>
+        <td>16</td>
+        <td>8</td>
+      </tr>
+    </table>
   </div>
-  <div class="day hidden">
-    <h1 class="day__title">суббота</h1>
+  <div class="day day-6">
+    <h1 class="day__title vh">суббота</h1>
+    <table class="cabinet-table">
+      <tr>
+        <td class="table-title" colspan="16">Cуббота</td>
+      </tr>
+      <tr>
+        <td class="table-title-2" colspan="16">1-ая смена</td>
+      </tr>
+      <tr>
+        <td>№</td>
+        <td>5А</td>
+        <td>5Б</td>
+        <td>5В</td>
+        <td>5Г</td>
+        <td>8А</td>
+        <td>8Б</td>
+        <td>8В</td>
+        <td>9А</td>
+        <td>9Б</td>
+        <td>10А</td>
+        <td>10Б</td>
+        <td>10В</td>
+        <td>11А</td>
+        <td>11Б</td>
+        <td>11В</td>
+      </tr>
+      <tr>
+        <td class="cabinet-table__first-column">1.</td>
+        <td>зал</td>
+        <td>17</td>
+        <td>14</td>
+        <td>15</td>
+        <td>9</td>
+        <td>7</td>
+        <td>16</td>
+        <td>22</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>5</td>
+        <td>12</td>
+        <td>21</td>
+        <td class="bg-orange" colspan="3">ко второму уроку</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>17</td>
+        <td>зал</td>
+        <td>16</td>
+        <td>15</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>20</td>
+        <td>22</td>
+        <td>7</td>
+        <td>9</td>
+        <td>5</td>
+        <td>21</td>
+        <td>6</td>
+        <td>14</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>16</td>
+        <td>9</td>
+        <td>15</td>
+        <td>17</td>
+        <td>21</td>
+        <td>12</td>
+        <td>20</td>
+        <td>7</td>
+        <td>5</td>
+        <td>зал</td>
+        <td>18</td>
+        <td>10</td>
+        <td>6</td>
+        <td>14</td>
+        <td>22</td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>20</td>
+        <td>9</td>
+        <td>зал</td>
+        <td>16</td>
+        <td>7</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,18</td>
+        <td>22</td>
+        <td>17</td>
+        <td>14</td>
+        <td>10</td>
+        <td>5</td>
+        <td>15</td>
+        <td>6</td>
+        <td>18,21</td>
+      </tr>
+      <tr>
+        <td>5.</td>
+        <td>21</td>
+        <td>10</td>
+        <td>14</td>
+        <td>17</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>16</td>
+        <td>зал</td>
+        <td>12</td>
+        <td>20</td>
+        <td>15</td>
+        <td>7</td>
+        <td>9</td>
+        <td>22</td>
+        <td>6</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>6.</td>
+        <td>21</td>
+        <td>16</td>
+        <td>17</td>
+        <td>20</td>
+        <td>15</td>
+        <td>зал</td>
+        <td>14</td>
+        <td>22</td>
+        <td></td>
+        <td>10</td>
+        <td>9</td>
+        <td>7</td>
+        <td class="bg-grey-2">18,19</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>22</td>
+        <td></td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>с/к</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="special-lesson">12 Мозалевская Л.В.</td>
+        <td class="special-lesson">5 Доманин А.А.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="bg-grey-2">18,19</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>с/к</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="3" class="special-lesson">21 Демашова Ю.А.</td>
+        <td colspan="3" class="special-lesson">10 Бакулина Г.С.</td>
+      </tr>
+      <tr>
+        <td colspan="16"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td colspan="6">2-ая смена</td>
+        <td class="hide-cell"></td>
+        <td class="cell-border-2px">с/к</td>
+        <td class="cell-border-2px">спецкурс</td>
+      </tr>
+      <tr>
+        <td>№</td>
+        <td>6А</td>
+        <td>6Б</td>
+        <td>6В</td>
+        <td>7А</td>
+        <td>7Б</td>
+        <td>7В</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>14</td>
+        <td>17</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>20</td>
+        <td>7</td>
+        <td class="hide-cell"></td>
+        <td class="of-0 bg-grey-2">Англ. яз.</td>
+        <td class="of-0">8</td>
+        <td class="of-0 ta-l" colspan="4">Зыкина И.А.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>14</td>
+        <td>17</td>
+        <td>15</td>
+        <td>20</td>
+        <td>7</td>
+        <td class="bg-grey-2">8,19</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">18</td>
+        <td class="of-0 ta-l" colspan="4">Сельверова Н.А.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>5</td>
+        <td>20</td>
+        <td>15</td>
+        <td>7</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>16</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">19</td>
+        <td class="of-0 ta-l" colspan="4">Байданова С.Г.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>20</td>
+        <td>5</td>
+        <td>21</td>
+        <td>15</td>
+        <td>7</td>
+        <td>16</td>
+        <td class="hide-cell"></td>
+        <td class="of-0"></td>
+        <td class="of-0">21</td>
+        <td class="of-0 ta-l" colspan="4">Кайтанба М.В.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>5</td>
+        <td>20</td>
+        <td>7</td>
+        <td>8</td>
+        <td>16</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>15</td>
+        <td>7</td>
+        <td>20</td>
+        <td>5</td>
+        <td>16</td>
+        <td>8</td>
+      </tr>
+    </table>
   </div>
   <div class="day hidden">
     <h1>суббота</h1>
   </div>
+
   <ul class="list">
-    <li class="list__item list__item--active">понедельник</li>
-    <li class="list__item">вторник</li>
-    <li class="list__item">среда</li>
-    <li class="list__item">четверг</li>
-    <li class="list__item">пятница</li>
-    <li class="list__item">суббота</li>
+    <li class="list__item item__1 list__item--active">понедельник
+    </li>
+    <li class="list__item item__2 ">вторник
+    </li>
+    <li class="list__item item__3 ">среда
+    </li>
+    <li class="list__item item__4 ">четверг
+    </li>
+    <li class="list__item item__5 ">пятница
+    </li>
+    <li class="list__item item__6 ">суббота
+    </li>
   </ul>
   <script src="app.js" type="module"></script>
 </body>
