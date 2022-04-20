@@ -5,10 +5,20 @@ const onClickChangeActive = (evt) => {
     document.querySelector('.list__item--active').classList.remove('list__item--active');
     evt.target.classList.add('list__item--active');
 
-     if (document.querySelector('.day__title').textContent === evt.target.textContent) {
-       const dayTitle = document.querySelector('.day__title');
-      console.log(`dayTitle=${dayTitle}`);
-     }
+    const days = document.querySelectorAll('.day');
+
+    for (const day of days) {
+      if (!day.classList.contains('hidden')) {
+        day.classList.add('hidden');
+      }
+    }
+
+    const dayTitles = document.querySelectorAll('.day__title');
+    dayTitles.forEach( item => {
+      if (item.textContent === evt.target.textContent) {
+        return item.parentElement.classList.toggle('hidden');
+      }
+    })
   }
 };
 
