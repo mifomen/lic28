@@ -4,6 +4,7 @@
   --white: #ffffff;
   --orange: #fbbc04;
   --grey-2: #d9d9d9;
+  --blue: #c9daf8;
 }
 *,
 *::after,
@@ -21,12 +22,15 @@
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   height: 100vh;
+  overflow: auto;
 }
 
+.label__list,
 .list {
   list-style: none;
   margin: 0;
@@ -34,6 +38,7 @@
   display: flex;
 }
 
+.label__list-item,
 .list__item2 {
   border: 1px solid var(--black);
   text-transform: uppercase;
@@ -104,6 +109,10 @@
 .bg-grey-2 {
   background-color: var(--grey-2);
 }
+.bg-blue {
+  background-color: var(--blue);
+}
+
 
 td.hide-cell {
   outline-color: transparent;
@@ -166,12 +175,12 @@ td.ta-l {
 .day__button-6:checked ~ .day-6 {
   display: block;
 }
-.day__button-1:checked ~ .button-label__1,
-.day__button-2:checked ~ .button-label__2,
-.day__button-3:checked ~ .button-label__3,
-.day__button-4:checked ~ .button-label__4,
-.day__button-5:checked ~ .button-label__5,
-.day__button-6:checked ~ .button-label__6    {
+.day__button-1:checked ~ .label__list .button-label__1,
+.day__button-2:checked ~ .label__list .button-label__2,
+.day__button-3:checked ~ .label__list .button-label__3,
+.day__button-4:checked ~ .label__list .button-label__4,
+.day__button-5:checked ~ .label__list .button-label__5,
+.day__button-6:checked ~ .label__list .button-label__6    {
   background-color: var(--grey);
   border-color: var(--white);
   outline-color: var(--white);

@@ -8,9 +8,6 @@
   <title>Document</title>
 </head>
 <body class="page-body">
-
-
-
   <input class="day__button day__button-1" type="radio" name="days" id="day-1" checked>
   <input class="day__button day__button-2" type="radio" name="days" id="day-2">
   <input class="day__button day__button-3" type="radio" name="days" id="day-3">
@@ -18,13 +15,14 @@
   <input class="day__button day__button-5" type="radio" name="days" id="day-5">
   <input class="day__button day__button-6" type="radio" name="days" id="day-6">
 
-  <label class="day__button-label button-label__1" for="day-1">понедельник</label>
-  <label class="day__button-label button-label__2" for="day-2">вторник</label>
-  <label class="day__button-label button-label__3" for="day-3">среда</label>
-  <label class="day__button-label button-label__4" for="day-4">четверг</label>
-
-  <label class="day__button-label button-label__5" for="day-5">пятница</label>
-  <label class="day__button-label button-label__6" for="day-6">суббота</label>
+  <ul class="label__list">
+    <label class="day__button-label button-label__1" for="day-1">понедельник</label>
+    <label class="day__button-label button-label__2" for="day-2">вторник</label>
+    <label class="day__button-label button-label__3" for="day-3">среда</label>
+    <label class="day__button-label button-label__4" for="day-4">четверг</label>
+    <label class="day__button-label button-label__5" for="day-5">пятница</label>
+    <label class="day__button-label button-label__6" for="day-6">суббота</label>
+   </ul>
   <div class="day day-1">
     <h1 class="day__title vh">понедельник</h1>
     <table class="cabinet-table">
@@ -852,7 +850,7 @@
     <h1 class="day__title vh">четверг</h1>
     <table class="cabinet-table">
       <tr>
-        <td class="table-title" colspan="16">четверг</td>
+        <td class="table-title vh" colspan="16">четверг</td>
       </tr>
       <tr>
         <td class="table-title-2" colspan="16">1-ая смена</td>
@@ -893,93 +891,93 @@
       </tr>
       <tr>
         <td>2.</td>
+        <td>7</td>
         <td>17</td>
-        <td>зал</td>
         <td>16</td>
         <td>15</td>
-        <td>12</td>
+        <td>14</td>
         <td class="bg-grey-2">8,18</td>
-        <td>20</td>
-        <td>22</td>
-        <td>7</td>
         <td>9</td>
         <td>5</td>
-        <td>21</td>
-        <td>6</td>
-        <td>14</td>
+        <td>12</td>
+        <td>22</td>
+        <td>20</td>
         <td>10</td>
+        <td>6</td>
+        <td>зал</td>
+        <td>21</td>
       </tr>
       <tr>
         <td>3.</td>
         <td>16</td>
-        <td>9</td>
+        <td class="bg-grey-2">7,18</td>
+        <td>12</td>
+        <td>14</td>
+        <td>20</td>
+        <td>зал</td>
+        <td class="bg-grey-2">8,19</td>
         <td>15</td>
         <td>17</td>
-        <td>21</td>
-        <td>12</td>
-        <td>20</td>
-        <td>7</td>
-        <td>5</td>
-        <td>зал</td>
-        <td>18</td>
-        <td>10</td>
         <td>6</td>
-        <td>14</td>
+        <td>5</td>
         <td>22</td>
+        <td>10</td>
+        <td>9</td>
+        <td>21</td>
       </tr>
       <tr>
         <td>4.</td>
-        <td>20</td>
-        <td>9</td>
-        <td>зал</td>
-        <td>16</td>
-        <td>7</td>
-        <td>12</td>
-        <td class="bg-grey-2">8,18</td>
-        <td>22</td>
         <td>17</td>
-        <td>14</td>
+        <td>7</td>
+        <td>зал</td>
         <td>10</td>
-        <td>5</td>
+        <td class="bg-grey-2">8,19</td>
+        <td>12</td>
         <td>15</td>
+        <td class="bg-grey-2">18,21</td>
+        <td>20</td>
         <td>6</td>
-        <td>18,21</td>
+        <td>5</td>
+        <td>22</td>
+        <td>9</td>
+        <td>16</td>
+        <td>14</td>
       </tr>
       <tr>
         <td>5.</td>
-        <td>21</td>
-        <td>10</td>
         <td>14</td>
-        <td>17</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>16</td>
-        <td>зал</td>
         <td>12</td>
-        <td>20</td>
-        <td>15</td>
-        <td>7</td>
+        <td>21</td>
+        <td class="bg-grey-2">4,8</td>
         <td>9</td>
+        <td>16</td>
+        <td>20</td>
+        <td>17</td>
+        <td>5</td>
+        <td class="bg-grey-2">18,19</td>
         <td>22</td>
         <td>6</td>
-        <td>5</td>
+        <td>15</td>
+        <td>7</td>
+        <td>10</td>
       </tr>
       <tr>
         <td>6.</td>
-        <td>21</td>
-        <td>16</td>
-        <td>17</td>
         <td>20</td>
-        <td>15</td>
-        <td>зал</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,21</td>
+        <td>17</td>
+        <td>9</td>
         <td>14</td>
-        <td>22</td>
+        <td>16</td>
+        <td>7</td>
         <td></td>
         <td>10</td>
-        <td>9</td>
-        <td>7</td>
-        <td class="bg-grey-2">18,19</td>
-        <td>5</td>
+        <td>22</td>
         <td>6</td>
+        <td>15</td>
+        <td class="bg-grey-2">5,18</td>
+        <td>зал</td>
       </tr>
       <tr>
         <td>7.</td>
@@ -995,9 +993,22 @@
         <td></td>
         <td></td>
         <td></td>
-        <td>22</td>
         <td></td>
-        <td>6</td>
+        <td>10</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>с/к</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="3" class="special-lesson">22 Плаксина Т.Ю.</td>
+        <td colspan="2" class="special-lesson">12 Муращенкова М.С.</td>
+        <td colspan="3" class="special-lesson">9 Ярощук М.В.</td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td>с/к</td>
@@ -1008,14 +1019,13 @@
         <td></td>
         <td></td>
         <td></td>
-        <td class="special-lesson">12 Мозалевская Л.В.</td>
-        <td class="special-lesson">5 Доманин А.А.</td>
+        <td></td>
+        <td></td>
+        <td colspan="2" class="special-lesson">5 Широкова Л.В.</td>
+        <td colspan="1" class="special-lesson">6 Мацокина Г.Ф.</td>
         <td></td>
         <td></td>
         <td></td>
-        <td class="bg-grey-2">18,19</td>
-        <td>5</td>
-        <td>6</td>
       </tr>
       <tr>
         <td>с/к</td>
@@ -1028,11 +1038,11 @@
         <td></td>
         <td></td>
         <td></td>
-        <td colspan="3" class="special-lesson">21 Демашова Ю.А.</td>
-        <td colspan="3" class="special-lesson">10 Бакулина Г.С.</td>
-      </tr>
-      <tr>
-        <td colspan="16"></td>
+        <td colspan="2" class="special-lesson">7 Демашова Ю.А.</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td></td>
@@ -1040,6 +1050,10 @@
         <td class="hide-cell"></td>
         <td class="cell-border-2px">с/к</td>
         <td class="cell-border-2px">спецкурс</td>
+        <td class="hide-cell"></td>
+        <td class="bg-blue cell-border-2px"> Инф.</td>
+        <td class="cell-border-2px">19</td>
+        <td class="cell-border-2px">Беспалова М.В.</td>
       </tr>
       <tr>
         <td>№</td>
@@ -1049,76 +1063,84 @@
         <td>7А</td>
         <td>7Б</td>
         <td>7В</td>
+        <td class="hide-cell"></td>
+        <td class="hide-cell"></td>
+        <td class="hide-cell"></td>
+        <td class="hide-cell"></td>
+        <td></td>
+        <td class="cell-border-2px">18</td>
+        <td class="cell-border-2px">Кошелев И.А.</td>
       </tr>
       <tr>
-        <td>1</td>
-        <td>14</td>
+        <td>1.</td>
+        <td>21</td>
         <td>17</td>
-        <td>12</td>
         <td class="bg-grey-2">8,19</td>
+        <td>14</td>
         <td>20</td>
-        <td>7</td>
+        <td>16</td>
         <td class="hide-cell"></td>
         <td class="of-0 bg-grey-2">Англ. яз.</td>
         <td class="of-0">8</td>
         <td class="of-0 ta-l" colspan="4">Зыкина И.А.</td>
       </tr>
       <tr>
-        <td>2</td>
-        <td>14</td>
+        <td>2.</td>
+        <td class="bg-grey-2">8,19</td>
         <td>17</td>
         <td>15</td>
+        <td>14</td>
+        <td>16</td>
         <td>20</td>
-        <td>7</td>
-        <td class="bg-grey-2">8,19</td>
+
         <td class="hide-cell"></td>
         <td class="of-0"></td>
         <td class="of-0">18</td>
         <td class="of-0 ta-l" colspan="4">Сельверова Н.А.</td>
       </tr>
       <tr>
-        <td>3</td>
-        <td>5</td>
-        <td>20</td>
+        <td>3.</td>
         <td>15</td>
-        <td>7</td>
-        <td class="bg-grey-2">8,19</td>
+        <td class="bg-grey-2">8,21</td>
+        <td>20</td>
+        <td>17</td>
         <td>16</td>
+        <td>14</td>
         <td class="hide-cell"></td>
         <td class="of-0"></td>
-        <td class="of-0">19</td>
+        <td class="of-0">5,19</td>
         <td class="of-0 ta-l" colspan="4">Байданова С.Г.</td>
       </tr>
       <tr>
-        <td>4</td>
-        <td>20</td>
-        <td>5</td>
-        <td>21</td>
-        <td>15</td>
+        <td>4.</td>
+        <td>зал</td>
         <td>7</td>
-        <td>16</td>
+        <td>17</td>
+        <td>15</td>
+        <td class="bg-blue">18,19</td>
+        <td>14</td>
         <td class="hide-cell"></td>
         <td class="of-0"></td>
-        <td class="of-0">21</td>
+        <td class="of-0">4,7,21</td>
         <td class="of-0 ta-l" colspan="4">Кайтанба М.В.</td>
       </tr>
       <tr>
-        <td>5</td>
-        <td>5</td>
-        <td>20</td>
+        <td>5.</td>
+        <td>15</td>
+        <td>зал</td>
         <td>7</td>
-        <td>8</td>
-        <td>16</td>
-        <td>8</td>
+        <td class="bg-blue">18,19</td>
+        <td>14</td>
+        <td>17</td>
       </tr>
       <tr>
-        <td>6</td>
-        <td>15</td>
+        <td>6.</td>
         <td>7</td>
-        <td>20</td>
-        <td>5</td>
-        <td>16</td>
-        <td>8</td>
+        <td>17</td>
+        <td>зал</td>
+        <td>15</td>
+        <td>14</td>
+        <td class="bg-blue">18,19</td>
       </tr>
     </table>
   </div>
@@ -1689,13 +1711,10 @@
     </li>
   </ul>
   <script>
-
-
-const url = `#day-${new Date().getDay()}`;
-if (document.querySelector(url)) {
-  document.querySelector(url).checked = true;
-}
-
+    const url = `#day-${new Date().getDay()}`;
+    if (document.querySelector(url)) {
+      document.querySelector(url).checked = true;
+    }
   </script>
 </body>
 </html>

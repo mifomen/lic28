@@ -23,8 +23,8 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"src/**/*.css\"",
-    "start": "browser-sync start --ss \"./src\" --server --no-ui --files \"src/**/*.*\"",
-    "start2": "browser-sync start --config bs-config.js",
+    "start2": "browser-sync start --ss \"./src\" --server --no-ui --files \"src/**/*.*\"",
+    "start": "browser-sync start --config bs-config.js",
     "test": "eslint ./src/ && npm run editorconfig && npm run stylelint",
     "test-gulp": "gulp serv"
   },
