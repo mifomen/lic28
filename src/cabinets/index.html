@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    :root {
+:root {
   --black: #000000;
   --grey: #808080;
   --white: #ffffff;
@@ -47,10 +47,10 @@
 
 .label__list-item,
 .list__item2 {
-  border: 1px solid var(--black);
+  border: 1px solid #000000;
   text-transform: uppercase;
   outline-offset: -4px;
-  outline: 1px solid var(--black);
+  outline: 1px solid #000000;
   font-size: 24px;
   padding: 5px;
   font-weight: 700;
@@ -59,14 +59,14 @@
 }
 
 .list__item--active1 {
-  background-color: var(--grey);
-  border-color: var(--white);
-  outline-color: var(--white);
-  color: var(--white);
-  text-shadow: 1px 1px 1px var(--black),
-  1px -1px 1px var(--black),
-  -1px 1px 1px var(--black),
-  -1px -1px 1px var(--black);
+  background-color: #808080;
+  border-color: #ffffff;
+  outline-color: #ffffff;
+  color: #ffffff);
+  text-shadow: 1px 1px 1px #000000,
+  1px -1px 1px #000000,
+  -1px 1px 1px #000000,
+  -1px -1px 1px #000000;
 }
 
 .day__title {
@@ -85,22 +85,23 @@
 
 
 .cabinet-table {
-  outline-offset: -1px;
-  outline: 1px solid var(--black);
-  font-size: 24px;
+  /* outline-offset: -1px; */
+  /* border: 1px solid #000000; */
+  font-size: 22px;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
 .cabinet-table td {
-  outline-offset: -3px;
-  outline: 1px solid var(--black);
-  padding: 5px 20px;
+  border: 2px solid #000000;
+  padding: 5px 15px;
   vertical-align: middle;
   text-align: center;
   font-weight: 700;
 }
 
 .cabinet-table td:nth-child(1) {
-  min-width: 35px;
+  min-width: 29px;
   /* background: red; */
 }
 
@@ -110,63 +111,49 @@
   padding: 0;
 }
 .bg-orange {
-  background-color: var(--orange);
+  background-color: #fbbc04;
 }
 
 .bg-grey-2 {
-  background-color: var(--grey-2);
+  background-color: #d9d9d9;
 }
 .bg-blue {
-  background-color: var(--blue);
+  background-color: #c9daf8;
 }
 
 
-td.hide-cell {
-  outline-color: transparent;
-  border-color: transparent;
-}
 
-td.cell-border-2px {
-  border: 3px solid var(--black)
-}
-
-td.of-0 {
-  outline-offset: 0;
-}
-td.ta-l {
-  text-align: left;
-
-}
-
-
-.button-label__1,
-.button-label__2,
-.button-label__3,
-.button-label__4,
-.button-label__5,
-.button-label__6,
+.day__button-label,
 .list__item {
-  border: 1px solid var(--black);
   text-transform: uppercase;
-  outline-offset: -4px;
-  outline: 1px solid var(--black);
+  outline-offset: -2px;
+  border: 2px solid #000000;
   font-size: 24px;
   padding: 5px;
   font-weight: 700;
   padding: 12px 20px 12px 20px;
-  margin-right: 1px;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+
+.day__button-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-bottom-color: transparent; */
+  /* border: none; */
 }
 
 .day__button-2:checked .button-label__2
 .day__button-1:checked .button-label__1 {
-  background-color: var(--grey);
-  border-color: var(--white);
-  outline-color: var(--white);
-  color: var(--white);
-  text-shadow: 1px 1px 1px var(--black),
-  1px -1px 1px var(--black),
-  -1px 1px 1px var(--black),
-  -1px -1px 1px var(--black);
+  background-color: #808080;
+  border-color: #ffffff;
+  outline-color: #ffffff;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000,
+  1px -1px 1px #000000,
+  -1px 1px 1px #000000,
+  -1px -1px 1px #000000;
 }
 
 .list,
@@ -187,16 +174,42 @@ td.ta-l {
 .day__button-3:checked ~ .label__list .button-label__3,
 .day__button-4:checked ~ .label__list .button-label__4,
 .day__button-5:checked ~ .label__list .button-label__5,
-.day__button-6:checked ~ .label__list .button-label__6    {
-  background-color: var(--grey);
-  border-color: var(--white);
-  outline-color: var(--white);
-  color: var(--white);
-  text-shadow: 1px 1px 1px var(--black),
-  1px -1px 1px var(--black),
-  -1px 1px 1px var(--black),
-  -1px -1px 1px var(--black);
+.day__button-6:checked ~ .label__list .button-label__6  {
+  background-color: #808080;
+  border: 2px double #808080;
+  outline-color: #ffffff;
+  outline-offset: -5px;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #000000,
+  1px -1px 1px #000000,
+  -1px 1px 1px #000000,
+  -1px -1px 1px #000000;
 }
+
+
+td.hide-cell {
+  outline-color: transparent;
+  border-color: transparent;
+}
+
+td.br-2 {
+  border: 2px solid #000000;
+}
+
+td.of-0 {
+  outline-offset: 0;
+}
+
+td.ta-l {
+  text-align: left;
+}
+
+td.ol-2 {
+  outline-offset: -1px;
+  outline: 2px solid #000000;
+}
+
+
 
   </style>
 </head>
@@ -403,8 +416,8 @@ td.ta-l {
         <td></td>
         <td colspan="6">2-ая смена</td>
         <td class="hide-cell"></td>
-        <td class="cell-border-2px">с/к</td>
-        <td class="cell-border-2px">спецкурс</td>
+        <td class="br-2">с/к</td>
+        <td class="br-2">спецкурс</td>
       </tr>
       <tr>
         <td>№</td>
@@ -675,8 +688,8 @@ td.ta-l {
         <td></td>
         <td colspan="6">2-ая смена</td>
         <td class="hide-cell"></td>
-        <td class="cell-border-2px">с/к</td>
-        <td class="cell-border-2px">спецкурс</td>
+        <td class="br-2">с/к</td>
+        <td class="br-2">спецкурс</td>
       </tr>
       <tr>
         <td>№</td>
@@ -943,8 +956,8 @@ td.ta-l {
         <td></td>
         <td colspan="6">2-ая смена</td>
         <td class="hide-cell"></td>
-        <td class="cell-border-2px">с/к</td>
-        <td class="cell-border-2px">спецкурс</td>
+        <td class="br-2">с/к</td>
+        <td class="br-2">спецкурс</td>
       </tr>
       <tr>
         <td>№</td>
@@ -1226,12 +1239,12 @@ td.ta-l {
         <td></td>
         <td colspan="6">2-ая смена</td>
         <td class="hide-cell"></td>
-        <td class="cell-border-2px">с/к</td>
-        <td class="cell-border-2px">спецкурс</td>
+        <td class="br-2">с/к</td>
+        <td class="br-2">спецкурс</td>
         <td class="hide-cell"></td>
-        <td class="bg-blue cell-border-2px"> Инф.</td>
-        <td class="cell-border-2px">19</td>
-        <td colspan=3 class="cell-border-2px">Беспалова М.В.</td>
+        <td class="bg-blue br-2"> Инф.</td>
+        <td class="br-2">19</td>
+        <td colspan=3 class="br-2">Беспалова М.В.</td>
       </tr>
       <tr>
         <td>№</td>
@@ -1246,8 +1259,8 @@ td.ta-l {
         <td class="hide-cell"></td>
         <td class="hide-cell"></td>
         <td></td>
-        <td class="cell-border-2px">18</td>
-        <td colspan=3 class="cell-border-2px">Кошелев И.А.</td>
+        <td class="br-2">18</td>
+        <td colspan=3 class="br-2">Кошелев И.А.</td>
       </tr>
       <tr>
         <td>1.</td>
@@ -1348,16 +1361,16 @@ td.ta-l {
       </tr>
       <tr>
         <td class="cabinet-table__first-column">1.</td>
-        <td>зал</td>
+        <td class="bg-grey-2">18,19</td>
         <td>17</td>
-        <td>14</td>
         <td>15</td>
-        <td>9</td>
-        <td>7</td>
-        <td>16</td>
-        <td>22</td>
-        <td class="bg-grey-2">8,18</td>
+        <td>20</td>
         <td>5</td>
+        <td>16</td>
+        <td>7</td>
+        <td>22</td>
+        <td>зал</td>
+        <td>10</td>
         <td>12</td>
         <td>21</td>
         <td class="bg-orange" colspan="3">ко второму уроку</td>
@@ -1365,92 +1378,92 @@ td.ta-l {
       <tr>
         <td>2.</td>
         <td>17</td>
-        <td>зал</td>
-        <td>16</td>
+        <td class="bg-grey-2">18,19</td>
         <td>15</td>
-        <td>12</td>
-        <td class="bg-grey-2">8,18</td>
-        <td>20</td>
-        <td>22</td>
+        <td>16</td>
         <td>7</td>
-        <td>9</td>
-        <td>5</td>
+        <td>22</td>
+        <td>20</td>
         <td>21</td>
+        <td>8</td>
         <td>6</td>
-        <td>14</td>
+        <td>12</td>
         <td>10</td>
+        <td>зал</td>
+        <td>14</td>
+        <td>9</td>
       </tr>
       <tr>
         <td>3.</td>
-        <td>16</td>
-        <td>9</td>
-        <td>15</td>
         <td>17</td>
-        <td>21</td>
-        <td>12</td>
-        <td>20</td>
+        <td>16</td>
         <td>7</td>
+        <td>21</td>
         <td>5</td>
-        <td>зал</td>
-        <td>18</td>
+        <td class="bg-blue">18,19</td>
+        <td>12</td>
+        <td class="bg-grey-2">8,9</td>
+        <td>20</td>
+        <td>15</td>
         <td>10</td>
         <td>6</td>
-        <td>14</td>
         <td>22</td>
+        <td>14</td>
+        <td>зал</td>
       </tr>
       <tr>
         <td>4.</td>
-        <td>20</td>
-        <td>9</td>
-        <td>зал</td>
         <td>16</td>
-        <td>7</td>
-        <td>12</td>
-        <td class="bg-grey-2">8,18</td>
-        <td>22</td>
         <td>17</td>
+        <td>21</td>
         <td>14</td>
-        <td>10</td>
+        <td>20</td>
+        <td>7</td>
+        <td class="bg-blue">18,19</td>
         <td>5</td>
+        <td class="bg-grey-2">8,22</td>
         <td>15</td>
+        <td>9</td>
+        <td>12</td>
+        <td>10</td>
+        <td>зал</td>
         <td>6</td>
-        <td>18,21</td>
       </tr>
       <tr>
         <td>5.</td>
-        <td>21</td>
-        <td>10</td>
+        <td>20</td>
         <td>14</td>
         <td>17</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>16</td>
+        <td class="bg-grey-2">7,8</td>
+        <td>15</td>
+        <td>5</td>
         <td>зал</td>
         <td>12</td>
-        <td>20</td>
-        <td>15</td>
-        <td>7</td>
+        <td class="bg-blue">18,19</td>
         <td>9</td>
-        <td>22</td>
+        <td>21</td>
+        <td>16</td>
         <td>6</td>
-        <td>5</td>
+        <td>10</td>
+        <td>22</td>
       </tr>
       <tr>
         <td>6.</td>
         <td>21</td>
-        <td>16</td>
-        <td>17</td>
-        <td>20</td>
-        <td>15</td>
-        <td>зал</td>
-        <td>14</td>
-        <td>22</td>
         <td></td>
+        <td class="bg-grey-2">8,16</td>
+        <td></td>
+        <td>15</td>
+        <td>14</td>
+        <td></td>
+        <td>20</td>
+        <td>5</td>
+        <td>7</td>
         <td>10</td>
         <td>9</td>
-        <td>7</td>
-        <td class="bg-grey-2">18,19</td>
-        <td>5</td>
+        <td class="bg-grey-2">17,18</td>
         <td>6</td>
+        <td>22</td>
       </tr>
       <tr>
         <td>7.</td>
@@ -1464,11 +1477,11 @@ td.ta-l {
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
+        <td>5</td>
         <td></td>
         <td>22</td>
-        <td></td>
-        <td>6</td>
+        <td>10</td>
+        <td class="bg-grey-2">18,21</td>
       </tr>
       <tr>
         <td>с/к</td>
@@ -1476,41 +1489,24 @@ td.ta-l {
         <td></td>
         <td></td>
         <td></td>
+        <td colspan="3" class="special-lesson">10 Плаксина Т.Ю.</td>
         <td></td>
+        <td class="special-lesson">12 Волков Н.С.</td>
+        <td colspan="2" class="special-lesson">6 Мацокина Г.Ф.</td>
         <td></td>
+        <td colspan="2" class="special-lesson">22 Анурина О.А.</td>
         <td></td>
-        <td class="special-lesson">12 Мозалевская Л.В.</td>
-        <td class="special-lesson">5 Доманин А.А.</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td class="bg-grey-2">18,19</td>
-        <td>5</td>
-        <td>6</td>
-      </tr>
-      <tr>
-        <td>с/к</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td colspan="3" class="special-lesson">21 Демашова Ю.А.</td>
-        <td colspan="3" class="special-lesson">10 Бакулина Г.С.</td>
-      </tr>
-      <tr>
-        <td colspan="16"></td>
       </tr>
       <tr>
         <td></td>
         <td colspan="6">2-ая смена</td>
         <td class="hide-cell"></td>
-        <td class="cell-border-2px">с/к</td>
-        <td class="cell-border-2px">спецкурс</td>
+        <td class="br-2 ol-2">с/к</td>
+        <td class="br-2">спецкурс</td>
+        <td style="" class="hide-cell ol-2"></td>
+        <td class="bg-blue br-2"> Инф.</td>
+        <td class="br-2">19</td>
+        <td colspan=3 class="br-2">Беспалова М.В.</td>
       </tr>
       <tr>
         <td>№</td>
@@ -1520,76 +1516,83 @@ td.ta-l {
         <td>7А</td>
         <td>7Б</td>
         <td>7В</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>14</td>
-        <td>17</td>
-        <td>12</td>
-        <td class="bg-grey-2">8,19</td>
-        <td>20</td>
-        <td>7</td>
         <td class="hide-cell"></td>
-        <td class="of-0 bg-grey-2">Англ. яз.</td>
-        <td class="of-0">8</td>
-        <td class="of-0 ta-l" colspan="4">Зыкина И.А.</td>
+        <td class="hide-cell"></td>
+        <td class="hide-cell"></td>
+        <td class="hide-cell"></td>
+        <td class="ol-2"></tdсд>
+        <td class="br-2">18</td>
+        <td colspan=3 class="br-2">Кошелев И.А.</td>
       </tr>
       <tr>
-        <td>2</td>
-        <td>14</td>
+        <td>1.</td>
+        <td>16</td>
         <td>17</td>
         <td>15</td>
-        <td>20</td>
-        <td>7</td>
-        <td class="bg-grey-2">8,19</td>
+        <td class="bg-grey-2">7,8</td>
+        <td>22</td>
+        <td>9</td>
         <td class="hide-cell"></td>
-        <td class="of-0"></td>
-        <td class="of-0">18</td>
+        <td class="of-0 bg-grey-2 ol-2">Англ. яз.</td>
+        <td class="of-0 ol-2">8</td>
+        <td class="of-0 ta-l  ol-2" colspan="4">Зыкина И.А.</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>15</td>
+        <td class="bg-grey-2">7,8</td>
+        <td>16</td>
+        <td>зал</td>
+        <td>5</td>
+        <td>9</td>
+        <td class="hide-cell"></td>
+        <td class="of-0 ol-2"></td>
+        <td class="of-0">9,18,22</td>
         <td class="of-0 ta-l" colspan="4">Сельверова Н.А.</td>
       </tr>
       <tr>
-        <td>3</td>
-        <td>5</td>
-        <td>20</td>
+        <td>3.</td>
         <td>15</td>
-        <td>7</td>
-        <td class="bg-grey-2">8,19</td>
+        <td class="bg-grey-2">7,8</td>
         <td>16</td>
+        <td>зал</td>
+        <td>5</td>
+        <td>9</td>
         <td class="hide-cell"></td>
-        <td class="of-0"></td>
-        <td class="of-0">19</td>
+        <td class="of-0  ol-2"></td>
+        <td class="of-0">17</td>
         <td class="of-0 ta-l" colspan="4">Байданова С.Г.</td>
       </tr>
       <tr>
-        <td>4</td>
-        <td>20</td>
+        <td>4.</td>
+        <td class="bg-grey-2">18,19</td>
         <td>5</td>
-        <td>21</td>
+        <td>17</td>
         <td>15</td>
-        <td>7</td>
+        <td>9</td>
         <td>16</td>
         <td class="hide-cell"></td>
-        <td class="of-0"></td>
-        <td class="of-0">21</td>
+        <td class="of-0  ol-2"></td>
+        <td class="of-0">16,19</td>
         <td class="of-0 ta-l" colspan="4">Кайтанба М.В.</td>
       </tr>
       <tr>
+        <td>5.</td>
         <td>5</td>
-        <td>5</td>
-        <td>20</td>
-        <td>7</td>
-        <td>8</td>
-        <td>16</td>
-        <td>8</td>
-      </tr>
-      <tr>
-        <td>6</td>
+        <td>14</td>
         <td>15</td>
         <td>7</td>
-        <td>20</td>
+        <td>зал</td>
+        <td class="bg-blue">8,19</td>
+      </tr>
+      <tr>
+        <td>6.</td>
+        <td></td>
+        <td></td>
+        <td></td>
         <td>5</td>
-        <td>16</td>
-        <td>8</td>
+        <td class="bg-blue">8,19</td>
+        <td>7</td>
       </tr>
     </table>
   </div>
@@ -1780,8 +1783,8 @@ td.ta-l {
         <td></td>
         <td colspan="6">2-ая смена</td>
         <td class="hide-cell"></td>
-        <td class="cell-border-2px">с/к</td>
-        <td class="cell-border-2px">спецкурс</td>
+        <td class="br-2">с/к</td>
+        <td class="br-2">спецкурс</td>
       </tr>
       <tr>
         <td>№</td>
@@ -1909,7 +1912,7 @@ td.ta-l {
     // for (const item of allItems) {
     //   item.addEventListener('click',onClickChangeActive);
     // }
-    const url = `#day-${new Date().getDay()}`;
+    const url = `#day-${new Date().getDay()+1}`;
     if (document.querySelector(url)) {
       document.querySelector(url).checked = true;
     }
