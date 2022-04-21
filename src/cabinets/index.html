@@ -877,17 +877,17 @@
       </tr>
       <tr>
         <td class="cabinet-table__first-column">1.</td>
-        <td>зал</td>
+        <td class="bg-grey-2 ">18,19</td>
         <td>17</td>
-        <td>14</td>
         <td>15</td>
-        <td>9</td>
-        <td>7</td>
         <td>16</td>
-        <td>22</td>
-        <td class="bg-grey-2">8,18</td>
         <td>5</td>
+        <td>9</td>
         <td>12</td>
+        <td>зал</td>
+        <td>14</td>
+        <td>22</td>
+        <td>10</td>
         <td>21</td>
         <td class="bg-orange" colspan="3">ко второму уроку</td>
       </tr>
@@ -1688,6 +1688,14 @@
     <li class="list__item item__6 ">суббота
     </li>
   </ul>
-  <script src="app.js" type="module"></script>
+  <script>
+
+
+const url = `#day-${new Date().getDay()}`;
+if (document.querySelector(url)) {
+  document.querySelector(url).checked = true;
+}
+
+  </script>
 </body>
 </html>
