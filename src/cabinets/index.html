@@ -37,6 +37,9 @@
   align-items: center;
   height: 100vh;
   overflow: auto;
+  background-color: #fff;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAMAAAApB0NrAAAABlBMVEX///+pqalTpKl9AAAAAnRSTlMAGovxNEIAAAAdSURBVDjLY2AAAUaG4UYxDDsfjfp91O+jfqfE7wCzpQCw/dq+qQAAAABJRU5ErkJggg==');
+
 }
 
 .label__list,
@@ -1785,7 +1788,7 @@ td.ol-2 {
     // for (const item of allItems) {
     //   item.addEventListener('click',onClickChangeActive);
     // }
-    const url = `#day-${new Date().getDay()+2}`;
+    const url = `#day-${new Date().getDay()}`;
     if (document.querySelector(url)) {
       document.querySelector(url).checked = true;
     }
