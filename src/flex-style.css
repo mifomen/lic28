@@ -1,3 +1,15 @@
+.ti25px {
+  text-indent: 25px;
+}
+
+.ti15px {
+  text-indent: 15px;
+}
+
+.ti35px {
+  text-indent: 35px;
+}
+
 @-webkit-keyframes b2pxb {
 	0%,
 	to {
@@ -1111,7 +1123,7 @@ border-radius: 0px;
 	transform: scale(1.2);
 }
 
-/* РїРёС‚Р°РЅРёРµ */
+/* Р С—Р С‘РЎвЂљР В°Р Р…Р С‘Р Вµ */
  .nutrition {
       font-size: 14pt;
     }
@@ -1246,7 +1258,7 @@ font-size: 1.2em;
 	line-height: 1.2;
 }
 
-/*РѕС„РѕСЂРјР»РµРЅРёРµ РґР»СЏ С‚Р°Р±Р»РёС†С‹ РёР· СЂР°Р±РѕС‡РёСЉС… РїСЂРѕРіСЂР°РјРј */
+/*Р С•РЎвЂћР С•РЎР‚Р СР В»Р ВµР Р…Р С‘Р Вµ Р Т‘Р В»РЎРЏ РЎвЂљР В°Р В±Р В»Р С‘РЎвЂ РЎвЂ№ Р С‘Р В· РЎР‚Р В°Р В±Р С•РЎвЂЎР С‘РЎР‰РЎвЂ¦ Р С—РЎР‚Р С•Р С–РЎР‚Р В°Р СР С */
 .table-td {
   width: 100%;
   /*counter-reset: first 0;*/
@@ -1362,7 +1374,7 @@ table.table-feedback {
     color: black;
     background-color: rgba(222,222,0,0.3);
     border: 1px solid #000000;
-    content: "РќР°Р¶РјРёС‚Рµ Рё РїРѕС‡С‚Р° СЃРєРѕРїРёСЂСѓРµС‚СЃСЏ";
+    content: "Р СњР В°Р В¶Р СР С‘РЎвЂљР Вµ Р С‘ Р С—Р С•РЎвЂЎРЎвЂљР В° РЎРѓР С”Р С•Р С—Р С‘РЎР‚РЎС“Р ВµРЎвЂљРЎРѓРЎРЏ";
     display: block;
     position: absolute;
     bottom: -10px;
@@ -1373,7 +1385,7 @@ table.table-feedback {
 }
 
 .copySuccess:hover:after  {
-    content: "l28_nn@mail.52gov.ru РІ Р±СѓС„РµСЂРµ РѕР±РјРµРЅР°";
+    content: "l28_nn@mail.52gov.ru Р Р† Р В±РЎС“РЎвЂћР ВµРЎР‚Р Вµ Р С•Р В±Р СР ВµР Р…Р В°";
 }
 
 .m0 {
