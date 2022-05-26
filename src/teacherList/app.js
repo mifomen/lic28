@@ -108,6 +108,7 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
     if ( post.classNOO === levelEducation || post.classSOO === levelEducation || post.classOOO === levelEducation) {
       const cardTeacher = document.createElement('li');
       cardTeacher.classList.add('fz18');
+
       const cardTeacherFIO = document.createElement('span');
       cardTeacherFIO.innerHTML = `${post.fio} <br>`;
       cardTeacher.appendChild(cardTeacherFIO);
