@@ -6,42 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    *,
-    body {
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .menu__list {
-      list-style: none;
-      /* border: 2px solid green; */
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-    }
-    .menu__item {
-      margin: 35px;
-    }
-    .menu__link {
-      font-size: 28px;
-      padding: 15px;
-      transition: 1300ms ease;
-      border: 10px solid darkorange;
-      border-radius: 22px;
-    }
-    .menu__link:hover {
-      transition: 1300ms ease;
-      border-color: blue;
-    }
-  </style>
+*, body { //eslint-disable-line
+  box-sizing: border-box; //eslint-disable-line
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.menu__list {
+  list-style: none;
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu__item {
+  margin: 35px;
+}
+
+.menu__link {
+  font-size: 28px;
+  padding: 15px;
+  transition: 1300ms ease;
+  border: 10px solid darkorange;
+  border-radius: 22px;
+}
+
+.menu__link:hover {
+  transition: 1300ms ease;
+  border-color: blue;
+}
+</style>
 </head>
 
 <body class="page-body">

@@ -1,5 +1,6 @@
 [
   {
+    "show": "true",
     "fio": "Белова Наталья Андреевна",
     "classNOO": 1,
     "classSOO": 2,
@@ -18,6 +19,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Булдина Нина Викторовна",
     "classNOO": 1,
     "classSOO": 0,
@@ -34,6 +36,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Губина Юлия Сергеевна",
     "classNOO": 1,
     "classSOO": 0,
@@ -52,6 +55,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Жолоб Маргарита Александровна",
     "classNOO": 1,
     "classSOO": 0,
@@ -68,6 +72,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Земскова Наталья Александровна",
     "classNOO": 1,
     "classSOO": 0,
@@ -84,6 +89,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Ермилова Наталья Вячеславовна",
     "classNOO": 1,
     "classSOO": 0,
@@ -100,6 +106,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Кириллова Елена Николаевна",
     "classNOO": 1,
     "classSOO": 0,
@@ -116,6 +123,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Лазарева Ирина Александровна",
     "classNOO": 1,
     "classSOO": 0,
@@ -132,6 +140,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Новикова Ирина Маматхановна",
     "classNOO": 1,
     "classSOO": 0,
@@ -148,6 +157,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Петрова Татьяна Евгеньевна",
     "classNOO": 1,
     "classSOO": 0,
@@ -164,6 +174,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Овчинникова Светлана Валентиновна",
     "classNOO": 1,
     "classSOO": 0,
@@ -180,6 +191,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Реброва Наталья Дмитриевна",
     "classNOO": 1,
     "classSOO": 0,
@@ -196,6 +208,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Соколова Ирина Юрьевна",
     "classNOO": 1,
     "classSOO": 0,
@@ -212,6 +225,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Страхова Анна Григорьевна",
     "classNOO": 1,
     "classSOO": 0,
@@ -228,6 +242,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Широкова Евгения Анатольевна ",
     "classNOO": 1,
     "classSOO": 0,
@@ -244,6 +259,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Красичкова Наталья Анатольевна",
     "classNOO": 1,
     "classSOO": 0,
@@ -260,6 +276,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Белозубова Юлия Андреевна",
     "classNOO": 1,
     "classSOO": 0,
@@ -276,6 +293,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Бочкарёва Ирина Федоровна",
     "classNOO": 1,
     "classSOO": 0,
@@ -292,6 +310,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Анурина Ольга Анатольевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -308,6 +327,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Плаксина Татьяна Юрьевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -324,6 +344,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Беспалова Марина Владимировна",
     "classNOO": 0,
     "classSOO": 2,
@@ -340,6 +361,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Кудрявцева Маргарита Сергаавна",
     "classNOO": 0,
     "classSOO": 2,
@@ -356,6 +378,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Баринова Марина Вячеславовна",
     "classNOO": 0,
     "classSOO": 2,
@@ -372,6 +395,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Байданова Светлана Геннадьевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -388,6 +412,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Виноградова Марина Александровна",
     "classNOO": 0,
     "classSOO": 2,
@@ -404,6 +429,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Демина Ольга Евгеньевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -420,6 +446,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Лакомова Анастасия Александровна",
     "classNOO": 0,
     "classSOO": 2,
@@ -436,6 +463,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Приходько Виктория Олеговна",
     "classNOO": 0,
     "classSOO": 2,
@@ -452,6 +480,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Зефирова Софья Анатольевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -468,6 +497,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Демина  Марина Юрьевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -484,6 +514,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Рыбак Владимир Вадимович",
     "classNOO": 0,
     "classSOO": 2,
@@ -500,6 +531,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Доманин Александр Анатольевич",
     "classNOO": 0,
     "classSOO": 2,
@@ -516,6 +548,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Кайтанба Мадлена Валериевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -532,6 +565,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Зыкина Ирина Анатольевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -548,6 +582,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Колесова Елена Владимировна",
     "classNOO": 0,
     "classSOO": 2,
@@ -564,6 +599,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Коченова Ольга Анатольевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -580,6 +616,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Метелкина Людмила Ивановна",
     "classNOO": 0,
     "classSOO": 2,
@@ -596,6 +633,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Мортин Владимир Викторович",
     "classNOO": 0,
     "classSOO": 2,
@@ -612,6 +650,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Мочалова Екатерина Николаевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -628,6 +667,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Муращенкова Марина Сергеевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -644,6 +684,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Новожилов Антон Юрьевич",
     "classNOO": 0,
     "classSOO": 2,
@@ -660,6 +701,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Сельверова Наталья Алексеевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -676,6 +718,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Смирнова Кристина Олеговна",
     "classNOO": 0,
     "classSOO": 2,
@@ -692,6 +735,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Тюрина Надежда Николаевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -708,6 +752,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Щербакова Мария Сергеевна",
     "classNOO": 0,
     "classSOO": 2,
@@ -724,6 +769,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Маркина Ольга Сергеевна",
     "classNOO": 0,
     "classSOO": 0,
@@ -740,6 +786,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Мацокина Галина Федоровна",
     "classNOO": 0,
     "classSOO": 0,
@@ -756,6 +803,7 @@
     "academicTitle": ""
   },
   {
+    "show": "true",
     "fio": "Мозалевская Людмила Владимировна",
     "classNOO": 0,
     "classSOO": 2,
