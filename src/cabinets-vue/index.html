@@ -12,11 +12,33 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
+  <div id="app">
+    {{ message }}
+    {{teacherList}}
+  </div>
+<script>
+const { createApp } = Vue;
 
-  <div id="app">{{ message }}
-{{teacherList}}
+createApp({
+  data() {
+    return {
+      message: 'Hello Vue!',
+      init: false,
+      teacherList: [],
+    }
+  },
+  mounted() {
+    try {
+      fetch('./teacherList.json')
+        .then((response) => response.json)
+        .then((json) => this.teacherList = json)
+        .then(this.init = true);
+      } catch (e) {
+          console.error("erorr", e)
+      }
+    },
+  }).mount('#app');
 
-  </div><script src="index.js">
 
   </script>
 </body>
