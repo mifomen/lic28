@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>vue3</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="vue.global.js"></script> -->
+  <script src="https://unpkg.com/vue@2"></script>
+  <!-- <script src="https://unpkg.com/vue@next"></script> -->
+  <!-- production-версия, оптимизированная для размера и скорости -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body class="page-body">
+  <div id="app">
+    {{ message }}
+    <span v-if="initialized">
+      <ul class="list collection">
+        <li class="list__item collection-item"v-for="(item, index) in teacherList" v-bind:key="item.id">
+          <span v-if="item.fio && item.fio.split(' ').length >= 1">
+            <strong>{{ ++index }}. Фамилия: </strong> {{ item.fio.split(" ")[0] }}
+          </span>
+          <span v-if="item.fio && item.fio.split(' ').length >= 2">
+            <strong>Имя: </strong>{{ item.fio.split(" ")[1] }}
+          </span>
+          <span v-if="item.fio && item.fio.split(' ').length >= 3">
+            <strong>Отчество: </strong>{{ item.fio.split(" ")[2] }}
+          </span>
+          <span v-if="item.dolzhnost">
+            <strong>Занимаемая должность: </strong>{{ item.dolzhnost }}
+          </span>
+          <span v-if="item.levelStudy">
+            <strong>Уровень образование: </strong>{{ item.levelStudy }}
+          </span>
+          <span v-if="item.qualification">
+            <strong>Квалификация: </strong>{{ item.qualification }}
+          </span>
+          <span v-if="item.upQualification">
+            <strong>Повышение: </strong>{{ item.upQualification }}
+          </span>
+          <span v-if="item.academicTitle">
+            <strong>academicTitle: </strong>{{ item.academicTitle }}
+          </span>
+          <span v-if="item.directionStudy">
+            <strong>Наименование направления подготовки и (или) специальности:</strong>{{ item.directionStudy }}
+          </span>
+          <span v-if="item.workExperienceInYearStart">
+            <strong>Общий стаж работы: </strong
+            >{{ new Date().getFullYear() - item.workExperienceInYearStart }}
+          </span>
+          <span v-if="item.workAsTeacherInYearStart">
+            <strong>Стаж работы по специальности: </strong>{{ new Date().getFullYear() - item.workAsTeacherInYearStart }}
+          </span>
+          <span v-if="item.subjectsTaught">
+            <strong>Преподоваемые учебные предметы: </strong>{{ item.subjectsTaught }}
+          </span>
+        </li>
+      </ul>
+    </span>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Привет, Vue!',
+        initialized: false,
+        teacherList: [],
+        pageNumber: 0,
+        itemOnPage: 7,
+        pageCount: 0,
+      },
+      methods: {
+        trySortByFio: function (d1, d2) {
+          //функция для сортировани по фио
+          if (d1.fio.toLowerCase() > d2.fio.toLowerCase()) {
+            return 1;
+          }
+          if (d1.fio.toLowerCase() < d2.fio.toLowerCase()) {
+            return -1;
+          }
+          if (d1.fio.toLowerCase() === d2.fio.toLowerCase()) {
+            return 0;
+          }
+        },
+      },
+      mounted() {
+        const URL =
+      "https://raw.githubusercontent.com/mifomen/vue-test/master/src/teachers.json";
+    try {
+      fetch(URL)
+        .then((response) => response.json())
+        .then((json) => (this.teacherList = json.sort(this.trySortByFio)))
+        .then((this.initialized = true));
+    } catch (errors) {
+      console.error("errors ", errors);
+    }
+      }
+    })
+  </script>
+</body>
+</html>
