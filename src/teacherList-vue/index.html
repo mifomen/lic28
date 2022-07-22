@@ -39,21 +39,25 @@
           <span v-if="item.qualification">
             <strong>Квалификация: </strong>{{ item.qualification }}
           </span>
-          <span v-if="item.upQualification">
-            <strong>Повышение: </strong>{{ item.upQualification }}
-          </span>
-          <span v-if="item.academicTitle">
-            <strong>academicTitle: </strong>{{ item.academicTitle }}
-          </span>
           <span v-if="item.directionStudy">
             <strong>Наименование направления подготовки и (или) специальности:</strong>{{ item.directionStudy }}
           </span>
+          <span v-if="item.academicDegree">
+            <strong>Ученая степень:</strong>{{ item.academicDegree }}
+          </span>
+          <span v-if="item.academicTitle">
+            <strong>Ученое звание: </strong>{{ item.academicTitle }}
+          </span>
+          <span v-if="item.upQualification">
+            <strong>повышение квалификации и профессиональная переподготовка: </strong>{{ item.upQualification }}
+          </span>
           <span v-if="item.workExperienceInYearStart">
             <strong>Общий стаж работы: </strong
-            >{{ new Date().getFullYear() - item.workExperienceInYearStart }}
+           >{{ new Date().getFullYear() - item.workExperienceInYearStart }}
+            {{LastAlphabet(new Date().getFullYear() - item.workExperienceInYearStart)}}
           </span>
           <span v-if="item.workAsTeacherInYearStart">
-            <strong>Стаж работы по специальности: </strong>{{ new Date().getFullYear() - item.workAsTeacherInYearStart }}
+            <strong>Стаж работы по специальности: </strong> {{new Date().getFullYear() - item.workAsTeacherInYearStart}} {{ LastAlphabet(new Date().getFullYear() - item.workAsTeacherInYearStart) }}
           </span>
           <span v-if="item.subjectsTaught">
             <strong>Преподоваемые учебные предметы: </strong>{{ item.subjectsTaught }}
@@ -87,6 +91,20 @@
             return 0;
           }
         },
+        LastAlphabet: function (NumberYear) {
+          // let LastAlphabet = function (NumberYear) {
+          let ageLastNumber = NumberYear % 10;
+          if (ageLastNumber == 0 || ageLastNumber >= 5 && ageLastNumber <= 9)
+            return "лет"
+          if (ageLastNumber >= 2 && ageLastNumber <= 4)
+            return "года"
+          if (ageLastNumber > 10 && ageLastNumber < 15)
+            return "лет"
+          if (NumberYear % 100 > 10 && NumberYear % 100 < 15)
+            return old = "Р»РµС‚"
+          if (ageLastNumber == 1)
+            return old = "год"
+         }
       },
       mounted() {
         const URL =
