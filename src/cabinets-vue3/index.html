@@ -11,55 +11,46 @@
   <!-- Compiled and minified JavaScript -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 </head>
-<body>
-  <div id="app" class="container">
-    <div
-      v-if="init"
-      сlass="container"
-      v-for="item in cabinets"
-      v-bind:key="item.id"
-    >
-      <span v-if="!item.secondShift" class="collection__inner">
-        <ul class="collection__list">
-        <!-- {{item.secondShift}} -->
-          <li class="collection__item">
-            {{ item.name }}
-          </li>
-          <li
-            class="collection__item"
-            v-for="elem in item.DayOfWeek1"
-            v-bind:key="elem">
-              {{ elem }}
-          </li>
-        </ul>
-      </span>
+<body class="page-body">
+  <div id="app" class="app-container">
+    <input class="day__button day__button-1" type="radio" name="days" id="day-1" checked="true">
+    <input class="day__button day__button-2" type="radio" name="days" id="day-2" checked="">
+    <input class="day__button day__button-3" type="radio" name="days" id="day-3" checked="">
+    <input class="day__button day__button-4" type="radio" name="days" id="day-4" checked="">
+    <input class="day__button day__button-5" type="radio" name="days" id="day-5" checked="">
+    <input class="day__button day__button-6" type="radio" name="days" id="day-6" checked="">
+    <ul class="label__list">
+      <label class="day__button-label button-label__1" for="day-1">понедельник</label>
+      <label class="day__button-label button-label__2" for="day-2">вторник</label>
+      <label class="day__button-label button-label__3" for="day-3">среда</label>
+      <label class="day__button-label button-label__4" for="day-4">четверг</label>
+      <label class="day__button-label button-label__5" for="day-5">пятница</label>
+      <label class="day__button-label button-label__6" for="day-6">суббота</label>
+     </ul>
+    <div class="container__wrapper">
+      <div
+        v-if="init"
+        сlass="container"
+        v-for="item in cabinets"
+        v-bind:key="item.id"
+      >
+        <span v-if="!item.secondShift" class="collection__inner">
+          <ul class="collection__list">
+          <!-- {{item.secondShift}} -->
+            <li class="collection__item">
+              {{ item.name }}
+            </li>
+            <li
+              class="collection__item"
+              v-for="elem in item.DayOfWeek1"
+              v-bind:key="elem">
+                {{ elem }}
+            </li>
+          </ul>
+        </span>
+        </div>
+      </div>
     </div>
-  </div>
-<script>
-const { createApp } = Vue;
-
-createApp({
-  data() {
-    return {
-      message: 'Hello Vue!',
-      init: false,
-      cabinets: [],
-    }
-  },
-  mounted() {
-    try {
-      fetch("./cabinets.json")
-        .then((response) => response.json())
-        .then((json) => this.cabinets = json)
-        .then((json) => console.log(json))
-        .then(this.init = true);
-    } catch(erros) {
-          console.error("erorr", erros)
-      }
-    },
-  }).mount('#app');
-
-
-  </script>
+<script src="index.js"></script>
 </body>
 </html>
