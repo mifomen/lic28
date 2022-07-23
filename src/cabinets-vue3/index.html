@@ -7,14 +7,33 @@
   <link rel="stylesheet" href="style.css">
   <script src="vue-3.js"></script>
   <!-- <script src="https://unpkg.com/vue@3"></script> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
   <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 </head>
 <body>
-  <div id="app">
-    {{ message }}
-    {{teacherList}}
+  <div id="app" class="container">
+    <div
+      v-if="init"
+      сlass="container"
+      v-for="item in cabinets"
+      v-bind:key="item.id"
+    >
+      <span v-if="!item.secondShift" class="collection__inner">
+        <ul class="collection__list">
+        <!-- {{item.secondShift}} -->
+          <li class="collection__item">
+            {{ item.name }}
+          </li>
+          <li
+            class="collection__item"
+            v-for="elem in item.DayOfWeek1"
+            v-bind:key="elem">
+              {{ elem }}
+          </li>
+        </ul>
+      </span>
+    </div>
   </div>
 <script>
 const { createApp } = Vue;
@@ -24,17 +43,18 @@ createApp({
     return {
       message: 'Hello Vue!',
       init: false,
-      teacherList: [],
+      cabinets: [],
     }
   },
   mounted() {
     try {
-      fetch('./teacherList.json')
-        .then((response) => response.json)
-        .then((json) => this.teacherList = json)
+      fetch("./cabinets.json")
+        .then((response) => response.json())
+        .then((json) => this.cabinets = json)
+        .then((json) => console.log(json))
         .then(this.init = true);
-      } catch (e) {
-          console.error("erorr", e)
+    } catch(erros) {
+          console.error("erorr", erros)
       }
     },
   }).mount('#app');

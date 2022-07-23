@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* width: 100%; */
+  /* justify-content: flex-start; */
+  text-align: center;
+}
+
+.collection {
+  /* width: 25%; */
+  border: 2px solid blue;
+}
+.collection__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.collection__item {
+  /* width: 25%; */
+  border: 2px solid blue;
+}
