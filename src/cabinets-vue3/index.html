@@ -14,8 +14,6 @@
 <body class="page-body">
   <div id="app" class="app-container">
 
-    {{resaultArray}}
-
     <input class="day__button day__button-1" type="radio" name="days" id="day-1" checked="true">
     <input class="day__button day__button-2" type="radio" name="days" id="day-2" checked="">
     <input class="day__button day__button-3" type="radio" name="days" id="day-3" checked="">
@@ -31,25 +29,27 @@
       <label class="day__button-label button-label__6" for="day-6">суббота</label>
     </ul>
     <div class="container__wrapper">
+      <div>{{getResaultArray}}</div>
       <div
       v-if="init"
       сlass="container"
       v-for="item in cabinets"
       v-bind:key="item.id"
       >
-      <span v-if="!item.secondShift" class="collection__inner">
-        </span>
-        <ul class="collection__list">
-          <!-- {{item.secondShift}} -->
-          <li class="collection__item">
-            {{ item.name }}
-            </li>
+      <!-- {{ item.data }} -->
+        <span
+          v-if="!item.secondShift"
+          class="collection__inner"
+        >
+         <ul class="collection__list">
+           <li class="collection__item">
+             {{ item.name }}
+             </li>
             <li
               class="collection__item"
-              v-for="elem in item.DayOfWeek"
-              v-bind:key="elem.id">
-              <!-- {{typeof(item.DayOfWeek[5])}} -->
-              {{ elem}}
+              v-for="elem in item.DayOfWeek1"
+              >
+              {{ elem }}
             </li>
           </ul>
         </span>
