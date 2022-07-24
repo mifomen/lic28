@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
   /* flex-wrap: wrap; */
   /* width: 100%; */
   /* justify-content: flex-start; */
@@ -18,7 +19,9 @@
 }
 .container__wrapper {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-content: center;
 }
 
 .container {
@@ -43,9 +46,12 @@
 }
 .collection__item {
   /* width: 25%; */
-  border: 2px solid blue;
+  outline: 1px solid blue;
+  outline-offset: -2px;
+  padding: 10px 15px;
 }
 
+.label-active,
 .day__button-1:checked ~ .label__list .button-label__1, .day__button-2:checked ~ .label__list .button-label__2, .day__button-3:checked ~ .label__list .button-label__3, .day__button-4:checked ~ .label__list .button-label__4, .day__button-5:checked ~ .label__list .button-label__5, .day__button-6:checked ~ .label__list .button-label__6 {
   background-color: #65d261;
   letter-spacing: 4px;

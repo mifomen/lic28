@@ -9,6 +9,15 @@ createApp({
       cabinets: [],
     };
   },
+  methods: {
+    backItem(evt) {
+      console.log(evt.target.id)
+      if (document.querySelector('.label-active')) {
+        document.querySelector('.label-active').classList.remove("label-active")
+      }
+      evt.target.classList.add("label-active")
+    }
+  },
   mounted() {
     try {
       fetch("./cabinets.json")
@@ -23,6 +32,7 @@ createApp({
   computed: {
     getResaultArray: function () {
       for (const item of this.cabinets) {
+        console.log("this.cabinets", this.cabinets)
         const itemArrays = new Array(5);
         itemArrays[0] = item.DayOfWeek1;
         itemArrays[1] = item.DayOfWeek2;
