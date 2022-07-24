@@ -7,7 +7,7 @@ createApp({
       message: 'Hello Vue!',
       init: false,
       cabinets: [],
-    }
+    };
   },
   mounted() {
     try {
@@ -17,7 +17,14 @@ createApp({
         .then((json) => console.log(json))
         .then(this.init = true);
     } catch(erros) {
-          console.error("erorr", erros)
+        console.error("erros=", erros);
       }
     },
-  }).mount('#app');
+  computed: {
+    resaultArray: function() {
+      const res = new Array(5);
+
+      return res;
+    },
+  },
+}).mount('#app');
