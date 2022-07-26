@@ -15,12 +15,12 @@
 <body class="page-body">
   <div id="app" class="app-container">
     <ul class="button__list">
-      <button @click="backItem" id="0" class="button" for="day-1">понедельник</button>
-      <button @click="backItem" id="1" class="button" for="day-2">вторник</button>
-      <button @click="backItem" id="2" class="button" for="day-3">среда</button>
-      <button @click="backItem" id="3" class="button" for="day-4">четверг</button>
-      <button @click="backItem" id="4" class="button" for="day-5">пятница</button>
-      <button @click="backItem" id="5" class="button" for="day-6">суббота</button>
+      <button @click="backArray" id="0" class="button" for="day-1">понедельник</button>
+      <button @click="backArray" id="1" class="button" for="day-2">вторник</button>
+      <button @click="backArray" id="2" class="button" for="day-3">среда</button>
+      <button @click="backArray" id="3" class="button" for="day-4">четверг</button>
+      <button @click="backArray" id="4" class="button" for="day-5">пятница</button>
+      <button @click="backArray" id="5" class="button" for="day-6">суббота</button>
     </ul>
     <h1>1-ая смена</h1>
     <div class="container__wrapper">
@@ -59,6 +59,10 @@
         <li class="collection__item">№</li>
         <li class="collection__item"  v-for="n in 6" > {{ n }}. </li>
       </ul>
+      <span v-for="item in getResaultArray"
+      v-bind:key="item.id">
+        {{ item }}
+      </span>
       <div
       v-if="init"
       сlass="container"
