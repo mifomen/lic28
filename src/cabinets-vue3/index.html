@@ -35,10 +35,10 @@
       v-for="item in cabinets"
       v-bind:key="item.id"
       >
-        <div
-          v-if="!item.secondShift"
-          class="collection__inner"
-        >
+        <!-- <div -->
+          <!-- v-if="!item.secondShift" -->
+          <!-- class="collection__inner" -->
+        <!-- > -->
          <ul class="collection__list">
            <li class="collection__item">
              {{ item.name }}
@@ -50,7 +50,7 @@
               {{elem}}
             </li>
           </ul>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
     <h1>2-ая смена</h1>
@@ -59,15 +59,12 @@
         <li class="collection__item">№</li>
         <li class="collection__item"  v-for="n in 6" > {{ n }}. </li>
       </ul>
-      <span v-for="item in getResaultArray"
-      v-bind:key="item.id">
-        {{ item }}
-      </span>
+
       <div
-      v-if="init"
-      сlass="container"
-      v-for="item in cabinets"
-      v-bind:key="item.id"
+        v-if="init"
+        сlass="container"
+        v-for="item in cabinets"
+        v-bind:key="item.id"
       >
         <div
           v-if="item.secondShift"
@@ -87,6 +84,18 @@
         </div>
       </div>
     </div>
+    <hr>
+     <!-- {{getResaultArray}} -->
+    <ul
+      v-for="item in getResaultArray"
+      v-bind:key="item.id"
+    >
+      <li v-for="elem in item">
+        {{ elem }}
+      </li>
+    </ul>
+
+
   </div>
 <script src="index.js"></script>
 </body>

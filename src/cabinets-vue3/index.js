@@ -7,7 +7,7 @@ createApp({
       message: 'Hello Vue!',
       init: false,
       cabinets: [],
-      itemArray: null,
+      itemArray1: [],
     };
   },
   methods: {
@@ -19,8 +19,8 @@ createApp({
       }
       evt.target.classList.add('button--active');
 
-      console.log('this.cabinets.DayOfWeek1',this.cabinets[0].DayOfWeek4); //eslint-disable-line
-      console.log('this.itemArray',this.itemArray); //eslint-disable-line
+
+      console.log("itemArray1",this.itemArray1); //eslint-disable-line
 
       if (evt.target.id === 0) {
         this.itemArray = this.cabinet[0].DayOfWeek1;
@@ -42,9 +42,9 @@ createApp({
       }
     },
   },
-  mounted() {
+  async mounted() {
     try {
-      fetch('./cabinets.json')
+      await fetch('./cabinets.json')
         .then((response) => response.json())
         .then((json) => this.cabinets = json)
         // .then((json) => console.log(json))
@@ -55,18 +55,19 @@ createApp({
   },
   computed: {
     getResaultArray: function () {
+      const itemArrays = new Array();
       for (const item of this.cabinets) {
-        const itemArrays = new Array(5);
-        itemArrays[0] = item.DayOfWeek1;
-        itemArrays[1] = item.DayOfWeek2;
-        itemArrays[2] = item.DayOfWeek3;
-        itemArrays[3] = item.DayOfWeek4;
-        itemArrays[4] = item.DayOfWeek5;
-        itemArrays[5] = item.DayOfWeek6;
-        this.cabinets.data = itemArrays;
-        console.log('this.cabinets', itemArrays); //eslint-disable-line
-        return itemArrays;
+        if (!item.secondShift ) {
+          itemArrays.push(item.DayOfWeek0);
+        }
       }
+      return itemArrays;
     },
+    // getWeek1: function () {
+    //   this.cabinet.forEach((item) => {
+    //     this.itemArray1.push(item.DayOfWeek1);
+    //   });
+    //   console.log("itemArray1",this.itemArray1); //eslint-disable-line
+    // },
   },
 }).mount('#app');
