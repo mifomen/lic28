@@ -12,10 +12,10 @@ createApp({
   methods: {
     backItem(evt) {
       console.log(evt.target.id)
-      if (document.querySelector('.label-active')) {
-        document.querySelector('.label-active').classList.remove("label-active")
+      if (document.querySelector('.button--active')) {
+        document.querySelector('.button--active').classList.remove("button--active")
       }
-      evt.target.classList.add("label-active")
+      evt.target.classList.add("button--active")
     }
   },
   mounted() {
