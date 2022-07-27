@@ -55,12 +55,29 @@ createApp({
   },
   computed: {
     getResaultArray: function () {
-      const itemArrays = new Array();
+      const itemArrays = new Array(5);
+      const templateArrays0 = new Array();
+      const templateArrays1 = new Array();
+      const templateArrays2 = new Array();
+      const templateArrays3 = new Array();
+      const templateArrays4 = new Array();
+      const templateArrays5 = new Array();
       for (const item of this.cabinets) {
         if (!item.secondShift ) {
-          itemArrays.push(item.DayOfWeek0);
+          templateArrays0.push(item.DayOfWeek0);
+          templateArrays1.push(item.DayOfWeek1);
+          templateArrays2.push(item.DayOfWeek2);
+          templateArrays3.push(item.DayOfWeek3);
+          templateArrays4.push(item.DayOfWeek4);
+          templateArrays5.push(item.DayOfWeek5);
         }
       }
+      itemArrays[0] = templateArrays0;
+      itemArrays[1] = templateArrays1;
+      itemArrays[2] = templateArrays2;
+      itemArrays[3] = templateArrays3;
+      itemArrays[4] = templateArrays4;
+      itemArrays[5] = templateArrays5;
       return itemArrays;
     },
     // getWeek1: function () {
@@ -71,3 +88,16 @@ createApp({
     // },
   },
 }).mount('#app');
+
+
+// const a = [1,2,3,4];
+// const b = [1,2,3,4,5,6];
+
+// const c = new Array(1);
+// c[0] = a;
+// c[1] = b;
+// c[2] = b;
+// console.log("c[0]",c[0],"c[1]",c[1])
+
+
+// console.log("c",c)

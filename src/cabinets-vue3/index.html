@@ -71,29 +71,35 @@
           class="collection__inner"
         >
          <ul class="collection__list">
-           <li class="collection__item">
+           <li class="collection__item"
+
+           >
              {{ item.name }}
              </li>
             <li
               class="collection__item"
-              v-for="elem in item.DayOfWeek1"
+              v-for="elem in getResaultArray[0]"
               >
-              {{elem}}
+              <span v-for="el in elem">
+                {{ el }} <br>
+              </span>
             </li>
           </ul>
         </div>
       </div>
     </div>
     <hr>
-     <!-- {{getResaultArray}} -->
-    <ul
+     {{getResaultArray[0]}} <!--
+    <ul class="collection__list"
       v-for="item in getResaultArray"
       v-bind:key="item.id"
     >
-      <li v-for="elem in item">
+      <li class="collection__item"
+        v-for="elem in item">
         {{ elem }}
       </li>
-    </ul>
+      </ul>
+    </ul> -->
 
 
   </div>
