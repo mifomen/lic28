@@ -23,10 +23,10 @@
       <button @click="backArray" id="5" class="button" for="day-6">суббота</button>
     </ul>
     <h1>1-ая смена</h1>
-    <div class="container__wrapper">
+    <div class="container__wrapper first-shift">
       <ul class="collection__list">
         <li class="collection__item">№</li>
-        <li class="collection__item"  v-for="n in 6" > {{ n }}. </li>
+        <li class="collection__item"  v-for="n in itemCount" > {{ n }}. </li>
       </ul>
 
       <div
@@ -35,50 +35,49 @@
       v-for="item in cabinets"
       v-bind:key="item.id"
       >
+        <div v-if="!item.secondShift">
          <ul class="collection__list">
            <li class="collection__item">
              {{ item.name }}
              </li>
             <li
               class="collection__item"
-              v-for="elem in item.DayOfWeek1"
+              v-for="elem in item.data[pageNumber]"
               >
-              {{elem}}
+              {{ elem }}
             </li>
           </ul>
+        </div>
       </div>
     </div>
     <h1>2-ая смена</h1>
-    <div class="container__wrapper"
+    <div class="container__wrapper second-shift">
+      <ul class="collection__list">
+        <li class="collection__item">№</li>
+        <li class="collection__item"  v-for="n in itemCount" > {{ n }}. </li>
+      </ul>
+
+      <div
       v-if="init"
       сlass="container"
+      v-for="item in cabinets"
+      v-bind:key="item.id"
       >
-        <ul class="collection__list">
-          <li class="collection__item">№</li>
-          <li class="collection__item" v-for="n in 6" >{{ n }}.</li>
-        </ul>
-        <table class="collection__list">
-          <tr>
-            <td
-              v-for="elemSecondShift in arraySecondShift"
+      <div v-if="item.secondShift">
+         <ul class="collection__list">
+           <li class="collection__item">
+             {{ item.name }}
+             </li>
+            <li
               class="collection__item"
-            >
-              {{elemSecondShift}}
-            </td>
-          </tr>
-        </table>
-        <table>
-          <tr
-            class="collection__list"
-            class="collection__inner collection__list"
-            v-for="item in getResaultArrayNotSecondShift[pageNumber]"
-          >
-            <td v-for="elem in item" class="collection__item">
-              {{elem}}
-            </td>
-          </tr>
-        </table>
+              v-for="elem in item.data[pageNumber]"
+              >
+              {{ elem }}
+            </li>
+          </ul>
+        </div>
       </div>
+    </div>
     </div>
   </div>
 <script src="index.js"></script>
