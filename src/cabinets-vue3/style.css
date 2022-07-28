@@ -145,5 +145,5 @@
 
 
 .second-shift .collection__item:nth-child(5) {
-  background-color: rgb(64, 218, 89);
+  background: rgb(64, 218, 89);
 }

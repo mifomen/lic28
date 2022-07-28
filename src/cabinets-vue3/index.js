@@ -30,10 +30,10 @@ createApp({
     document.getElementById(this.pageNumber).classList.add('button--active');
     try {
       await fetch('./cabinets.json')
-      .then((response) => response.json())
-      .then((json) => this.cabinets = json)
-      // .then((json) => console.log(json))
-      .then(this.init = true);
+        .then((response) => response.json())
+        .then((json) => this.cabinets = json)
+        // .then((json) => console.log(json))
+        .then(this.init = true);
     } catch(erros) {
       console.error('erros=', erros); //eslint-disable-line
     }
@@ -42,7 +42,7 @@ createApp({
   computed: {
     getResaultArrayNotSecondShift: function () {
       const itemArrays1 = new Array(5);
-      return true;
+      return itemArrays1;
     },
   },
 }).mount('#app');
