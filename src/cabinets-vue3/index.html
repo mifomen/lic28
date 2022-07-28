@@ -15,7 +15,7 @@
 <body class="page-body">
   <div id="app" class="app-container">
     <ul class="button__list">
-      <button @click="backArray" id="0" class="button" for="day-1">понедельник</button>
+      <button @click="backArray" id="0" class="button button--active" for="day-1">понедельник</button>
       <button @click="backArray" id="1" class="button" for="day-2">вторник</button>
       <button @click="backArray" id="2" class="button" for="day-3">среда</button>
       <button @click="backArray" id="3" class="button" for="day-4">четверг</button>
@@ -35,10 +35,6 @@
       v-for="item in cabinets"
       v-bind:key="item.id"
       >
-        <!-- <div -->
-          <!-- v-if="!item.secondShift" -->
-          <!-- class="collection__inner" -->
-        <!-- > -->
          <ul class="collection__list">
            <li class="collection__item">
              {{ item.name }}
@@ -50,58 +46,40 @@
               {{elem}}
             </li>
           </ul>
-        <!-- </div> -->
       </div>
     </div>
     <h1>2-ая смена</h1>
-    <div class="container__wrapper">
-      <ul class="collection__list">
-        <li class="collection__item">№</li>
-        <li class="collection__item"  v-for="n in 6" > {{ n }}. </li>
-      </ul>
-
-      <div
-        v-if="init"
-        сlass="container"
-        v-for="item in cabinets"
-        v-bind:key="item.id"
+    <div class="container__wrapper"
+      v-if="init"
+      сlass="container"
       >
-        <div
-          v-if="item.secondShift"
-          class="collection__inner"
-        >
-         <ul class="collection__list">
-           <li class="collection__item"
-
-           >
-             {{ item.name }}
-             </li>
-            <li
+        <ul class="collection__list">
+          <li class="collection__item">№</li>
+          <li class="collection__item" v-for="n in 6" >{{ n }}.</li>
+        </ul>
+        <table class="collection__list">
+          <tr>
+            <td
+              v-for="elemSecondShift in arraySecondShift"
               class="collection__item"
-              v-for="elem in getResaultArray[0]"
-              >
-              <span v-for="el in elem">
-                {{ el }} <br>
-              </span>
-            </li>
-          </ul>
-        </div>
+            >
+              {{elemSecondShift}}
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr
+            class="collection__list"
+            class="collection__inner collection__list"
+            v-for="item in getResaultArrayNotSecondShift[pageNumber]"
+          >
+            <td v-for="elem in item" class="collection__item">
+              {{elem}}
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
-    <hr>
-     {{getResaultArray[0]}} <!--
-    <ul class="collection__list"
-      v-for="item in getResaultArray"
-      v-bind:key="item.id"
-    >
-      <li class="collection__item"
-        v-for="elem in item">
-        {{ elem }}
-      </li>
-      </ul>
-    </ul> -->
-
-
   </div>
 <script src="index.js"></script>
 </body>
