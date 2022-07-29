@@ -8,7 +8,7 @@ createApp({
       init: false,
       cabinets: [],
       itemArray1: [],
-      pageNumber: new Date().getDay(),
+      pageNumber: 6 || new Date().getDay(),
       itemCount: 6,
     };
   },
@@ -19,8 +19,6 @@ createApp({
         document.querySelector('.button--active').classList.remove('button--active');
       }
       evt.target.classList.add('button--active');
-
-
     },
   },
   async mounted() {
@@ -46,16 +44,3 @@ createApp({
     },
   },
 }).mount('#app');
-
-
-// const a = [1,2,3,4];
-// const b = [1,2,3,4,5,6];
-
-// const c = new Array(1);
-// c[0] = a;
-// c[1] = b;
-// c[2] = b;
-// console.log("c[0]",c[0],"c[1]",c[1])
-
-
-// console.log("c",c)

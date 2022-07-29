@@ -166,6 +166,7 @@
 .container__second-shift {
 display: flex;
 }
+
 .second-shift {
   display: flex;
   flex-direction: column;
