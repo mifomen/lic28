@@ -8,7 +8,7 @@ createApp({
       init: false,
       cabinets: [],
       itemArray1: [],
-      pageNumber: 6 || new Date().getDay(),
+      pageNumber: 5 || new Date().getDay(),
       itemCount: 6,
     };
   },
