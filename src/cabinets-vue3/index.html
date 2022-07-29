@@ -50,31 +50,33 @@
         </div>
       </div>
     </div>
-    <h1>2-ая смена</h1>
-    <div class="container__wrapper second-shift">
-      <ul class="collection__list">
-        <li class="collection__item">№</li>
-        <li class="collection__item"  v-for="n in itemCount" > {{ n }}. </li>
-      </ul>
+    <div class="container__wrapper second-shift" v-if="pageNumber!==5">
+      <h1>2-ая смена</h1>
+      <div class="container__second-shift">
+        <ul class="collection__list">
+          <li class="collection__item">№</li>
+          <li class="collection__item"  v-for="n in itemCount" > {{ n }}. </li>
+        </ul>
 
-      <div
-      v-if="init"
-      сlass="container"
-      v-for="item in cabinets"
-      v-bind:key="item.id"
-      >
-      <div v-if="item.secondShift">
-         <ul class="collection__list">
-           <li class="collection__item">
-             {{ item.name }}
-             </li>
-            <li
-              class="collection__item"
-              v-for="elem in item.data[pageNumber]"
-              >
-              {{ elem }}
-            </li>
-          </ul>
+        <div
+        v-if="init"
+        сlass="container"
+        v-for="item in cabinets"
+        v-bind:key="item.id"
+        >
+        <div v-if="item.secondShift">
+          <ul class="collection__list">
+            <li class="collection__item">
+              {{ item.name }}
+              </li>
+              <li
+                class="collection__item"
+                v-for="elem in item.data[pageNumber]"
+                >
+                {{ elem }}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
