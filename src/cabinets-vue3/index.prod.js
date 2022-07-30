@@ -1,5 +1,6 @@
 
 const { createApp } = Vue; //eslint-disable-line
+// Vue.config.productionTip = false;
 
 createApp({
   data() {
