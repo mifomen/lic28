@@ -34,8 +34,8 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
   const spoilerForMenuFilesHigh = document.querySelector('.js-food-menu-high');
   const spoilerForMenuFilesLow = document.querySelector('.js-food-menu-low');
 
-  spoilerForMenuFilesHigh.innerHidth = '';
-  spoilerForMenuFilesLow.innerHidth = '';
+  spoilerForMenuFilesHigh.innerHTML = '';
+  spoilerForMenuFilesLow.innerHTML = '';
 
   spoilerForMenuFilesLow.innerHTML = `<summary style='max-width: 550px'>Школьное меню 1-4 классы c 03.09.2021 по ${new Date().toLocaleDateString()}</summary>`;
   spoilerForMenuFilesHigh.innerHTML = `<summary style='max-width: 550px'>Школьное меню 5-11 классы c 03.09.2021 по ${new Date().toLocaleDateString()}</summary>`;
@@ -101,9 +101,23 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
   // let loop = new Date(lastWorkDay);     // today
 
   // while (loop >= start) {
+    let end;
+    let start;
 
-  const end = new Date('06/01/2022');
-  const start = new Date('09/01/2021'); //september 1 2021
+    if (spoilerForMenuFilesLow.hasAttribute('data-food-start')) {
+      start = new Date(spoilerForMenuFilesLow.dataset.foodStart);
+    } else {
+      start = new Date('09-1-2021');
+    }
+
+    if (spoilerForMenuFilesLow.hasAttribute('data-food-end')) {
+      end = new Date(spoilerForMenuFilesLow.dataset.foodEnd)
+    } else {
+      end = new Date('06-01-2022');
+
+    }
+    // start = new Date('05-15-2022'); //september 1 2021
+    // end = new Date('06-01-2022');
   let loop = new Date(end); // today
 
   while (loop >= start) {
@@ -132,8 +146,8 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
       mode: 'cors', // no-cors, *cors, same-origin
       cache: 'no-cache',
     };
-
-    if (arrayDaysNoFoodHighSchool.indexOf(nowDate) === -1) {
+    // console.log("loop=",loop.getDay())
+    if (loop.getDay() != 6 || arrayDaysNoFoodLowSchool.indexOf(`${nowDate}`) === -1 && arrayDaysNoFoodHighSchool.indexOf(nowDate) === -1 ) {
       const pathFullHighSchool = `https://www.liceum28.nnov.ru/wp-includes/ms-files.php?file=menu-${nowDate}.pdf`;
 
       fetch(pathFullHighSchool, settingsOfFetch).then(
@@ -151,10 +165,7 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
       );
     }
 
-    if (
-      arrayDaysNoFoodLowSchool.indexOf(`${nowDate}`) === -1 &&
-      arrayDaysNoFoodHighSchool.indexOf(nowDate) === -1
-    ) {
+    if ( loop.getDay() != 6 || loop.getDay() != 5 || arrayDaysNoFoodLowSchool.indexOf(`${nowDate}`) === -1 || arrayDaysNoFoodHighSchool.indexOf(nowDate) === -1) {
       const pathFullLowSchool = `https://www.liceum28.nnov.ru/wp-includes/ms-files.php?file=menu-0${nowDate}.pdf`;
 
       fetch(pathFullLowSchool, settingsOfFetch).then(

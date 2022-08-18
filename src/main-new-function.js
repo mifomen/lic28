@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+if (document.querySelector('#cookie__button')) {
+
+
 let CookieButton = document.querySelector('#cookie__button')
 let CookieDiv = document.querySelector(".cookie")
 
@@ -42,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 let  deleteCokie = function() {
   return delete localStorage.CookieMemory
 }
-
+}
 // document.addEventListener("DOMContentLoaded", proverka);
 // proverka();
 // let WidgetButton = document.querySelector('.js-close-gosuslugi')
@@ -174,6 +177,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener("DOMContentLoaded", ChengeTimeOnpage())
 
+
+  const applyActionForTextSpans = (selector,innerAction) => {
+      if (document.querySelector(selector)) {
+        for (const item of document.querySelectorAll(selector)) {
+          item.textContent = innerAction
+        }
+      }
+    }
+
+    applyActionForTextSpans('.js-now-time',new Date().toLocaleDateString());
+    applyActionForTextSpans('.js-now-year',`${new Date().getFullYear()-1} — ${new Date().getFullYear()}`)
+    applyActionForTextSpans('.js-now-two-year',`${new Date().getFullYear()-1} — ${new Date().getFullYear()}`)
+    applyActionForTextSpans('.js-now-two-year-slash',`${new Date().getFullYear()-1}/${new Date().getFullYear()}`)
+    applyActionForTextSpans('.js-now-year-minus-one',`${new Date().getFullYear()-1}`)
 
   document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelector("#js-show-iframe-wrapper")) {
@@ -990,9 +1007,20 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
   const spoilerForMenuFilesHigh = document.querySelector('.js-food-menu-high');
   const spoilerForMenuFilesLow = document.querySelector('.js-food-menu-low');
 
-  document.querySelector('.js-food-menu-high summary').textContent = `Школьное меню 5-11 классы c 03.09.2021 по ${new Date().toLocaleDateString()}`;
+  const returnRightYear = () => {
+    const nowYeardate = new Date();
+    if ( nowYeardate.getMonth() >= 8 ) {
+      return nowYeardate.getFullYear();
+    }
+    if ( nowYeardate.getMonth() < 8 ) {
+      return nowYeardate.getFullYear()-1;
+      }
+  }
 
-  document.querySelector('.js-food-menu-low summary').textContent = `Школьное меню 1-4 классы  c 03.09.2021 по ${new Date().toLocaleDateString()}`;
+
+  document.querySelector('.js-food-menu-high summary').textContent = `Школьное меню 5-11 классы c 01.09.${returnRightYear()} по ${new Date().toLocaleDateString()}`;
+
+  document.querySelector('.js-food-menu-low summary').textContent = `Школьное меню 1-4 классы  c 01.09.${returnRightYear()} по ${new Date().toLocaleDateString()}`;
 
   document.querySelector('.js-menu-food-one').remove();
   document.querySelector('.js-menu-food-two').remove();
@@ -1043,8 +1071,29 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
     }
   }
 
-  const end = new Date('06/01/2022');
-  const start = new Date('09/01/2021');  //september 1 2021
+  const returnDate = (year,month,day) => {
+    // const currentDate = new Date();
+    return new Date(year, month, day, 0, 0, 0, 0);
+  }
+
+ let end = 0;
+ let start = 0;
+
+  const currentDate = new Date();
+
+  if ( currentDate.getMonth() >= 8 ) {
+    end = returnDate(currentDate.getFullYear()+1,7,1);
+    start = returnDate(currentDate.getFullYear(),8,1);
+  } else {
+    end = returnDate(currentDate.getFullYear(),8,1) ;
+    start = returnDate(currentDate.getFullYear()-1,7,1);
+    }
+
+  // const nameDate =  returnDate(2022,8,1);
+  // console.log(`nameDate=${nameDate}`);
+    // console.log(`end = ${end} start = ${start}`)
+  // const end = new Date('07/01/2022');
+  // const start = new Date('09/01/2021');  //september 1 2021
   let loop = new Date(end);     // today
 
   while (loop >= start) {
