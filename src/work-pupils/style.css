@@ -1,0 +1,32 @@
+
+.table-basic {
+  border: 2px solid #000;
+}
+
+.table-basic td {
+  border: 2px solid #000;
+  text-align: center;
+  vertical-align: center;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.fl {
+  float: left;
+}
+
+.pa {
+  position: absolute;
+}
+
+.pr {
+  position: relative;
+}
+
+.l0 {
+  left: 0;
+}
+
+.t0 {
+  top: 0;
+}
