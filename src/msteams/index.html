@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Microsoft Teams</title>
   <link rel="stylesheet" href="../flex-style.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/vue@2"></script>
@@ -21,37 +21,31 @@
     <li class="df ffdc">
       <span>Teams</span>
       <span><a href="https://teams.microsoft.com/" target="_blank">https://teams.microsoft.com</a></span>
-      <span>Торопова Ирина Олеговна</span>
-      <span class="fw-bold">login:</span>
-      <span>28-8-65@liceum28nn.onmicrosoft.com</span>
-      <span class="fw-bold">Password:</span>
-      <span>Njhjgjdf28</span>
     </li>
   </ol>
   <div id="app">
-    {{ message }}
-
     <ul class="list collection">
-      <li class="list__item collection-item"v-for="(item, index) in teacherList" v-bind:key="item.id">
-        <span v-if="item.fio && item.fio.split(' ').length >= 1">
-          <strong>{{ ++index }}. Фамилия: </strong> {{ item.fio.split(" ")[0] }}
+      <li class="list__item collection-item" v-for="(item, index) in itemList" v-bind:key="item.id">
+        <span v-if="item.fio">
+          <strong>{{ ++index }}. ФИО:</strong> {{ item.fio }}
         </span>
-        <span v-if="item.fio && item.fio.split(' ').length >= 2">
-          <strong>Имя: </strong>{{ item.fio.split(" ")[1] }}
+        <span>
+          <strong>Логин:</strong> {{ item.login }}
         </span>
-        <span v-if="item.fio && item.fio.split(' ').length >= 3">
-          <strong>Отчество: </strong>{{ item.fio.split(" ")[2] }}
+        <span>
+          <strong>Пароль:</strong> {{ item.pass }}
         </span>
       </li>
+
     </ul>
   </div>
   <script>
-var app = new Vue({
+    var app = new Vue({
       el: '#app',
       data: {
-        message: 'Привет, Vue!',
+        message: 'Привет, 123Vue!123',
         initialized: false,
-        teacherList: [],
+        itemList: [],
         pageNumber: 0,
         itemOnPage: 7,
         pageCount: 0,
@@ -82,21 +76,20 @@ var app = new Vue({
             return old = "Р»РµС‚"
           if (ageLastNumber == 1)
             return old = "год"
-         }
-      },
+          }
+        },
       mounted() {
-        const URL =
-      "https://raw.githubusercontent.com/mifomen/vue-test/master/src/teachers.json";
+        const URL = "https://raw.githubusercontent.com/mifomen/lic28/master/src/msteams/list.json";
         try {
           fetch(URL)
             .then((response) => response.json())
-            .then((json) => (this.teacherList = json.sort(this.trySortByFio)))
+            .then((json) => (this.itemList = json.sort(this.trySortByFio)))
             .then((this.initialized = true));
-        } catch (errors) {
-          console.error("errors ", errors);
+            } catch (errors) {
+              console.error("errors ", errors);
+            }
         }
-      }
-    })
+      })
   </script>
 </body>
 </html>
