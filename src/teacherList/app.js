@@ -160,13 +160,13 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
       cardTeacher.appendChild(cardTeacherworkAsTeacherInYear);
 
       //expirience teacher with month
-      const cardTeacherworkExperienceInYearWithMonths = document.createElement('span');
-      cardTeacherworkExperienceInYearWithMonths.innerHTML = `<strong>Общий стаж работы:</strong> ${checkSummerTimeWithMonths(post.workExperienceInYearStart)}<br>`;
-      cardTeacher.appendChild(cardTeacherworkExperienceInYearWithMonths);
+      // const cardTeacherworkExperienceInYearWithMonths = document.createElement('span');
+      // cardTeacherworkExperienceInYearWithMonths.innerHTML = `<strong>Общий стаж работы:</strong> ${checkSummerTimeWithMonths(post.workExperienceInYearStart)}<br>`;
+      // cardTeacher.appendChild(cardTeacherworkExperienceInYearWithMonths);
 
-      const cardTeacherworkAsTeacherInYearWithMonths = document.createElement('span');
-      cardTeacherworkAsTeacherInYearWithMonths.innerHTML = `<strong>Стаж работы по специальности:</strong> ${checkSummerTimeWithMonths(post.workAsTeacherInYearStart)}<br>`;
-      cardTeacher.appendChild(cardTeacherworkAsTeacherInYearWithMonths);
+      // const cardTeacherworkAsTeacherInYearWithMonths = document.createElement('span');
+      // cardTeacherworkAsTeacherInYearWithMonths.innerHTML = `<strong>Стаж работы по специальности:</strong> ${checkSummerTimeWithMonths(post.workAsTeacherInYearStart)}<br>`;
+      // cardTeacher.appendChild(cardTeacherworkAsTeacherInYearWithMonths);
 
       const cardTeacherSubjectsTaught = document.createElement('span');
       cardTeacherSubjectsTaught.innerHTML = `<strong>Преподоваемые учебные предметы:</strong> ${post.subjectsTaught}<br>`;
