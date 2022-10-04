@@ -75,6 +75,7 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
       menuFileLink.textContent = 'Школьнок питание 5-11 класс'; //menu09032022.pdf среднее звено
       menuFileLinkDescription.textContent = `Файл Adobe PDF, ~160 Кбайт. Дата размещения: ${parseInt(urlFile.slice(0, 2),10)} ${arrayMonths[parseInt(urlFile.slice(2, 4), 10) - 1]} ${urlFile.slice(urlFile.length - 4,urlFile.length)}`;
     }
+    console.log("urlFile ",urlFile)
 
     menuFileContent.appendChild(menuFileLink);
     menuFileContent.appendChild(menuFileLinkDescription);
@@ -103,22 +104,24 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
   // while (loop >= start) {
     let end;
     let start;
+    start = new Date('09-01-2022');
+    end = new Date('11-01-2022');
+    // if (spoilerForMenuFilesLow.hasAttribute('data-food-start')) {
+    //   start = new Date(spoilerForMenuFilesLow.dataset.foodStart);
+    // } else {
 
-    if (spoilerForMenuFilesLow.hasAttribute('data-food-start')) {
-      start = new Date(spoilerForMenuFilesLow.dataset.foodStart);
-    } else {
-      start = new Date('09-1-2021');
-    }
+    // }
 
-    if (spoilerForMenuFilesLow.hasAttribute('data-food-end')) {
-      end = new Date(spoilerForMenuFilesLow.dataset.foodEnd)
-    } else {
-      end = new Date('06-01-2022');
+    // if (spoilerForMenuFilesLow.hasAttribute('data-food-end')) {
+    //   end = new Date(spoilerForMenuFilesLow.dataset.foodEnd)
+    // } else {
 
-    }
+
+    // }
     // start = new Date('05-15-2022'); //september 1 2021
     // end = new Date('06-01-2022');
   let loop = new Date(end); // today
+
 
   while (loop >= start) {
     let nowDate;
@@ -185,5 +188,6 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
 
     const newDate = loop.setDate(loop.getDate() - 1);
     loop = new Date(newDate);
+    // console.log("loop ",loop)
   }
 }
