@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <span class="js-now-time"> 2021</span><br>
+  <span class="js-now-year"> 2021</span><br>
+  <span class="js-now-two-year"> 2021</span><br>
+  <span class="js-now-two-year-slash"> 2021</span> slash<br>
+  <span class="js-now-two-year-slash"> 2021</span> slash<br>
+  <span class="js-now-year-minus-one"> 2021</span><br>
+
+  <script>
+    const applyActionForTextSpans = (selector,separator) => {
+        if (document.querySelector(selector)) {
+          const item = document.querySelector(selector);
+          let nowYear;
+          if  (new Date().getMonth() >=8) {
+            nowYear = new Date().getFullYear(); //2022
+            // console.log(new Date().getMonth() -1)
+          } else {
+            nowYear = new Date().getFullYear()-1; //2023
+            // console.log(new Date().getMonth())
+          }
+          if (separator === "+") {
+            item.textContent = new Date().toLocaleDateString();
+            return;
+          }
+          if (separator === "-1") {
+            item.textContent = nowYear;
+            return;
+          }
+          for (const item of document.querySelectorAll(selector)) {
+            item.textContent = `${nowYear} ${separator} ${nowYear+1}`
+          }
+        }
+      }
+    // console.log(`new Date().getFullYear()=${new Date().getMonth()}`)
+        applyActionForTextSpans('.js-now-time',"+");
+        applyActionForTextSpans('.js-now-year',"/")
+        applyActionForTextSpans('.js-now-two-year',"-")
+        applyActionForTextSpans('.js-now-two-year-slash',"/")
+        applyActionForTextSpans('.js-now-year-minus-one',"-1")
+
+    // console.group(applyActionForTextSpans('.js-now-time',new Date().toLocaleDateString()))
+    // console.log(applyActionForTextSpans('.js-now-year',`${new Date().getFullYear()-1} — ${new Date().getFullYear()}`))
+    // console.log(applyActionForTextSpans('.js-now-two-year',`${new Date().getFullYear()-1} — ${new Date().getFullYear()}`))
+    // console.groupEnd(applyActionForTextSpans('.js-now-two-year-slash',`${new Date().getFullYear()-1}/${new Date().getFullYear()}`))
+  </script>
+</body>
+</html>
