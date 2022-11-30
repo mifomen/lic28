@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <span>
+    <span class="js-now-time">js-now-time</span> <== js-now-time <br>
+    <span class="js-now-year">js-now-year</span> <== js-now-year <br>
+    <span class="js-now-two-year">js-now-two-year</span> <== js-now-two-year <br>
+    <span class="js-now-two-year-slash">js-now-two-year-slash</span> <== js-now-two-year-slash <br>
+    <span class="js-now-year-minus-one">js-now-year-minus-one</span> <== js-now-year-minus-one
+
+  <script>
+    const applyActionForTextSpans = (selector,separator) => {
+    if (document.querySelector(selector)) {
+      let nowYear;
+      if  (new Date().getMonth() >=8) {
+        nowYear = new Date().getFullYear(); //2022
+      } else {
+        nowYear = new Date().getFullYear()-1; //2023
+      }
+
+      for (const item of document.querySelectorAll(selector)) {
+        if (separator === "+") {
+          item.textContent = new Date().toLocaleDateString();
+          return;
+        }
+        if (separator === "/") {
+          item.textContent = `${nowYear}`;
+          return;
+        }
+        if (separator === "-1") {
+          item.textContent = `${nowYear} / ${nowYear+1}`;
+          return;
+        }
+        if (separator === "//") {
+          item.textContent = `${nowYear} / ${nowYear+1}`;
+          return;
+        }
+        item.textContent = `${nowYear} ${separator} ${nowYear+1}`
+      }
+    }
+  }
+// console.log(`new Date().getFullYear()=${new Date().getMonth()}`)
+    applyActionForTextSpans('.js-now-time',"+");
+    applyActionForTextSpans('.js-now-year',"/")
+    applyActionForTextSpans('.js-now-two-year',"-")
+    applyActionForTextSpans('.js-now-two-year-slash',"//")
+    applyActionForTextSpans('.js-now-year-minus-one',"-1")
+    applyActionForTextSpans('.js-now-year-minus-one',"//")
+  </script>
+</body>
+</html>
