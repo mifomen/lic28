@@ -67,13 +67,13 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
 
     if (levelEducation===2) {
       menuFileLink.textContent = 'Школьное питание 1-4 класс'; //menu009032022.pdf началка
-      menuFileLinkDescription.textContent = `Файл XLS , ~23 Кбайт. Дата размещения:   ${parseInt(urlFile.slice(urlFile.length-5,urlFile.length-3),10)} ${arrayMonths[parseInt(urlFile.slice(5,7), 10)-1]} ${parseInt(urlFile.slice(0,4),10)}`;
+      menuFileLinkDescription.textContent = `Файл XLS , ~16 Кбайт. Дата размещения:   ${parseInt(urlFile.slice(urlFile.length-5,urlFile.length-3),10)} ${arrayMonths[parseInt(urlFile.slice(5,7), 10)-1]} ${parseInt(urlFile.slice(0,4),10)}`;
       // console.log('arrayMonths[parseInt(urlFile.slice(5, 7), 10) ',parseInt(urlFile.slice(1, 5), 10))
     }
 
     if (levelEducation===1) {
       menuFileLink.textContent = 'Школьное питание 5-11 класс'; //menu009032022.pdf началка
-      menuFileLinkDescription.textContent = `Файл XLS , ~23 Кбайт. Дата размещения:   ${parseInt(urlFile.slice(urlFile.length-5,urlFile.length-3),10)} ${arrayMonths[parseInt(urlFile.slice(5,7), 10)-1]} ${parseInt(urlFile.slice(0,4),10)}`;
+      menuFileLinkDescription.textContent = `Файл XLS , ~16 Кбайт. Дата размещения:   ${parseInt(urlFile.slice(urlFile.length-5,urlFile.length-3),10)} ${arrayMonths[parseInt(urlFile.slice(5,7), 10)-1]} ${parseInt(urlFile.slice(0,4),10)}`;
       console.log('arrayMonths[parseInt(urlFile.slice(5, 7), 10) ',parseInt(urlFile.slice(1, 5), 10))
     }
     console.log("urlFile ",urlFile)
