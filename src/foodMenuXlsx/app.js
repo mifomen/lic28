@@ -107,7 +107,7 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
     let start;
     start = new Date('09-01-2022');
     const date = new Date();
-    end = date.setDate(date.getDate() + 31);
+    end = date.setDate(date.getDate() + 2 );
     // console.log('end ',end);
     // console.log('start ',start);
     // if (spoilerForMenuFilesLow.hasAttribute('data-food-start')) {
@@ -142,10 +142,10 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
      }
 
      if (loop.getMonth() < 10) {
-       templateMonth= `0${loop.getMonth()}`;
+       templateMonth= `0${loop.getMonth()+1}`;
      }
      else {
-      templateMonth= `${loop.getMonth()}`
+      templateMonth= `${loop.getMonth()+1}`
      }
      nowDate = `${loop.getFullYear()}-${templateMonth}-${templateDate}`;
 
