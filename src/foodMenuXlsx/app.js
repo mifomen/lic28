@@ -74,9 +74,9 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
     if (levelEducation===1) {
       menuFileLink.textContent = 'Школьное питание 5-11 класс'; //menu009032022.pdf началка
       menuFileLinkDescription.textContent = `Файл XLS , ~16 Кбайт. Дата размещения:   ${parseInt(urlFile.slice(urlFile.length-5,urlFile.length-3),10)} ${arrayMonths[parseInt(urlFile.slice(5,7), 10)-1]} ${parseInt(urlFile.slice(0,4),10)}`;
-      console.log('arrayMonths[parseInt(urlFile.slice(5, 7), 10) ',parseInt(urlFile.slice(1, 5), 10))
+      // console.log('arrayMonths[parseInt(urlFile.slice(5, 7), 10) ',parseInt(urlFile.slice(1, 5), 10))
     }
-    console.log("urlFile ",urlFile)
+    // console.log("urlFile ",urlFile)
 
     menuFileContent.appendChild(menuFileLink);
     menuFileContent.appendChild(menuFileLinkDescription);
@@ -106,7 +106,10 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
     let end;
     let start;
     start = new Date('09-01-2022');
-    end = new Date('01-01-2023');
+    const date = new Date();
+    end = date.setDate(date.getDate() + 31);
+    // console.log('end ',end);
+    // console.log('start ',start);
     // if (spoilerForMenuFilesLow.hasAttribute('data-food-start')) {
     //   start = new Date(spoilerForMenuFilesLow.dataset.foodStart);
     // } else {
@@ -151,7 +154,7 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
       mode: 'cors', // no-cors, *cors, same-origin
       cache: 'no-cache',
     };
-    console.log("loop=",loop.getDay())
+    // console.log("loop=",loop.getDay())
     if (loop.getDay() != 6 ) {
       // const pathFullHighSchool = `https://www.liceum28.nnov.ru/wp-includes/ms-files.php?file=menu-${nowDate}.pdf`;
       const pathFullHighSchool = `https://www.liceum28.nnov.ru/food/${nowDate}-ss.xlsx`;
@@ -191,6 +194,7 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
 
     const newDate = loop.setDate(loop.getDate() - 1);
     loop = new Date(newDate);
+    console.log('loop ',loop)
     // console.log("loop ",loop)
   }
 }
