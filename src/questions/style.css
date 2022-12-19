@@ -8,7 +8,7 @@
 
 
 h1 {
-  color: var(--basic-red);
+  color: #ff0000;
 }
 
  .order-1 {
@@ -228,8 +228,10 @@ h1 {
 
 .pointsResault {
   font-weight: bold;
-  text-shadow: 1px 1px 1px #00f;
-	color: #34a5ef
+  /* text-shadow: 1px 1px 1px #00f;
+	color: #34a5ef */
+  text-shadow: 1px 1px 1px #000;
+	color: orange;
 }
 
 .resaultAnswer {
