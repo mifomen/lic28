@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "qustionText": "Какие высказывания относятся к определению компьютера?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["универсальное устройство", "устройство для работы с информацией", "сложное устройство","программно упраавляемое устройство"]
+  },
+  {
+    "id": 2,
+    "qustionText": "qustionText2qustionText2qustionText2qustionText 2qustionText 2qustionText 2qustionText 2qustionText 2qustionText 2qustionText 2qustionText 2qustionText 2qustionText 2qustionText 2qustionText 2qustionText 2",
+    "questionImg": "test2",
+    "questionAudio": "name2",
+    "arrayAnswers": ["test", "otvet2", "otver3", "otet4"]
+  }
+]
