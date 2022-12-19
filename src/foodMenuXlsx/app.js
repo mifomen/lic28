@@ -1,12 +1,4 @@
 
-// span with nowtime on all page
-if (document.querySelector('.js-now-time')) {
-  const allSpansWithNowTime = document.querySelectorAll('.js-now-time');
-  for (const allSpanWithNowTime of allSpansWithNowTime) {
-    allSpanWithNowTime.textContent = `${new Date().toLocaleDateString()}`;
-  }
-}
-
 //food menu PDF
 if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-food-menu-low')) {
   //eslint-disable-next-line
@@ -60,7 +52,7 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
     // https://www.liceum28.nnov.ru/food/2022-12-02-sm.xlsx
     menuFileLink.href = `https://liceum28.nnov.ru/food/${urlFile}.xlsx`;
     menuFileLink.rel = 'noopener';
-
+    // console.log('urlFile ',urlFile);
     const menuFileLinkDescription = document.createElement('p');
     menuFileLinkDescription.className = 'document__description';
     menuFileLinkDescription.style.cssText = 'font-size: 14px; font-weight: 500;';
@@ -141,15 +133,15 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
        templateDate = loop.getDate();
      }
 
-     if (loop.getMonth() < 10) {
-       templateMonth= `0${loop.getMonth()+1}`;
+     if (loop.getMonth()+1 < 10) {
+      templateMonth= `0${loop.getMonth()+1}`;
      }
      else {
       templateMonth= `${loop.getMonth()+1}`
      }
      nowDate = `${loop.getFullYear()}-${templateMonth}-${templateDate}`;
 
-
+    // console.log('nowDate ',nowDate)
     const settingsOfFetch = {
       mode: 'cors', // no-cors, *cors, same-origin
       cache: 'no-cache',
@@ -194,7 +186,7 @@ if (document.querySelector('.js-food-menu-high') && document.querySelector('.js-
 
     const newDate = loop.setDate(loop.getDate() - 1);
     loop = new Date(newDate);
-    console.log('loop ',loop)
+    // console.log('loop ',loop)
     // console.log("loop ",loop)
   }
 }
