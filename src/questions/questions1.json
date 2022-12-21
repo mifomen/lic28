@@ -50,14 +50,14 @@
   },
   {
     "id": 8,
-    "qustionText": "Задать элементы массива случайным числом, какая конструкция верна?",
+    "qustionText": "По массиву FOO состоящего из N элементов, двигаются при помощи цикла for i:=1 to n do , как создать случайный элементы массива?",
     "questionImg": "",
     "questionAudio": "",
-    "arrayAnswers": ["BAR:=random(100);","BAR:=randomize(100);","BAR:=random[100];","BAR:=rng(100);"]
+    "arrayAnswers": ["BAR[i]:=random(100);","BAR[i]:=randomize(100);","BAR[i]:=random[100];","BAR[i]:=rng(100);"]
   },
   {
     "id": 9,
-    "qustionText": "Задать элементы массива случайным числом, какая конструкция верна?",
+    "qustionText": "Какая конструкция отвечает за создание случайного числа в переменной BAR?",
     "questionImg": "",
     "questionAudio": "",
     "arrayAnswers": ["BAR:=random(100);","BAR:=randomize(100);","BAR:=random[100];","BAR:=rng(100);"]
@@ -85,9 +85,9 @@
   },
   {
     "id": 13,
-    "qustionText": "Какая конструкция создаст a число из диапазона [-5;19]",
+    "qustionText": "Какая конструкция создаст число \"FOO\" из диапазона [-5;19]",
     "questionImg": "",
     "questionAudio": "",
-    "arrayAnswers": ["a:=random(25)-5;","a:=random(24)-5;","a:=random(24)+5;","a:=random(19,-5);"]
+    "arrayAnswers": ["FOO:=random(25)-5;","FOO:=random(24)-5;","FOO:=random(24)+5;","FOO:=random(19,-5);"]
   }
 ]
