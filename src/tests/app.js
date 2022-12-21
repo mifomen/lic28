@@ -26,3 +26,20 @@ if (document.querySelector('.js-now-fulldate')) {
     allDate.textContent = `${nowTime.getDate()} ${monthsArray[nowTime.getMonth()]} ${nowTime.getFullYear()}`
   }
 }
+
+
+
+let ownArray = ['Boolean','Undefined',23,'String','Null',15,54,NaN];
+
+let count = 0;
+
+const func = (arr) => {
+  return arr.reduce((a, b) =>{
+    if(typeof b === "number" && !isNaN(b)){
+        ++count;
+        return a += b;
+    }
+    return a
+}, 0) / count || 0
+}
+console.log(func(ownArray));
