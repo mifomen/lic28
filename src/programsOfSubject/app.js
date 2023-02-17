@@ -11,7 +11,7 @@ if (document.querySelector('.js-row')) {
     let href1 = link.querySelector('td:last-child a');
     set.add(href1)
     arr.push(href1)
-    console.log(` mifomen = href1 = ${href1}`)
+    // console.log(` mifomen = href1 = ${href1}`)
     if (href1.href[href1.href.length - 1] === '#') {
       //eslint-disable-next-line
       console.log(
