@@ -148,9 +148,9 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
       if (post.qualification !== '' && post.qualification !== undefined) {
         const cardTeacherQualification = document.createElement('td');
         cardTeacherQualification.classList.add('ta-c')
-        cardTeacherQualification.innerHTML = `${post.qualification}`;
+        cardTeacherQualification.innerHTML = 'Нет Квалификация';
         if (post.qualification === "" || post.qualification == undefined) {
-          cardTeacherQualification.innerHTML = 'Нет Квалификация';
+          cardTeacherQualification.innerHTML = `${post.qualification}`;
         }
         cardTeacher.appendChild(cardTeacherQualification);
       }
