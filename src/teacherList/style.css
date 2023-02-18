@@ -1313,3 +1313,19 @@ font-size: 1.2em;
   border: 2px double black;
   border-radius: 20px;
 }
+
+
+.table-workers {
+  outline: 1px solid black;
+  outline-offset: -1px;
+}
+.table-workers th,
+.table-workers td {
+  outline: 2px solid black;
+  outline-offset: -2px;
+  vertical-align: top;
+  text-align: left;
+}
+.table-workers .ta-c {
+  text-align: center;
+}
