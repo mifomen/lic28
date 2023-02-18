@@ -38,7 +38,7 @@ const sortByFIO = (a, b) => {
 const setTimeWordYear = (numberYear) => {
   const ageLastNumber = numberYear % 10;
   // console.log(`numberYear %100 = ${numberYear %100}; ageLastNumber=${ageLastNumber}; numberYear=${numberYear}`)
-  if ( numberYear <= 0 ) {
+  if ( numberYear <= 1 ) {
     return 'молодой специалист';
   }
   if ( ageLastNumber === 0 || ageLastNumber >= 5 && ageLastNumber <= 9 ) {
@@ -71,7 +71,7 @@ const setTimeWordMonths = (numberMonth) => {
 const checkSummerTimeWithMonths = (thisTimeString) => {
   const thisTime = new Date(`08-30-${thisTimeString}`);
 
-  if (new Date().getYear() - thisTime.getYear() <= 0 ) {
+  if (new Date().getYear() - thisTime.getYear() <= 1 ) {
     return 'молодой специалист';
   }
 
@@ -119,7 +119,7 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
   const postFragment = document.createDocumentFragment();
 
   renderPosts.forEach((post) => {
-    if ( (post.classNOO === levelEducation || post.classSOO === levelEducation || post.classOOO === levelEducation) && post.show === "true" ) {
+    if ( (post.classNOO === levelEducation || post.classSOO === levelEducation || post.classOOO === levelEducation|| post.classVNE === levelEducation|| post.classDOP === levelEducation) && post.show === "true" ) {
       const cardTeacher = document.createElement('tr');
       cardTeacher.classList.add('fz18');
 
@@ -145,30 +145,33 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
       cardTeacher.appendChild(cardTeacherLevelStudy);
 {/* <strong>Квалификация:</strong>  */}
 
-      if (post.qualification !== '' && post.qualification !== undefined) {
+      // if (post.qualification !== '' && post.qualification !== undefined) {
         const cardTeacherQualification = document.createElement('td');
         cardTeacherQualification.classList.add('ta-c')
-        cardTeacherQualification.innerHTML = `${post.qualification}`;
-        if (post.qualification === "" || post.qualification == undefined) {
-          cardTeacherQualification.innerHTML = 'Нет Квалификация';
+        cardTeacherQualification.innerHTML = 'Нет квалификация';
+        if (post.qualification !== "" || post.qualification == undefined) {
+          cardTeacherQualification.innerHTML = `${post.qualification}`;
         }
         cardTeacher.appendChild(cardTeacherQualification);
-      }
+      // }
 {/* <strong>Наименование направления подготовки и (или) специальности:</strong> */}
-      if (post.directionStudy !== '' && post.directionStudy !== undefined) {
-        const cardTeacherDirectionStudy = document.createElement('td');
-        cardTeacherDirectionStudy.classList.add('ta-c');
-        cardTeacherDirectionStudy.innerHTML = ` ${post.directionStudy}`;
-        cardTeacher.appendChild(cardTeacherDirectionStudy);
-      }
-{/* <strong>Ученая степень:</strong>  */}
-      if (post.academicDegree === '' || post.academicDegree !== undefined) {
-        const cardTeacherAcademicDegree = document.createElement('td');
-        cardTeacherAcademicDegree.classList.add('ta-c');
-      //  cardTeacherAcademicDegree.innerHTML = `${post.academicDegree} Нет `;
-        cardTeacherAcademicDegree.innerHTML = `Нет`;
-        cardTeacher.appendChild(cardTeacherAcademicDegree);
-      }
+    const cardTeacherDirectionStudy = document.createElement('td');
+    cardTeacherDirectionStudy.classList.add('ta-c');
+    cardTeacherDirectionStudy.innerHTML = 'Нет';
+    if (post.directionStudy !== '' || post.directionStudy !== undefined) {
+      cardTeacherDirectionStudy.innerHTML = post.directionStudy;
+    }
+    cardTeacher.appendChild(cardTeacherDirectionStudy);
+    {/* <strong>Ученая степень:</strong>  */}
+
+    const cardTeacherAcademicDegree = document.createElement('td');
+    cardTeacherAcademicDegree.classList.add('ta-c');
+    cardTeacherAcademicDegree.innerHTML = 'Нет';
+    if (post.academicDegree !== '' && post.academicDegree !== undefined) {
+      cardTeacherAcademicDegree.innerHTML = post.academicDegree;
+    }
+    cardTeacher.appendChild(cardTeacherAcademicDegree);
+
         // <strong>Ученое звание:</strong>
       if (post.academicTitle === '' || post.academicTitle !== undefined) {
         const cardTeacherAcademicTitle = document.createElement('td');
@@ -179,12 +182,13 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
         cardTeacher.appendChild(cardTeacherAcademicTitle);
       }
 
-//<strong>Повышение квалификации:</strong>
-      if (post.upQualification === '' || post.upQualification !== undefined) {
-        const cardTeacherupQualification = document.createElement('td');
-        cardTeacherupQualification.innerHTML = ` ${post.upQualification} Нет `;
-        cardTeacher.appendChild(cardTeacherupQualification);
+      //<strong>Повышение квалификации:</strong>
+      const cardTeacherupQualification = document.createElement('td');
+      cardTeacherupQualification.innerHTML = 'Нет';
+      if (post.upQualification !== '' && post.upQualification !== undefined) {
+        cardTeacherupQualification.innerHTML = post.upQualification;
       }
+      cardTeacher.appendChild(cardTeacherupQualification);
       //<strong>Общий стаж работы:</strong>
       const cardTeacherworkExperienceInYear = document.createElement('td');
       cardTeacherworkExperienceInYear.innerHTML = `${setTimeWordYear(new Date().getFullYear() - post.workExperienceInYearStart)}`;
