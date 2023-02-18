@@ -100,76 +100,100 @@ const checkSummerTimeWithMonths = (thisTimeString) => {
 const renderPostOfTeachers = (renderPosts, levelEducation) => {
   // levelEducation => 1= HOO 2 = OOO 3 = COO  4 = HOO&OOO 5 = OOO&COO
   const postsListElement = document.querySelector('.parent');
-  postsListElement.innerHTML = '';
+  postsListElement.innerHTML = `
+  <th><td>№</td>
+    <td>ФИО</td>
+    <td>занимаемая должность (должности)</td>
+    <td>уровень образования</td>
+    <td>квалификация</td>
+    <td>наименование направления подготовки и (или) специальности;</td>
+    <td>ученая степень (при наличии);</td>
+    <td>ученое звание (при наличии);</td>
+    <td>повышение квалификации и (или) профессиональная переподготовка (при наличии)</td>
+    <td>общий стаж работы</td>
+    <td>стаж работы по специальности</td>
+    <td>преподаваемые учебные предметы, курсы, дисциплины (модули)</td>
+  </th>`;
+  let nowNumberOfFio = 0;
   // const postsTemplate = document.querySelector('#teacher');
   const postFragment = document.createDocumentFragment();
 
   renderPosts.forEach((post) => {
     if ( (post.classNOO === levelEducation || post.classSOO === levelEducation || post.classOOO === levelEducation) && post.show === "true" ) {
-      const cardTeacher = document.createElement('li');
+      const cardTeacher = document.createElement('tr');
       cardTeacher.classList.add('fz18');
 
-      const cardTeacherFIO = document.createElement('span');
+      const cardTeacherNumber = document.createElement('td');
+      cardTeacherNumber.innerHTML = `${++nowNumberOfFio}`;
+      cardTeacher.appendChild(cardTeacherNumber);
+
+      const cardTeacherFIO = document.createElement('td');
       cardTeacherFIO.innerHTML = `${post.fio} <br>`;
       cardTeacher.appendChild(cardTeacherFIO);
 
-      const cardTeacherDolzhnost = document.createElement('span');
-      cardTeacherDolzhnost.innerHTML = `<strong>Занимаемая должность:</strong> ${post.dolzhnost} <br>`;
+{/* <strong>Занимаемая должность:</strong>  */}
+      const cardTeacherDolzhnost = document.createElement('td');
+      cardTeacherDolzhnost.innerHTML = `${post.dolzhnost} <br>`;
       cardTeacher.appendChild(cardTeacherDolzhnost);
 
-      const cardTeacherLevelStudy = document.createElement('span');
-      cardTeacherLevelStudy.innerHTML = `<strong>Уровень образование:</strong> ${post.levelStudy} <br>`;
-      cardTeacher.appendChild(cardTeacherLevelStudy);
+{/* <strong>Уровень образование:</strong>  */}
 
+      const cardTeacherLevelStudy = document.createElement('td');
+      cardTeacherLevelStudy.innerHTML = `${post.levelStudy} <br>`;
+      cardTeacher.appendChild(cardTeacherLevelStudy);
+{/* <strong>Квалификация:</strong>  */}
       if (post.qualification !== '' && post.qualification !== undefined) {
-        const cardTeacherQualification = document.createElement('span');
-        cardTeacherQualification.innerHTML = `<strong>Квалификация:</strong> ${post.qualification}<br>`;
+        const cardTeacherQualification = document.createElement('td');
+        cardTeacherQualification.innerHTML = `${post.qualification}<br>`;
         cardTeacher.appendChild(cardTeacherQualification);
       }
-
+{/* <strong>Наименование направления подготовки и (или) специальности:</strong> */}
       if (post.directionStudy !== '' && post.directionStudy !== undefined) {
-        const cardTeacherDirectionStudy = document.createElement('span');
-        cardTeacherDirectionStudy.innerHTML = `<strong>Наименование направления подготовки и (или) специальности:</strong> ${post.directionStudy}<br>`;
+        const cardTeacherDirectionStudy = document.createElement('td');
+        cardTeacherDirectionStudy.innerHTML = ` ${post.directionStudy}<br>`;
         cardTeacher.appendChild(cardTeacherDirectionStudy);
       }
-
-      if (post.academicDegree !== '' && post.academicDegree !== undefined) {
-        const cardTeacherAcademicDegree = document.createElement('span');
-        cardTeacherAcademicDegree.innerHTML = `<strong>Ученая степень:</strong> ${post.academicDegree}<br>`;
+{/* <strong>Ученая степень:</strong>  */}
+      if (post.academicDegree === '' || post.academicDegree !== undefined) {
+        const cardTeacherAcademicDegree = document.createElement('td');
+        cardTeacherAcademicDegree.innerHTML = `${post.academicDegree} Нет <br>`;
         cardTeacher.appendChild(cardTeacherAcademicDegree);
       }
-
-      if (post.academicTitle !== '' && post.academicTitle !== undefined) {
-        const cardTeacherAcademicTitle = document.createElement('span');
-        cardTeacherAcademicTitle.innerHTML = `<strong>Ученое звание:</strong> ${post.academicTitle}<br>`;
+        // <strong>Ученое звание:</strong>
+      if (post.academicTitle === '' || post.academicTitle !== undefined) {
+        const cardTeacherAcademicTitle = document.createElement('td');
+        cardTeacherAcademicTitle.innerHTML = `${post.academicTitle} Нет<br>`;
         cardTeacher.appendChild(cardTeacherAcademicTitle);
       }
 
+//<strong>Повышение квалификации:</strong>
       if (post.upQualification !== '' && post.upQualification !== undefined) {
-        const cardTeacherupQualification = document.createElement('span');
-        cardTeacherupQualification.innerHTML = `<strong>Повышение квалификации:</strong> ${post.upQualification}<br>`;
+        const cardTeacherupQualification = document.createElement('td');
+        cardTeacherupQualification.innerHTML = ` ${post.upQualification}<br>`;
         cardTeacher.appendChild(cardTeacherupQualification);
       }
-
-      const cardTeacherworkExperienceInYear = document.createElement('span');
-      cardTeacherworkExperienceInYear.innerHTML = `<strong>Общий стаж работы:</strong> ${setTimeWordYear(new Date().getFullYear() - post.workExperienceInYearStart)}<br>`;
+{/* <strong>Общий стаж работы:</strong> $ */}
+      const cardTeacherworkExperienceInYear = document.createElement('td');
+      cardTeacherworkExperienceInYear.innerHTML = `{setTimeWordYear(new Date().getFullYear() - post.workExperienceInYearStart)}<br>`;
       cardTeacher.appendChild(cardTeacherworkExperienceInYear);
 
-      const cardTeacherworkAsTeacherInYear = document.createElement('span');
-      cardTeacherworkAsTeacherInYear.innerHTML = `<strong>Стаж работы по специальности:</strong> ${setTimeWordYear(new Date().getFullYear() - post.workAsTeacherInYearStart)}<br>`;
+      // <strong>Стаж работы по специальности:</strong>
+      const cardTeacherworkAsTeacherInYear = document.createElement('td');
+      cardTeacherworkAsTeacherInYear.innerHTML = ` ${setTimeWordYear(new Date().getFullYear() - post.workAsTeacherInYearStart)}<br>`;
       cardTeacher.appendChild(cardTeacherworkAsTeacherInYear);
 
       //expirience teacher with month
-      // const cardTeacherworkExperienceInYearWithMonths = document.createElement('span');
+      // const cardTeacherworkExperienceInYearWithMonths = document.createElement('td');
       // cardTeacherworkExperienceInYearWithMonths.innerHTML = `<strong>Общий стаж работы:</strong> ${checkSummerTimeWithMonths(post.workExperienceInYearStart)}<br>`;
       // cardTeacher.appendChild(cardTeacherworkExperienceInYearWithMonths);
 
-      // const cardTeacherworkAsTeacherInYearWithMonths = document.createElement('span');
+      // const cardTeacherworkAsTeacherInYearWithMonths = document.createElement('td');
       // cardTeacherworkAsTeacherInYearWithMonths.innerHTML = `<strong>Стаж работы по специальности:</strong> ${checkSummerTimeWithMonths(post.workAsTeacherInYearStart)}<br>`;
       // cardTeacher.appendChild(cardTeacherworkAsTeacherInYearWithMonths);
 
-      const cardTeacherSubjectsTaught = document.createElement('span');
-      cardTeacherSubjectsTaught.innerHTML = `<strong>Преподоваемые учебные предметы:</strong> ${post.subjectsTaught}<br>`;
+{/* <strong>Преподоваемые учебные предметы:</strong> */}
+      const cardTeacherSubjectsTaught = document.createElement('td');
+      cardTeacherSubjectsTaught.innerHTML = ` ${post.subjectsTaught}<br>`;
       cardTeacher.appendChild(cardTeacherSubjectsTaught);
 
       postFragment.appendChild(cardTeacher);
