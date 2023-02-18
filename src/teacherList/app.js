@@ -101,19 +101,19 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
   // levelEducation => 1= HOO 2 = OOO 3 = COO  4 = HOO&OOO 5 = OOO&COO
   const postsListElement = document.querySelector('.parent');
   postsListElement.innerHTML = `
-  <th><td>№</td>
-    <td>ФИО</td>
-    <td>занимаемая должность (должности)</td>
-    <td>уровень образования</td>
-    <td>квалификация</td>
-    <td>наименование направления подготовки и (или) специальности;</td>
-    <td>ученая степень (при наличии);</td>
-    <td>ученое звание (при наличии);</td>
-    <td>повышение квалификации и (или) профессиональная переподготовка (при наличии)</td>
-    <td>общий стаж работы</td>
-    <td>стаж работы по специальности</td>
-    <td>преподаваемые учебные предметы, курсы, дисциплины (модули)</td>
-  </th>`;
+  <tr><th style="vertical-align: middle; text-align: center;">№</th>
+    <th style="vertical-align: middle; text-align: center;">ФИО</th>
+    <th style="vertical-align: middle; text-align: center;">Занимаемая должность (должности)</th>
+    <th style="vertical-align: middle; text-align: center;">Уровень образования</th>
+    <th style="vertical-align: middle; text-align: center;">Квалификация</th>
+    <th style="vertical-align: middle; text-align: center;">Наименование направления подготовки и (или) специальности;</th>
+    <th style="vertical-align: middle; text-align: center;">Ученая степень (при наличии);</th>
+    <th style="vertical-align: middle; text-align: center;">Ученое звание (при наличии);</th>
+    <th style="vertical-align: middle; text-align: center;">Повышение квалификации и (или) профессиональная переподготовка (при наличии)</th>
+    <th style="vertical-align: middle; text-align: center;">Общий стаж работы</th>
+    <th style="vertical-align: middle; text-align: center;">Стаж работы по специальности</th>
+    <th style="vertical-align: middle; text-align: center;">Преподаваемые учебные предметы, курсы, дисциплины (модули)</th>
+  </tr>`;
   let nowNumberOfFio = 0;
   // const postsTemplate = document.querySelector('#teacher');
   const postFragment = document.createDocumentFragment();
@@ -128,72 +128,87 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
       cardTeacher.appendChild(cardTeacherNumber);
 
       const cardTeacherFIO = document.createElement('td');
-      cardTeacherFIO.innerHTML = `${post.fio} <br>`;
+      cardTeacherFIO.innerHTML = `${post.fio} `;
       cardTeacher.appendChild(cardTeacherFIO);
 
 {/* <strong>Занимаемая должность:</strong>  */}
       const cardTeacherDolzhnost = document.createElement('td');
-      cardTeacherDolzhnost.innerHTML = `${post.dolzhnost} <br>`;
+      cardTeacherDolzhnost.innerHTML = `${post.dolzhnost} `;
+      cardTeacherDolzhnost.classList.add('ta-c')
       cardTeacher.appendChild(cardTeacherDolzhnost);
 
 {/* <strong>Уровень образование:</strong>  */}
 
       const cardTeacherLevelStudy = document.createElement('td');
-      cardTeacherLevelStudy.innerHTML = `${post.levelStudy} <br>`;
+      cardTeacherLevelStudy.innerHTML = `${post.levelStudy} `;
+      cardTeacherLevelStudy.classList.add('ta-c')
       cardTeacher.appendChild(cardTeacherLevelStudy);
 {/* <strong>Квалификация:</strong>  */}
+
       if (post.qualification !== '' && post.qualification !== undefined) {
         const cardTeacherQualification = document.createElement('td');
-        cardTeacherQualification.innerHTML = `${post.qualification}<br>`;
+        cardTeacherQualification.classList.add('ta-c')
+        cardTeacherQualification.innerHTML = `${post.qualification}`;
+        if (post.qualification === "" || post.qualification == undefined) {
+          cardTeacherQualification.innerHTML = 'Нет Квалификация';
+        }
         cardTeacher.appendChild(cardTeacherQualification);
       }
 {/* <strong>Наименование направления подготовки и (или) специальности:</strong> */}
       if (post.directionStudy !== '' && post.directionStudy !== undefined) {
         const cardTeacherDirectionStudy = document.createElement('td');
-        cardTeacherDirectionStudy.innerHTML = ` ${post.directionStudy}<br>`;
+        cardTeacherDirectionStudy.classList.add('ta-c');
+        cardTeacherDirectionStudy.innerHTML = ` ${post.directionStudy}`;
         cardTeacher.appendChild(cardTeacherDirectionStudy);
       }
 {/* <strong>Ученая степень:</strong>  */}
       if (post.academicDegree === '' || post.academicDegree !== undefined) {
         const cardTeacherAcademicDegree = document.createElement('td');
-        cardTeacherAcademicDegree.innerHTML = `${post.academicDegree} Нет <br>`;
+        cardTeacherAcademicDegree.classList.add('ta-c');
+      //  cardTeacherAcademicDegree.innerHTML = `${post.academicDegree} Нет `;
+        cardTeacherAcademicDegree.innerHTML = `Нет`;
         cardTeacher.appendChild(cardTeacherAcademicDegree);
       }
         // <strong>Ученое звание:</strong>
       if (post.academicTitle === '' || post.academicTitle !== undefined) {
         const cardTeacherAcademicTitle = document.createElement('td');
-        cardTeacherAcademicTitle.innerHTML = `${post.academicTitle} Нет<br>`;
+        cardTeacherAcademicTitle.classList.add('ta-c');
+        // cardTeacherAcademicTitle.innerHTML = `${post.academicTitle} Нет`;
+        cardTeacherAcademicTitle.innerHTML = `Нет`;
+
         cardTeacher.appendChild(cardTeacherAcademicTitle);
       }
 
 //<strong>Повышение квалификации:</strong>
-      if (post.upQualification !== '' && post.upQualification !== undefined) {
+      if (post.upQualification === '' || post.upQualification !== undefined) {
         const cardTeacherupQualification = document.createElement('td');
-        cardTeacherupQualification.innerHTML = ` ${post.upQualification}<br>`;
+        cardTeacherupQualification.innerHTML = ` ${post.upQualification} Нет `;
         cardTeacher.appendChild(cardTeacherupQualification);
       }
-{/* <strong>Общий стаж работы:</strong> $ */}
+      //<strong>Общий стаж работы:</strong>
       const cardTeacherworkExperienceInYear = document.createElement('td');
-      cardTeacherworkExperienceInYear.innerHTML = `{setTimeWordYear(new Date().getFullYear() - post.workExperienceInYearStart)}<br>`;
+      cardTeacherworkExperienceInYear.innerHTML = `${setTimeWordYear(new Date().getFullYear() - post.workExperienceInYearStart)}`;
+      cardTeacherworkExperienceInYear.classList.add('ta-c')
       cardTeacher.appendChild(cardTeacherworkExperienceInYear);
 
       // <strong>Стаж работы по специальности:</strong>
       const cardTeacherworkAsTeacherInYear = document.createElement('td');
-      cardTeacherworkAsTeacherInYear.innerHTML = ` ${setTimeWordYear(new Date().getFullYear() - post.workAsTeacherInYearStart)}<br>`;
+      cardTeacherworkAsTeacherInYear.innerHTML = ` ${setTimeWordYear(new Date().getFullYear() - post.workAsTeacherInYearStart)}`;
+      cardTeacherworkAsTeacherInYear.classList.add('ta-c')
       cardTeacher.appendChild(cardTeacherworkAsTeacherInYear);
 
       //expirience teacher with month
       // const cardTeacherworkExperienceInYearWithMonths = document.createElement('td');
-      // cardTeacherworkExperienceInYearWithMonths.innerHTML = `<strong>Общий стаж работы:</strong> ${checkSummerTimeWithMonths(post.workExperienceInYearStart)}<br>`;
+      // cardTeacherworkExperienceInYearWithMonths.innerHTML = `<strong>Общий стаж работы:</strong> ${checkSummerTimeWithMonths(post.workExperienceInYearStart)}`;
       // cardTeacher.appendChild(cardTeacherworkExperienceInYearWithMonths);
 
       // const cardTeacherworkAsTeacherInYearWithMonths = document.createElement('td');
-      // cardTeacherworkAsTeacherInYearWithMonths.innerHTML = `<strong>Стаж работы по специальности:</strong> ${checkSummerTimeWithMonths(post.workAsTeacherInYearStart)}<br>`;
+      // cardTeacherworkAsTeacherInYearWithMonths.innerHTML = `<strong>Стаж работы по специальности:</strong> ${checkSummerTimeWithMonths(post.workAsTeacherInYearStart)}`;
       // cardTeacher.appendChild(cardTeacherworkAsTeacherInYearWithMonths);
 
 {/* <strong>Преподоваемые учебные предметы:</strong> */}
       const cardTeacherSubjectsTaught = document.createElement('td');
-      cardTeacherSubjectsTaught.innerHTML = ` ${post.subjectsTaught}<br>`;
+      cardTeacherSubjectsTaught.innerHTML = ` ${post.subjectsTaught}`;
       cardTeacher.appendChild(cardTeacherSubjectsTaught);
 
       postFragment.appendChild(cardTeacher);
