@@ -1,5 +1,5 @@
 const URL = './teachers.json';
-const geliata = (onSuccess) => {
+const getListData = (onSuccess) => {
   fetch(URL)
     .then((response) => response.json())
     .then((teacherList) => {
@@ -7,8 +7,8 @@ const geliata = (onSuccess) => {
     });
 };
 
-// async function geliata(teacherList) {
-//   console.log('Starting geliata...')
+// async function getListData(teacherList) {
+//   console.log('Starting getListData...')
 //   try {
 //     const response = await fetch(URL);
 //     const teacherList = await response.json();
@@ -233,7 +233,7 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
 //   });
 // }
 
-geliata((listArray) => {
+getListData((listArray) => {
   // console.log(listArray);
   // for ( const listArrayItem of listArray) {
   //   listArrayItem.workExperienceInYear = setTimeWordYear(new Date().getFullYear() - listArrayItem.workExperienceInYearStart);
