@@ -101,18 +101,18 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
   // levelEducation => 1= HOO 2 = OOO 3 = COO  4 = HOO&OOO 5 = OOO&COO
   const postsListElement = document.querySelector('.parent');
   postsListElement.innerHTML = `
-  <tr><th style="vertical-align: middle; text-align: center;">№</th>
-    <th style="vertical-align: middle; text-align: center;">ФИО</th>
-    <th style="vertical-align: middle; text-align: center;">Занимаемая должность (должности)</th>
-    <th style="vertical-align: middle; text-align: center;">Уровень образования</th>
-    <th style="vertical-align: middle; text-align: center;">Квалификация</th>
-    <th style="vertical-align: middle; text-align: center;">Наименование направления подготовки и (или) специальности;</th>
-    <th style="vertical-align: middle; text-align: center;">Ученая степень (при наличии);</th>
-    <th style="vertical-align: middle; text-align: center;">Ученое звание (при наличии);</th>
-    <th style="vertical-align: middle; text-align: center;">Повышение квалификации и (или) профессиональная переподготовка (при наличии)</th>
-    <th style="vertical-align: middle; text-align: center;">Общий стаж работы</th>
-    <th style="vertical-align: middle; text-align: center;">Стаж работы по специальности</th>
-    <th style="vertical-align: middle; text-align: center;">Преподаваемые учебные предметы, курсы, дисциплины (модули)</th>
+  <tr><th style="font-size:18px; vertical-align: middle; text-align: center;">№</th>
+    <th style="font-size:18px; vertical-align: middle; text-align: center;">ФИО</th>
+    <th style="font-size:18px; vertical-align: middle; text-align: center;">За&shy;ни&shy;ма&shy;емая дол&shy;жность (дол&shy;жности)</th>
+    <th style="font-size:18px; vertical-align: middle; text-align: center;">Уровень образования</th>
+    <th style="font-size:18px; vertical-align: middle; text-align: center;">Ква&shy;ли&shy;фи&shy;ка&shy;ция</th>
+    <th style="font-size:18px; vertical-align: middle; text-align: center;">Наименование направления подготовки и (или) специальности;</th>
+    <th style="font-size:18px; vertical-align: middle; text-align: center;">Ученая степень</th>
+    <th style="font-size:18px; vertical-align: middle; text-align: center;">Ученое звание</th>
+    <th style="font-size:18px; vertical-align: middle; text-align: center;">Повышение квалификации и (или) профессиональная переподготовка (при наличии)</th>
+    <th style="font-size:18px; vertical-align: middle; text-align: center;">Общий стаж работы</th>
+    <th style="font-size:18px; vertical-align: middle; text-align: center;">Стаж работы по специальности</th>
+    <th style="font-size:18px; vertical-align: middle; text-align: center;">Преподаваемые учебные предметы, курсы, дисциплины (модули)</th>
   </tr>`;
   let nowNumberOfFio = 0;
   // const postsTemplate = document.querySelector('#teacher');
@@ -124,7 +124,7 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
       cardTeacher.classList.add('fz18');
 
       const cardTeacherNumber = document.createElement('td');
-      cardTeacherNumber.innerHTML = `${++nowNumberOfFio}`;
+      cardTeacherNumber.innerHTML = `${++nowNumberOfFio}.`;
       cardTeacher.appendChild(cardTeacherNumber);
 
       const cardTeacherFIO = document.createElement('td');

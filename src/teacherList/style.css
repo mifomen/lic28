@@ -1316,15 +1316,20 @@ font-size: 1.2em;
 
 
 .table-workers {
-  outline: 1px solid black;
-  outline-offset: -1px;
+  outline: 3px solid black;
+  outline-offset: -3px;
+  border-collapse: separate;
+  border-spacing: 5px;
+
 }
 .table-workers th,
 .table-workers td {
-  outline: 2px solid black;
-  outline-offset: -2px;
+  outline: 3px solid black;
+  outline-offset: -3px;
   vertical-align: top;
   text-align: left;
+  padding: 15px;
+  box-sizing: border-box;
 }
 .table-workers .ta-c {
   text-align: center;
