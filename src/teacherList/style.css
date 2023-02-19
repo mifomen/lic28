@@ -1302,7 +1302,7 @@ font-size: 1.2em;
 .reset-first-counter {
   counter-reset: first 0;
 }
-
+/*
 .list-of-teacher {
   font-size: 20px;
 }
@@ -1333,4 +1333,4 @@ font-size: 1.2em;
 }
 .table-workers .ta-c {
   text-align: center;
-}
+} */
