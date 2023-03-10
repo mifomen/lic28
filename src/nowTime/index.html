@@ -21,8 +21,10 @@
       let nowYear;
       if  (new Date().getMonth() >=8) {
         nowYear = new Date().getFullYear(); //2022
+        console.log(`nowYear=${nowYear}`)
       } else {
         nowYear = new Date().getFullYear()-1; //2023
+        console.log(`new Date().getMonth()=${new Date().getMonth()} nowYear=${nowYear}`)
       }
 
       for (const item of document.querySelectorAll(selector)) {
@@ -35,7 +37,7 @@
           return;
         }
         if (separator === "-1") {
-          item.textContent = `${nowYear} / ${nowYear+1}`;
+          item.textContent = `${nowYear-1} / ${nowYear}`;
           return;
         }
         if (separator === "//") {
@@ -52,7 +54,7 @@
     applyActionForTextSpans('.js-now-two-year',"-")
     applyActionForTextSpans('.js-now-two-year-slash',"//")
     applyActionForTextSpans('.js-now-year-minus-one',"-1")
-    applyActionForTextSpans('.js-now-year-minus-one',"//")
+    // applyActionForTextSpans('.js-now-year-minus-one',"//")
   </script>
 </body>
 </html>
