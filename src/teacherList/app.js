@@ -126,7 +126,8 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
       cardTeacher.classList.add('fz18');
 
       const cardTeacherNumber = document.createElement('td');
-      cardTeacherNumber.innerHTML = ++nowNumberOfFio;
+      cardTeacherNumber.innerHTML = `${++nowNumberOfFio}.`;
+      cardTeacherNumber.classList.add('fw-bold')
       cardTeacher.appendChild(cardTeacherNumber);
 
       const cardTeacherFIO = document.createElement('td');
