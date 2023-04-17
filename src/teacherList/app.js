@@ -100,6 +100,7 @@ const checkSummerTimeWithMonths = (thisTimeString) => {
 const renderPostOfTeachers = (renderPosts, levelEducation) => {
   // levelEducation => 1= HOO 2 = OOO 3 = COO  4 = HOO&OOO 5 = OOO&COO
   const postsListElement = document.querySelector('.parent');
+  postsListElement.classList.add("table-teacher__list");
   postsListElement.innerHTML = `
   <tr><th style="font-size:18px; vertical-align: middle; text-align: center;">№</th>
     <th style="font-size:18px; vertical-align: middle; text-align: center;">ФИО</th>
@@ -114,7 +115,7 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
     <th style="font-size:18px; vertical-align: middle; text-align: center;">Стаж работы по специальности</th>
     <th style="font-size:18px; vertical-align: middle; text-align: center;">Преподаваемые учебные предметы, курсы, дисциплины (модули)</th>
   </tr>`;
-  postsListElement.innerHTML ='';
+  // postsListElement.innerHTML ='';
   let nowNumberOfFio = 0;
   // const postsTemplate = document.querySelector('#teacher');
   const postFragment = document.createDocumentFragment();
@@ -134,14 +135,16 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
 
 {/* <strong>Занимаемая должность:</strong>  */}
       const cardTeacherDolzhnost = document.createElement('td');
-      cardTeacherDolzhnost.innerHTML = `<strong>Занимаемая должность (должности):</strong> ${post.dolzhnost};<br>`;
+//  cardTeacherDolzhnost.innerHTML = `<strong>Занимаемая должность (должности):</strong> ${post.dolzhnost};<br>`; // li
+      cardTeacherDolzhnost.innerHTML = `${post.dolzhnost}`;
       // cardTeacherDolzhnost.classList.add('ta-c')
       cardTeacher.appendChild(cardTeacherDolzhnost);
 
 {/* <strong>Уровень образование:</strong>  */}
 
       const cardTeacherLevelStudy = document.createElement('td');
-      cardTeacherLevelStudy.innerHTML = `<strong>Уровень образования:</strong> ${post.levelStudy};<br>`;
+      // cardTeacherLevelStudy.innerHTML = `<strong>Уровень образования:</strong> ${post.levelStudy};<br>`;
+      cardTeacherLevelStudy.innerHTML = `${post.levelStudy}`;
       // cardTeacherLevelStudy.classList.add('ta-c')
       cardTeacher.appendChild(cardTeacherLevelStudy);
 {/* <strong>Квалификация:</strong>  */}
@@ -151,7 +154,8 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
         // cardTeacherQualification.classList.add('ta-c')
         cardTeacherQualification.innerHTML = 'Нет квалификации';
         if (post.qualification !== "" || post.qualification == undefined) {
-          cardTeacherQualification.innerHTML = `<strong>Квалификация:</strong> ${post.qualification};<br>`;
+          // cardTeacherQualification.innerHTML = `<strong>Квалификация:</strong> ${post.qualification};<br>`;
+          cardTeacherQualification.innerHTML = `${post.qualification}<br>`;
         }
         cardTeacher.appendChild(cardTeacherQualification);
       // }
@@ -160,7 +164,8 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
     // cardTeacherDirectionStudy.classList.add('ta-c');
     cardTeacherDirectionStudy.innerHTML = 'Нет';
     if (post.directionStudy !== '' || post.directionStudy !== undefined) {
-      cardTeacherDirectionStudy.innerHTML = `<strong>Наименование направления подготовки и (или) специальности:</strong> ${post.directionStudy};<br>`;
+      // cardTeacherDirectionStudy.innerHTML = `<strong>Наименование направления подготовки и (или) специальности:</strong> ${post.directionStudy};<br>`;
+      cardTeacherDirectionStudy.innerHTML = `${post.directionStudy}`;
     }
     cardTeacher.appendChild(cardTeacherDirectionStudy);
     {/* <strong>Ученая степень:</strong>  */}
@@ -169,7 +174,8 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
     // cardTeacherAcademicDegree.classList.add('ta-c');
     cardTeacherAcademicDegree.innerHTML = 'Нет';
     if (post.academicDegree !== '' && post.academicDegree !== undefined) {
-      cardTeacherAcademicDegree.innerHTML = `<strong>Ученая степень:</strong> ${post.academicDegree};<br>`;
+      //       cardTeacherAcademicDegree.innerHTML = `<strong>Ученая степень:</strong> ${post.academicDegree};<br>`;
+      cardTeacherAcademicDegree.innerHTML = `${post.academicDegree}`;
     }
     cardTeacher.appendChild(cardTeacherAcademicDegree);
 
@@ -177,7 +183,8 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
         const cardTeacherAcademicTitle = document.createElement('td');
         cardTeacherAcademicTitle.innerHTML = `Нет`;
       if (post.academicTitle !== '' && post.academicTitle !== undefined) {
-        cardTeacherAcademicTitle.innerHTML = `<strong>Ученое звание:</strong> ${post.academicTitle};<br>`;
+        // cardTeacherAcademicTitle.innerHTML = `<strong>Ученое звание:</strong> ${post.academicTitle};<br>`;
+        cardTeacherAcademicTitle.innerHTML = `${post.academicTitle}`;
 
         cardTeacher.appendChild(cardTeacherAcademicTitle);
       }
@@ -186,19 +193,22 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
       const cardTeacherupQualification = document.createElement('td');
       cardTeacherupQualification.innerHTML = 'Нет';
       if (post.upQualification !== '' && post.upQualification !== undefined) {
-        cardTeacherupQualification.innerHTML = `<strong>Повышение квалификации и (или) профессиональная переподготовка:</strong><br>${post.upQualification};<br>`;
+        // cardTeacherupQualification.innerHTML = `<strong>Повышение квалификации и (или) профессиональная переподготовка:</strong><br>${post.upQualification};<br>`;
+        cardTeacherupQualification.innerHTML = `${post.upQualification}`;
       }
       cardTeacher.appendChild(cardTeacherupQualification);
 
       //<strong>Общий стаж работы:</strong>
       const cardTeacherworkExperienceInYear = document.createElement('td');
-      cardTeacherworkExperienceInYear.innerHTML = `<strong>Общий стаж работы:</strong> ${setTimeWordYear(new Date().getFullYear() - post.workExperienceInYearStart)};<br>`;
+      // cardTeacherworkExperienceInYear.innerHTML = `<strong>Общий стаж работы:</strong> ${setTimeWordYear(new Date().getFullYear() - post.workExperienceInYearStart)};<br>`;
+      cardTeacherworkExperienceInYear.innerHTML = `${setTimeWordYear(new Date().getFullYear() - post.workExperienceInYearStart)}`;
       // cardTeacherworkExperienceInYear.classList.add('ta-c')
       cardTeacher.appendChild(cardTeacherworkExperienceInYear);
 
       //
       const cardTeacherworkAsTeacherInYear = document.createElement('td');
-      cardTeacherworkAsTeacherInYear.innerHTML = `<strong>Стаж работы по специальности:</strong> ${setTimeWordYear(new Date().getFullYear() - post.workAsTeacherInYearStart)}; <br>`;
+      // cardTeacherworkAsTeacherInYear.innerHTML = `<strong>Стаж работы по специальности:</strong> ${setTimeWordYear(new Date().getFullYear() - post.workAsTeacherInYearStart)}; <br>`;
+      cardTeacherworkAsTeacherInYear.innerHTML = `${setTimeWordYear(new Date().getFullYear() - post.workAsTeacherInYearStart)}`;
       // cardTeacherworkAsTeacherInYear.classList.add('ta-c')
       cardTeacher.appendChild(cardTeacherworkAsTeacherInYear);
 
@@ -213,7 +223,8 @@ const renderPostOfTeachers = (renderPosts, levelEducation) => {
 
 {/* <strong>Преподоваемые учебные предметы:</strong> */}
       const cardTeacherSubjectsTaught = document.createElement('td');
-      cardTeacherSubjectsTaught.innerHTML = `<strong>Преподаваемые учебные предметы, курсы, дисциплины (модули):</strong> ${post.subjectsTaught}<br>`;
+      // cardTeacherSubjectsTaught.innerHTML = `<strong>Преподаваемые учебные предметы, курсы, дисциплины (модули):</strong> ${post.subjectsTaught}<br>`;
+      cardTeacherSubjectsTaught.innerHTML = `${post.subjectsTaught}`;
       cardTeacher.appendChild(cardTeacherSubjectsTaught);
 
       postFragment.appendChild(cardTeacher);
