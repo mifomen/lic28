@@ -1,3 +1,15 @@
+.jbmf{
+	font-family: 'JetBrains Mono', 'Times New Roman', 'Roboto', arial;
+}
+
+.sub-title {
+	color: #008000;
+	font-size: 16px;
+	font-family: verdana, geneva, sans-serif;
+	font-weight: 700;
+	text-align: center;
+}
+
 .ti25px {
   text-indent: 25px;
 }
@@ -180,17 +192,7 @@
 	flex-direction: column-reverse
 }
 
-.fwn {
-	-webkit-flex-wrap: nowrap;
-	-ms-flex-wrap: nowrap;
-	flex-wrap: nowrap
-}
 
-.fww {
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap
-}
 
 .fwr {
 	-webkit-flex-wrap: wrap-reverse;
@@ -432,6 +434,18 @@
 	-webkit-align-content: inherit;
 	-ms-flex-line-pack: inherit;
 	align-content: inherit
+}
+
+.fwn {
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap
+}
+
+.fww {
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap
 }
 
 .fm-a * {
@@ -816,6 +830,9 @@ ol.ff-times>li>ul>li {
 .ttu {
 	text-transform: uppercase;
 }
+.ttl {
+	text-transform: lowercase;
+}
 .menu__button-wrapper  {
 	display: flex;
 	justify-content: center;
@@ -1123,7 +1140,7 @@ border-radius: 0px;
 	transform: scale(1.2);
 }
 
-/* РїРёС‚Р°РЅРёРµ */
+/* Р С—Р С‘РЎвЂљР В°Р Р…Р С‘Р Вµ */
  .nutrition {
       font-size: 14pt;
     }
@@ -1272,7 +1289,7 @@ font-size: 1.2em;
 	line-height: 1.2;
 }
 
-/*РѕС„РѕСЂРјР»РµРЅРёРµ РґР»СЏ С‚Р°Р±Р»РёС†С‹ РёР· СЂР°Р±РѕС‡РёСЉС… РїСЂРѕРіСЂР°РјРј */
+/*Р С•РЎвЂћР С•РЎР‚Р СР В»Р ВµР Р…Р С‘Р Вµ Р Т‘Р В»РЎРЏ РЎвЂљР В°Р В±Р В»Р С‘РЎвЂ РЎвЂ№ Р С‘Р В· РЎР‚Р В°Р В±Р С•РЎвЂЎР С‘РЎР‰РЎвЂ¦ Р С—РЎР‚Р С•Р С–РЎР‚Р В°Р СР С */
 .table-td {
   width: 100%;
   /*counter-reset: first 0;*/
@@ -1388,7 +1405,7 @@ table.table-feedback {
     color: black;
     background-color: rgba(222,222,0,0.3);
     border: 1px solid #000000;
-    content: "РќР°Р¶РјРёС‚Рµ Рё РїРѕС‡С‚Р° СЃРєРѕРїРёСЂСѓРµС‚СЃСЏ";
+    content: "Р СњР В°Р В¶Р СР С‘РЎвЂљР Вµ Р С‘ Р С—Р С•РЎвЂЎРЎвЂљР В° РЎРѓР С”Р С•Р С—Р С‘РЎР‚РЎС“Р ВµРЎвЂљРЎРѓРЎРЏ";
     display: block;
     position: absolute;
     bottom: -10px;
@@ -1399,7 +1416,7 @@ table.table-feedback {
 }
 
 .copySuccess:hover:after  {
-    content: "l28_nn@mail.52gov.ru РІ Р±СѓС„РµСЂРµ РѕР±РјРµРЅР°";
+    content: "l28_nn@mail.52gov.ru Р Р† Р В±РЎС“РЎвЂћР ВµРЎР‚Р Вµ Р С•Р В±Р СР ВµР Р…Р В°";
 }
 
 .m0 {
@@ -1588,6 +1605,22 @@ table.table-feedback {
    width: 20%;
  }
 
+ .w100 {
+	width: 100%;
+}
+.h100 {
+	height: 100%;
+}
+.bs-bb {
+	box-sizing: border-box;
+}
+.bs-pb {
+	box-sizing: padding-box;
+}
+.ts1 {
+  text-shadow: 1px 1px 1px #000;
+}
+
 .pr {
   position: relative;
 }
@@ -1641,4 +1674,50 @@ table.table-feedback {
 .default-list {
   font-size: 24px;
   font-family: verdana, geneva, sans-serif;
+}
+
+
+
+.table-basic {
+  border: 2px solid #000;
+}
+
+.table-basic td {
+  border: 2px solid #000;
+  text-align: center;
+  vertical-align: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+
+.fl {
+  float: left;
+}
+
+.pa {
+  position: absolute;
+}
+
+.pr {
+  position: relative;
+}
+
+.l0 {
+  left: 0;
+}
+
+.t0 {
+  top: 0;
+}
+
+.zi-1 {
+	z-index: -1
+}
+
+.vam td,
+.vam tr td,
+.vam,
+.va-m {
+vertical-align: middle;
 }
