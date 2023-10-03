@@ -1,0 +1,14 @@
+.popup-active {
+  display: block;
+  position: absolute;
+  width: 80%;
+  border: 10px solid blue;
+  box-sizing: border-box;
+  height: 80vh;
+  padding: 15px;
+  text-align: center;
+  transform: translate(50%, -50%);
+  right: 50%;
+  top: 50%;
+  background-color: white;
+}
