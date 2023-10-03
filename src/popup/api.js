@@ -21,11 +21,10 @@ newsBtns.forEach(item => {
       document.querySelector('.js-news-content').innerHTML=document.querySelector('.menu-news__item-content-3').innerHTML;
     }
 
-    if (choosen.classList.contains('menu-news__item-4')) {
-      if (!document.querySelector('.js-news-content').classList.contains('vh')) {
+    if (choosen.classList.contains('menu-news__item-4') && !document.querySelector('.js-news-content').classList.contains('vh')) {
         document.querySelector('.js-news-content').innerHTML=document.querySelector('.menu-news__item-content-4').innerHTML;
       } else {
-      document.querySelector('.js-news-content').innerHTML=document.querySelector('.menu-news__item-content-4').innerHTML;}
+      document.querySelector('.js-news-content').innerHTML=document.querySelector('.menu-news__item-content-4').innerHTML;
     }
 
     if (choosen.classList.contains('menu-news__item-5')) {
