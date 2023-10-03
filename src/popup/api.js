@@ -3,6 +3,8 @@ const popupBtn = document.querySelectorAll('.js-info-link')
 const popup = document.querySelector('.js-info-popup')
 const popupInformater = document.querySelector('.js-info-popup-info')
 
+
+
 const showPopup2 = (evt) => {
   evt.preventDefault()
   popupInformater.classList.toggle('vh')
@@ -17,6 +19,7 @@ const showPopup = (evt) => {
   popupInformater.classList.toggle('popup-active')
   // evt.target.innerHTML="";
   popupInformater.innerHTML = evt.target.innerHTML;
+  document.body.classList.toggle('shadow')
 }
 
 // popup.addEventListener('click',showPopup)
