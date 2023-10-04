@@ -2,6 +2,11 @@
   margin: 0;
 }
 
+
+.menu-news__item br {
+  /* display: none; does not work */
+}
+
 .popup-active {
   display: block;
   position: absolute;

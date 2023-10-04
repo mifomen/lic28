@@ -1,6 +1,13 @@
 
 if (document.querySelector('.menu-news__item-content') && document.querySelector('.menu-news__item-content'))  {
 
+
+const brInGrid = document.querySelectorAll('.menu-news__list br');
+
+for (const item of brInGrid) {
+  // item.remove();
+}
+
 const frameContent = document.querySelector('.js-news-content');
 const allContent = document.querySelectorAll('.menu-news__item-content')
 
@@ -35,7 +42,7 @@ allContentBtns.forEach(item => {
     choosen = evt.target.dataset.link;
 
 
-      console.log('has')
+      // console.log('has')
       evt.preventDefault();
       const elem = findItemById(allContentArray,evt.target)
       frameContent.innerHTML = elem.innerHTML;
