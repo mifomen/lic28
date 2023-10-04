@@ -1,59 +1,32 @@
-const popupBtn = document.querySelectorAll('.js-info-link')
 
+const popupBtn = document.querySelectorAll('.js-info-link')
 const popup = document.querySelector('.js-info-popup')
 const popupInformater = document.querySelector('.js-info-popup-info')
 
-const newsBtns = document.querySelectorAll('.menu-news__link');
-newsBtns.forEach(item => {
+const frameContent = document.querySelector('.js-news-content');
+
+const allContent = document.querySelectorAll('.menu-news__item-content')
+console.log(`allContent = ${allContent[0].dataset.content}`)
+
+const allContentArray = new Array();
+allContent.forEach(item => {
+  allContentArray.push(item)
+})
+
+// console.log(`allContentArray=${allContentArray.dataset.content}`)
+
+const allContentBtns = document.querySelectorAll('.js-link-content')
+
+const findItemById = function (items, resolve) {
+  return items.find(item => item.dataset.content === resolve.dataset.link);
+};
+
+allContentBtns.forEach(item => {
   item.addEventListener('click', (evt) => {
-    evt.preventDefault()
-    const contentInput = document.querySelector('.js-news-content')
-    contentInput.classList.toggle('vh')
-    const choosen = evt.target;
+    evt.preventDefault();
+    console.log(`${evt.target.dataset.link}`)
+    console.log(findItemById(allContentArray,evt.target))
 
-    if (choosen.classList.contains('menu-news__item-1')) {
-      document.querySelector('.js-news-content').innerHTML=document.querySelector('.menu-news__item-content-1').innerHTML;
-    }
-    if (choosen.classList.contains('menu-news__item-2')) {
-      document.querySelector('.js-news-content').innerHTML=document.querySelector('.menu-news__item-content-2').innerHTML;
-    }
-    if (choosen.classList.contains('menu-news__item-3')) {
-      document.querySelector('.js-news-content').innerHTML=document.querySelector('.menu-news__item-content-3').innerHTML;
-    }
-
-    if (choosen.classList.contains('menu-news__item-4') && !document.querySelector('.js-news-content').classList.contains('vh')) {
-        document.querySelector('.js-news-content').innerHTML=document.querySelector('.menu-news__item-content-4').innerHTML;
-      } else {
-      document.querySelector('.js-news-content').innerHTML=document.querySelector('.menu-news__item-content-4').innerHTML;
-    }
-
-    if (choosen.classList.contains('menu-news__item-5')) {
-      document.querySelector('.js-news-content').innerHTML=document.querySelector('.menu-news__item-content-5').innerHTML;
-    }
-  })
+  if (findItemById(allContentArray,evt.target)) {
+    frameContent.innerHTML =findItemById(allContentArray,evt.target).innerHTML  } })
 })
-
-const showPopup2 = (evt) => {
-  evt.preventDefault()
-  popupInformater.classList.toggle('vh')
-  popupInformater.classList.toggle('popup-active')
-  // evt.target.innerHTML="";
-  // evt.target.innerHTML = popup.innerHTML;
-}
-
-const showPopup = (evt) => {
-  evt.preventDefault()
-  popupInformater.classList.toggle('vh')
-  popupInformater.classList.toggle('popup-active')
-  // evt.target.innerHTML="";
-  popupInformater.innerHTML = evt.target.innerHTML;
-  document.body.classList.toggle('overlay')
-}
-
-// popup.addEventListener('click',showPopup)
-
-popupBtn.forEach(item => {
-  item.addEventListener('click',showPopup)
-})
-
-// popupInformater.addEventListener('click',showPopup2)
