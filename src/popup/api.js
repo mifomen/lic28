@@ -5,7 +5,7 @@ if (document.querySelector('.menu-news__item-content') && document.querySelector
 const brInGrid = document.querySelectorAll('.menu-news__list br');
 
 for (const item of brInGrid) {
-  // item.remove();
+  item.remove();
 }
 
 const frameContent = document.querySelector('.js-news-content');
