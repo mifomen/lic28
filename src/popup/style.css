@@ -4,7 +4,7 @@
 
 
 .menu-news__item br {
-  /* display: none; does not work */
+  display: none; does not work
 }
 
 .popup-active {
@@ -67,7 +67,7 @@
   list-style: none;
   margin: 0;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(5, auto);
   /* grid-auto-flow: row; */
 }
 
@@ -78,9 +78,6 @@
   grid-column: span 3;
 }
 
-.menu-news__item {
-
-}
 
 .menu-news__link {
   text-decoration: none;
