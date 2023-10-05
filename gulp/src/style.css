@@ -1,0 +1,10 @@
+h1 {
+  color: red;
+  color: yellow;
+}
+
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+}

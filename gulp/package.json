@@ -1,0 +1,41 @@
+{
+  "name": "lic28",
+  "version": "1.0.0",
+  "description": "lic28",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp build && gulp serve"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "css-mqpacker": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-less": "^5.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rm": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "engines": {
+    "node": "20.x",
+    "npm": "8.x"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 25 chrome version",
+      "last 25 firefox version",
+      "last 25 safari version",
+      "last 5 ie version"
+    ]
+  }
+}
