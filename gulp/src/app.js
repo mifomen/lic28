@@ -7,68 +7,58 @@ const clearBR = (selector) => {
       item.remove();
     }
   }
-}
+};
 
-clearBR('.clear-br br')
-
-
+clearBR('.clear-br br');
 clearBR('.menu-news__list br');
 
-
-
-if (document.querySelector('.menu-news__item-content') && document.querySelector('.menu-news__item-content'))  {
-
-
+if (document.querySelector('.menu-news__item-content') && document.querySelector('.menu-news__item-content')) {
 
   const frameContent = document.querySelector('.js-news-content');
-  const allContent = document.querySelectorAll('.menu-news__item-content')
+  const allContent = document.querySelectorAll('.menu-news__item-content');
 
   const allContentArray = new Array();
-  allContent.forEach(item => {
-    allContentArray.push(item)
-  })
+  allContent.forEach((item) => {
+    allContentArray.push(item);
+  });
 
   // console.log(`allContentArray=${allContentArray.dataset.content}`)
 
-  const allContentBtns = document.querySelectorAll('.js-link-content')
+  const allContentBtns = document.querySelectorAll('.js-link-content');
 
   const findItemById = function (items, resolve) {
-    return items.find(item => item.dataset.content === resolve.dataset.link);
+    return items.find((item) => item.dataset.content === resolve.dataset.link);
   };
 
   let choosen;
-  let showStatusFrame = false;
+  let showStatusFrame = false; //eslint-disable-line
 
-  allContentBtns.forEach(item => {
+  allContentBtns.forEach((item0 => {
     item.addEventListener('click', (evt) => {
-      if (evt.target.hasAttribute('data-link') && evt.target.dataset.link != undefined && evt.target.dataset.link != "" ) {
+      if (evt.target.hasAttribute('data-link') && evt.target.dataset.link !== undefined && evt.target.dataset.link !== '') {
 
         clearBR('.menu-news__item-content br');
-      if (choosen === evt.target.dataset.link) {
-        frameContent.classList.toggle('vh')
-        showStatusFrame = false;
-      } else {
-        frameContent.classList.remove('vh')
-        showStatusFrame = true;
-      }
-      choosen = evt.target.dataset.link;
-
-
+        if (choosen === evt.target.dataset.link) {
+          frameContent.classList.toggle('vh');
+          showStatusFrame = false;
+        } else {
+          frameContent.classList.remove('vh');
+          showStatusFrame = true;
+        }
+        choosen = evt.target.dataset.link;
         // console.log('has')
         evt.preventDefault();
-        const elem = findItemById(allContentArray,evt.target)
+        const elem = findItemById(allContentArray,evt.target);
         frameContent.innerHTML = elem.innerHTML;
       }
-  })
+    });
   })
 
 
-  document.addEventListener('keypress', event => {
-    console.log(event.key)
-    if (event.key === "Escape" || event.key === "Enter" ) {
-      frameContent.classList.add('vh')
+  document.addEventListener('keypress', (evt) => {
+    console.log(evt.key); //eslint-disable-line
+    if (evt.key === 'Escape' || evt.key === 'Enter') {
+      frameContent.classList.add('vh');
     }
   })
-
-
-  }
+}
