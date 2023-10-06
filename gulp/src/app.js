@@ -33,7 +33,7 @@ if (document.querySelector('.menu-news__item-content') && document.querySelector
   let choosen;
   let showStatusFrame = false; //eslint-disable-line
 
-  allContentBtns.forEach((item0 => {
+  allContentBtns.forEach((item) => {
     item.addEventListener('click', (evt) => {
       if (evt.target.hasAttribute('data-link') && evt.target.dataset.link !== undefined && evt.target.dataset.link !== '') {
 
@@ -52,12 +52,12 @@ if (document.querySelector('.menu-news__item-content') && document.querySelector
         frameContent.innerHTML = elem.innerHTML;
       }
     });
-  })
+  });
 
   document.addEventListener('keypress', (evt) => {
     console.log(evt.key); //eslint-disable-line
     if (evt.key === 'Escape' || evt.key === 'Enter') {
       frameContent.classList.add('vh');
     }
-  })
+  });
 }

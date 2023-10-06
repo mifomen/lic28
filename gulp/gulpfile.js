@@ -1,3 +1,4 @@
+//eslint-disable
 // 'use strict'
 //npm install npm install gulp npm start
 
@@ -71,7 +72,7 @@ gulp.task('css', function() {
 gulp.task('js', function() {
   return gulp.src('src/**/app.js')
   .pipe(plumber())
-  .pipe(uglify())
+  // .pipe(uglify())
   .pipe(gulp.dest('./build'))
   .pipe(browserSync.reload({
    stream: true
@@ -80,7 +81,34 @@ gulp.task('js', function() {
 
  gulp.task('flex-style', function() {
   return gulp.src('src/**/flex-style.css')
+  .pipe(autoprefixer({
+
+    cascade: true
+  }))
+  .pipe(postcss([
+    mqpacker({ sort: true })
+    ])
+  )
+  .pipe(cleanCSS({
+    breaks: {
+      afterAtRule: 2,
+      afterBlockBegins: 1, // 1 is synonymous with `true`
+      afterBlockEnds: 2,
+      afterComment: 1,
+      afterProperty: 1,
+      afterRuleBegins: 1,
+      afterRuleEnds: 1,
+      beforeBlockEnds: 1,
+      betweenSelectors: 0 // 0 is synonymous with `false`
+    },
+    format: 'beautify',
+    all:false,
+    removeDuplicateFontRules: true, // controls duplicate `@font-face` removing; defaults to true
+    removeDuplicateMediaBlocks: true, // controls duplicate `@media` removing; defaults to true
+    removeDuplicateRules: true, // controls duplicate rules removing; defaults to true
+  }))
   .pipe(gulp.dest('./build'))
+
   .pipe(browserSync.reload({
    stream: true
   }))
