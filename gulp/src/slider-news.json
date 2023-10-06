@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "sliderText": "Навигатор детства",
+    "sliderTextShow":true,
+    "sliderImg": "https://www.liceum28.nnov.ru/files/nav-det-02.png",
+    "sliderImgShow": true,
+    "sliderLink": ""
+  },
+  {
+    "id": 2,
+    "sliderText": "Новость №1",
+    "sliderTextShow": true,
+    "sliderImg": "https://www.liceum28.nnov.ru/files/koPb-0001.jpg",
+    "sliderImgShow": true,
+    "sliderLink": ""
+  },
+  {
+    "id": 3,
+    "sliderText": "Новости про итоговое сочинение №123",
+    "sliderTextShow": true,
+    "sliderImg": "https://www.liceum28.nnov.ru/files/Itogovoe-sochinenie-2022-2023.jpg",
+    "sliderImgShow": true,
+    "sliderLink": ""
+  },
+  {
+    "id": 4,
+    "sliderText": "Навигатор детства",
+    "sliderTextShow":true,
+    "sliderImg": "https://www.liceum28.nnov.ru/files/nav-det-02.png",
+    "sliderImgShow": true,
+    "sliderLink": ""
+  },
+  {
+    "id": 5,
+    "sliderText": "Новость №1",
+    "sliderTextShow": true,
+    "sliderImg": "https://www.liceum28.nnov.ru/files/koPb-0001.jpg",
+    "sliderImgShow": true,
+    "sliderLink": ""
+  },
+  {
+    "id": 6,
+    "sliderText": "Новости про итоговое сочинение №123",
+    "sliderTextShow": true,
+    "sliderImg": "https://www.liceum28.nnov.ru/files/Itogovoe-sochinenie-2022-2023.jpg",
+    "sliderImgShow": true,
+    "sliderLink": ""
+  },
+  {
+    "id": 7,
+    "sliderText": "Новость №1",
+    "sliderTextShow": true,
+    "sliderImg": "https://www.liceum28.nnov.ru/files/koPb-0001.jpg",
+    "sliderImgShow": true,
+    "sliderLink": ""
+  },
+  {
+    "id": 8,
+    "sliderText": "Новости про итоговое сочинение №123",
+    "sliderTextShow": true,
+    "sliderImg": "https://www.liceum28.nnov.ru/files/Itogovoe-sochinenie-2022-2023.jpg",
+    "sliderImgShow": true,
+    "sliderLink": ""
+  },
+  {
+    "id": 9,
+    "sliderText": "Новость №1",
+    "sliderTextShow": true,
+    "sliderImg": "https://www.liceum28.nnov.ru/files/koPb-0001.jpg",
+    "sliderImgShow": true,
+    "sliderLink": ""
+  },
+  {
+    "id":10,
+    "sliderText": "Новости про итоговое сочинение №123",
+    "sliderTextShow": true,
+    "sliderImg": "https://www.liceum28.nnov.ru/files/Itogovoe-sochinenie-2022-2023.jpg",
+    "sliderImgShow": true,
+    "sliderLink": ""
+  }
+]
