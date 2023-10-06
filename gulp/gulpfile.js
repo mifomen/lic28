@@ -1,21 +1,21 @@
-'use strict'
+// 'use strict'
 //npm install npm install gulp npm start
 
 //npm install  gulp-cli --save-dev
 // npm install  gulp --save-dev
 // npm i browser-sync --save-dev
 //npm remove minify-js --save-dev
-var sourcemaps = require('gulp-sourcemaps')
-var gulp = require('gulp');
-var less = require('gulp-less');
-var browserSync = require('browser-sync').create();// livereload
-var plumber = require('gulp-plumber'); // dont stop with mistake
-var csso = require('gulp-csso'); //min css
-var uglify = require("gulp-uglify"); //min js
-var rm = require( 'gulp-rm' ) // clear build folder
-var autoprefixer = require( 'gulp-autoprefixer' ) // autoprefixer
-var postcss= require( 'gulp-postcss' ) // post css
-var mqpacker= require( 'css-mqpacker' ) // sotr css, media query
+const sourcemaps = require('gulp-sourcemaps');
+const gulp = require('gulp');
+const less = require('gulp-less');
+const browserSync = require('browser-sync').create();// livereload
+const plumber = require('gulp-plumber'); // dont stop with mistake
+const csso = require('gulp-csso'); //min css
+const uglify = require("gulp-uglify"); //min js
+const rm = require( 'gulp-rm' ); // clear build folder
+const autoprefixer = require( 'gulp-autoprefixer' ) // autoprefixer
+const postcss= require( 'gulp-postcss' ) // post css
+const mqpacker= require( 'css-mqpacker' ) // sotr css, media query
 
 
 var rename = require("gulp-rename");
