@@ -46,15 +46,18 @@
   ],
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
+      "> 1%",
+      "dead",
       "not op_mini all"
     ],
-    "development": [
-      "last 25 chrome version",
-      "last 25 firefox version",
-      "last 25 safari version",
-      "last 5 ie version"
+    "modern": [
+      "last 65 chrome version",
+      "last 65 firefox version",
+      "last 65 safari version",
+      "last 7 ie version"
+    ],
+    "ssr": [
+      "node 20"
     ]
   }
 }

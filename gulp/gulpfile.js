@@ -83,7 +83,10 @@ gulp.task('js', function() {
   return gulp.src('src/**/flex-style.css')
   .pipe(autoprefixer({
 
-    cascade: true
+    cascade: true,
+    flexbox: true,
+    grid: "autoplace",
+    supports: false,
   }))
   .pipe(postcss([
     mqpacker({ sort: true })
