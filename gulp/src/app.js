@@ -54,7 +54,6 @@ if (document.querySelector('.menu-news__item-content') && document.querySelector
     });
   })
 
-
   document.addEventListener('keypress', (evt) => {
     console.log(evt.key); //eslint-disable-line
     if (evt.key === 'Escape' || evt.key === 'Enter') {
