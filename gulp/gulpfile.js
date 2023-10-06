@@ -18,10 +18,13 @@ var postcss= require( 'gulp-postcss' ) // post css
 var mqpacker= require( 'css-mqpacker' ) // sotr css, media query
 
 
+var rename = require("gulp-rename");
+var concat = require('gulp-concat');
 
+const cleanCSS = require('gulp-clean-css');
 
 gulp.task('less', function() {
-  return gulp.src('src/**/style-less.less')
+  return gulp.src('src/**/style.less')
   .pipe(plumber())
   .pipe(less())
   .pipe(sourcemaps.init())
@@ -37,6 +40,9 @@ gulp.task('less', function() {
     )
     .pipe(sourcemaps.write('.'))
   // .pipe(csso())
+  // .pipe(cleanCSS({removeDuplicateRules: 'true'}))
+  // .pipe(concat('style-less.css'))
+  .pipe(rename("less.css"))
   .pipe(gulp.dest('./build'))
   .pipe(browserSync.reload({
    stream: true
@@ -72,6 +78,13 @@ gulp.task('js', function() {
   }))
  });
 
+ gulp.task('flex-style', function() {
+  return gulp.src('src/**/flex-style.css')
+  .pipe(gulp.dest('./build'))
+  .pipe(browserSync.reload({
+   stream: true
+  }))
+ });
 
  gulp.task('html', function() {
   return gulp.src('src/**/index.html')
@@ -102,6 +115,7 @@ gulp.task('serve', function () {
 gulp.watch("src/**/*.html",  gulp.parallel('html'));
 gulp.watch("src/**/*.css",  gulp.parallel('css'));
 gulp.watch("src/**/*.js",  gulp.parallel('js'));
+gulp.watch("src/**/flex-style.css",  gulp.parallel('flex-style'));
 
 gulp.watch("src/**/*.less",  gulp.parallel('less'));
   // gulp.watch("src/*.html", ["html"]).on("change", browserSync.reload);
@@ -113,6 +127,7 @@ gulp.watch("src/**/*.less",  gulp.parallel('less'));
    gulp.series(
     'clear',
     'html',
+    'flex-style',
     'less',
     'css',
     'js'
