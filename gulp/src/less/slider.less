@@ -10,6 +10,25 @@
   // display: flex;
   // justify-content: center;
   text-align: center;
+  position: relative;
+  &-btn__prev,
+  &-btn__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    outline: 2px solid darkorange;
+    outline-offset: -3px;
+  }
+  &-btn__prev {
+    left: 0;
+  }
+  &-btn__next {
+    right: 0;
+  }
   &__list {
     display: grid;
     grid-template-columns: repeat(5, auto);

@@ -73,12 +73,12 @@ const getData = (onSuccess) => {
     });
 };
 
-const sliderMove = () => {
+const sliderMove = (step) => {
   let interval = 0;
   setInterval(() => {
     document.querySelector('.slider__list').style.transform = `translateX(${interval}px)`;
-    interval = interval - 175;
-  },1000);
+    interval = interval - step;
+  },3000);
 };
 
 // }
@@ -89,6 +89,19 @@ const sliderMove = () => {
 
 // let interval = 0;
 const renderSliderItems = (arrayRender) => {
+  if (document.querySelector('.js-slider-news')) {
+    const slider = document.querySelector('.js-slider-news');
+    const btn = document.createElement('button');
+    btn.classList.add('slider-btn__prev');
+    btn.textContent = 'Предыдущий слайд';
+    slider.appendChild(btn);
+
+    const btn2 = document.createElement('button');
+    btn2.classList.add('slider-btn__next');
+    btn2.textContent = 'Предыдущий слайд';
+    slider.appendChild(btn2);
+
+  };
   const div = document.createElement('div');
   div.classList.add('js-slider-inner');
   div.classList.add('slider__list');
@@ -132,7 +145,7 @@ if (document.querySelector('.js-slider-news')) {
   // let interval = 0;
   getData((questionArray) => {
     renderSliderItems(questionArray);
-    // sliderMove(); // uncomment for move
+    // sliderMove(175); // uncomment for move
   });
 };
 // const timerId = setInterval(() => {
