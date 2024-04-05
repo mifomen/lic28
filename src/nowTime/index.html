@@ -9,6 +9,7 @@
 <body>
 
   <span>
+    <span class="js-year-important">js-now-time</span> <== js-year-important <br>
     <span class="js-now-time">js-now-time</span> <== js-now-time <br>
     <span class="js-now-year">js-now-year</span> <== js-now-year <br>
     <span class="js-now-two-year">js-now-two-year</span> <== js-now-two-year <br>
@@ -28,12 +29,16 @@
       }
 
       for (const item of document.querySelectorAll(selector)) {
+        if (separator === "++") {
+          item.textContent = nowYear;
+          return;
+        }
         if (separator === "+") {
           item.textContent = new Date().toLocaleDateString();
           return;
         }
         if (separator === "/") {
-          item.textContent = `${nowYear}`;
+          item.textContent = `${new Date().getFullYear()}`;
           return;
         }
         if (separator === "-1") {
@@ -49,6 +54,7 @@
     }
   }
 // console.log(`new Date().getFullYear()=${new Date().getMonth()}`)
+    applyActionForTextSpans('.js-year-important',"++");
     applyActionForTextSpans('.js-now-time',"+");
     applyActionForTextSpans('.js-now-year',"/")
     applyActionForTextSpans('.js-now-two-year',"-")
