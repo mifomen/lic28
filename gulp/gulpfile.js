@@ -110,6 +110,7 @@ gulp.task('js', function() {
     removeDuplicateMediaBlocks: true, // controls duplicate `@media` removing; defaults to true
     removeDuplicateRules: true, // controls duplicate rules removing; defaults to true
   }))
+  .pipe(csso())
   .pipe(gulp.dest('./build'))
 
   .pipe(browserSync.reload({
@@ -119,6 +120,15 @@ gulp.task('js', function() {
 
  gulp.task('html', function() {
   return gulp.src('src/**/index.html')
+  .pipe(gulp.dest('./build'))
+  .pipe(browserSync.reload({
+   stream: true
+  }))
+ });
+
+ gulp.task('json-main', function() {
+  return gulp.src(['src/**/main-new-function.js'])
+  .pipe(uglify())
   .pipe(gulp.dest('./build'))
   .pipe(browserSync.reload({
    stream: true
@@ -154,6 +164,8 @@ gulp.watch("src/**/*.html",  gulp.parallel('html'));
 gulp.watch("src/**/*.css",  gulp.parallel('css'));
 gulp.watch("src/**/*.js",  gulp.parallel('js'));
 gulp.watch("src/**/*.json",  gulp.parallel('json'));
+gulp.watch("src/**/main-new-function.js",  gulp.parallel('json-main'));
+
 
 gulp.watch("src/**/flex-style.css",  gulp.parallel('flex-style'));
 
@@ -168,6 +180,7 @@ gulp.watch("src/**/*.less",  gulp.parallel('less'));
     'clear',
     'html',
     'flex-style',
+    'json-main',
     'less',
     'css',
     'json',
